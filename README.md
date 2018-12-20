@@ -1,4 +1,4 @@
-# mhw-save-edior (Linux version)
+# mhw-save-editor (Linux version)
 This is a simple _Monster Hunter: World_ save file editor.
 
 ## Summary
