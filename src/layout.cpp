@@ -20,7 +20,22 @@
 #include <stdexcept>
 #include <iconv.h>
 
+namespace {
+	const static size_t	STEAMID_OFFSET = 0x28,
+				SAVESLOT_OFFSET = 0x003004DC,
+		      		SAVESLOT_SIZE = 0xF6110;
+}
+
 namespace layout {
+
+	const char	*items_data::names[ITEMS_CONTAINER::last] = {
+		"pouch item",
+		"pouch ammo",
+		"box item",
+		"box ammo",
+		"box materials",
+		"box decos"
+	};
 	
 	bool basic_checksum(const io::buffer& buf) {
 		const static uint8_t	CHECKSUM[] = { 0x01, 0x00, 0x00, 0x00 };
@@ -28,16 +43,12 @@ namespace layout {
 	}
 
 	int64_t get_steamid(const io::buffer& buf) {
-		const static size_t	STEAMID_OFFSET = 0x28;
 		int64_t	out = 0;
 		std::memcpy(&out, &buf[STEAMID_OFFSET], sizeof(int64_t));
 		return out;
 	}
 
 	hunter_data get_slot_data(const io::buffer& buf, const size_t slot_id) {
-		const static size_t	SAVESLOT_OFFSET = 0x003004DC,
-		      			SAVESLOT_SIZE = 0xF6110;
-
 		const size_t	base_slot = SAVESLOT_OFFSET + SAVESLOT_SIZE*slot_id;
 		size_t		cur_slot = base_slot;
 		if((cur_slot+SAVESLOT_SIZE) > buf.size())
@@ -67,6 +78,41 @@ namespace layout {
 		fn_read_uint32_t(out.xp);
 		fn_read_uint32_t(out.playtime);
 		std::memcpy(&out.gender, &buf[base_slot + 0xB0], sizeof(uint32_t));
+		return out;
+	}
+
+	struct items_containers {
+		size_t	offset,
+			count;
+	};
+
+	const static items_containers	LIST_CONTAINERS[] = {
+		{0xa2c79, 24},	//pouch_item
+		{0xa2d39, 16},	//pouch_ammo
+		{0xa2ed9, 200},	//box_item
+		{0xa3519, 200}, //box_ammo
+		{0xa3b59, 800},	//box_material
+		{0xa5459, 200}	//box_deco
+	};
+
+	items_data get_items_data(const io::buffer& buf, const size_t slot_id) {
+		const size_t	base_slot = SAVESLOT_OFFSET + SAVESLOT_SIZE*slot_id;
+		if((base_slot+SAVESLOT_SIZE) > buf.size())
+			throw std::runtime_error("Invalid slot, outside of boundaries of savegame");
+		// start filling in info
+		items_data out;
+		for(size_t i = 0; i < sizeof(LIST_CONTAINERS)/sizeof(items_containers); ++i) {
+			auto&		cur_items = out.containers[i];
+			cur_items.resize(LIST_CONTAINERS[i].count);
+			const size_t	cur_offset = base_slot + LIST_CONTAINERS[i].offset;
+			auto fn_read_two_uint32_t = [&buf, &cur_offset](const size_t idx, std::pair<uint32_t, uint32_t>& v) -> void {
+				std::memcpy(&v.first, &buf[cur_offset + idx*sizeof(uint32_t)*2], sizeof(uint32_t));
+				std::memcpy(&v.second, &buf[cur_offset + idx*sizeof(uint32_t)*2 + sizeof(uint32_t)], sizeof(uint32_t));
+			};
+
+			for(size_t j = 0; j < LIST_CONTAINERS[i].count; ++j)
+				fn_read_two_uint32_t(j, cur_items[j]);
+		}
 		return out;
 	}
 }

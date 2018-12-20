@@ -32,9 +32,27 @@ namespace layout {
 				gender;
 	};
 
+	typedef std::vector<std::pair<uint32_t, uint32_t>>	items_list;
+
+	enum ITEMS_CONTAINER {
+		pouch_item = 0,
+		pouch_ammo,
+		box_item,
+		box_ammo,
+		box_materials,
+		box_decos,
+		last
+	};
+
+	struct items_data {
+		items_list		containers[ITEMS_CONTAINER::last];
+		static const char	*names[ITEMS_CONTAINER::last];
+	};
+
 	bool		basic_checksum(const io::buffer& buf);
 	int64_t 	get_steamid(const io::buffer& buf);
 	hunter_data	get_slot_data(const io::buffer& buf, const size_t slot_id);
+	items_data	get_items_data(const io::buffer& buf, const size_t slot_id);
 }
 
 #endif //_LAYOUT_H_

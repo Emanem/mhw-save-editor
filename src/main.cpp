@@ -121,33 +121,52 @@ namespace {
 	}
 
 	void print_basic_slot(const SLOT_ID slot, const io::buffer& data) {
-		auto fn_read_print = [&data](const int slot) -> void {
-			std::cout  << "Slot: " << slot << std::endl;
-			const auto	hd = layout::get_slot_data(data, slot);
-			const auto	namelen = std::wcslen(hd.name);
-			if(!namelen)
-				std::cout << "\t" << "(no info)" << std::endl;
+		const auto	hd = layout::get_slot_data(data, slot);
+		const auto	namelen = std::wcslen(hd.name);
+		if(!namelen) {
+			std::cout << "\t" << "(no info)" << std::endl;
+			return;
+		}
 
-			std::wcout << "\t" << "Name:\t" << hd.name << '\n';
-			std::cout  << "\t" << "Rank:\t" << hd.rank << '\n'
-				   << "\t" << "Zenny:\t" << hd.zenny << '\n'
-				   << "\t" << "Research:\t" << hd.res_points << '\n'
-				   << "\t" << "Experience:\t" << hd.xp << '\n'
-				   << "\t" << "Playtime:\t" << hd.playtime << '\n'
-				   << "\t" << "Gender:\t" << ((hd.gender==1) ? 'F' : 'M') << '\n'
-				   << std::endl;
-		};
+		std::wcout << "\t" << "Name:\t" << hd.name << '\n';
+		std::cout  << "\t" << "Rank:\t" << hd.rank << '\n'
+			   << "\t" << "Zenny:\t" << hd.zenny << '\n'
+			   << "\t" << "Research:\t" << hd.res_points << '\n'
+			   << "\t" << "Experience:\t" << hd.xp << '\n'
+			   << "\t" << "Playtime:\t" << hd.playtime << '\n'
+			   << "\t" << "Gender:\t" << ((hd.gender==1) ? 'F' : 'M') << '\n'
+			   << std::endl;
+	}
 
+	void print_items_slot(const SLOT_ID slot, const io::buffer& data) {
+		const auto	items = layout::get_items_data(data, slot);
+		for(size_t i = 0; i < layout::ITEMS_CONTAINER::last; ++i) {
+			const auto&	cur_items = items.containers[i];
+			std::cout << "\t" << layout::items_data::names[i] << '\n';
+			for(const auto& item_desc : cur_items) {
+				if(0 == item_desc.first)
+					continue;
+				std::cout << "\t\t" << item_desc.first << ", " << item_desc.second << '\n';
+			}
+			std::cout << std::endl;
+		}
+	}
+
+	template<typename func>
+	void print_data(const SLOT_ID slot, const io::buffer& data, func&& f) {
 		switch(slot) {
 			case SLOT_ID::s0:
 			case SLOT_ID::s1:
 			case SLOT_ID::s2:
-			fn_read_print((int)slot);
+			std::cout  << "Slot: " << slot << std::endl;
+			f(slot, data);
 			break;
 
 			default:
-			for(int i = 0; i < 3; i++)
-				fn_read_print(i);
+			for(int i = 0; i < 3; i++) {
+				std::cout  << "Slot: " << (SLOT_ID)i << std::endl;
+				f((SLOT_ID)i, data);
+			}
 			break;
 		}
 	}
@@ -170,11 +189,12 @@ int main(int argc, char *argv[]) {
 			} break;
 
 			case LIST_TYPE::all:
+			print_data(slot_id, rv, [](const SLOT_ID slot, const io::buffer& data) -> void { print_basic_slot(slot, data); print_items_slot(slot, data); } );
 			break;
 
 			case LIST_TYPE::basic:
 			default:
-			print_basic_slot(slot_id, rv);
+			print_data(slot_id, rv, [](const SLOT_ID slot, const io::buffer& data) -> void { print_basic_slot(slot, data); } );
 			break;
 		}
 	} catch(const std::exception& e) {

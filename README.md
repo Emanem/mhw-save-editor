@@ -49,6 +49,21 @@ Each slot (max 3) has a size of 0xF6110 and the slot data starts at 0x003004DC, 
 6. Play time (4 bytes uint32_t)
 7. Gender (starting at 0xb0)
 
+### Items/Ammo containers
+Each container starts from a given offset for current slot. Using slot starting area as basepoint, one sums up the relative offset and then goes through the items list.
+The items list is a `uint32_t`, `uint32_t` pairs, indicating the item code and the quantity.
+
+Each container has a limited max number of items; the min items is 1 and max item is 999 (?).
+
+|Container  |Offset  |Number |
+|-----------|--------|------:|
+|pouch item|0xa2c79|24|
+|pouch ammo|0xa2d39|16|
+|box item|0xa2ed9|200|
+|box ammo|0xa3519|200|
+|box materials|0xa3b59|800|
+|box decos|0xa5459|200|   
+
 ## Why this editor?
 I play on Linux (through SteamPlay) and altough the game runs very well, I have two issues:
 * I already have ~1000 hours on PS4 and I don't want to grind again
