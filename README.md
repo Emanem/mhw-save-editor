@@ -15,7 +15,8 @@ and is named:
 
 ### Binary data
 The binary data inside the file shoould be encrypted/decrypted with Blowfish ecb algorithm and using the following key:
-```xieZjoe#P2134-3zmaghgpqoe0z8$3azeq```
+```xieZjoe#P2134-3zmaghgpqoe0z8$3azeq
+```
 
 It's worth noting that there is a further _byte-swapping_ inside the file, pre and post encryption, such as the first byte of a quartet needs to be swapped with the last, the second with the third.
 This operation is performed before and after the encryption/decription stage.
@@ -23,7 +24,8 @@ This operation is performed before and after the encryption/decription stage.
 When opening a save file, one should do
 ```swapbytes
 decrypt
-swapbytes```
+swapbytes
+```
 
 ## Data layout
 Section describing the file data layout. 
