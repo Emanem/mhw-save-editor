@@ -28,6 +28,7 @@ namespace io {
 
 	buffer	read_savegame(const std::string& fname);
 	void	write_savegame(const std::string& fname, const buffer& buf);
+	void	write_dump(const std::string& fname, const buffer& buf);
 }
 
 #endif //_IO_H_

@@ -94,5 +94,13 @@ namespace io {
 		if(tmp.size() != (size_t)ostr.write((const char*)&tmp[0], tmp.size()).tellp())
 			throw std::runtime_error("can't write the whole file");
 	}
+
+	void write_dump(const std::string& fname, const buffer& rv) {
+		std::ofstream	ostr(fname, std::ios_base::binary);
+		if(!ostr)
+			throw std::runtime_error("can't open binary dump file for writing (check path/permission)");
+		if(rv.size() != (size_t)ostr.write((const char*)&rv[0], rv.size()).tellp())
+			throw std::runtime_error("can't write the whole dump file");
+	}
 }
 

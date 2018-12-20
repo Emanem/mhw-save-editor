@@ -16,18 +16,167 @@
  * */
 
 #include <iostream>
+#include <getopt.h>
+#include <cstring>
 #include "io.h"
 #include "layout.h"
 
+namespace {
+	static const char	VERSION[] = "0.0.1";
+
+	enum LIST_TYPE {
+		basic = 0,
+		all,
+		dump
+	} list_type = LIST_TYPE::basic;
+
+	enum SLOT_ID {
+		s_all = -1,
+		s0 = 0,
+		s1,
+		s2,
+	} slot_id = SLOT_ID::s_all;
+
+	std::string	outfile;
+
+	// settings/options management
+	void print_help(const char *prog, const char *version) {
+		std::cerr <<	"Usage: " << prog << " [options] ... [savefile]\nExecutes mhw-save-editor " << version << "\n\n"
+				"-l, --list         lists the basic save information for all the slots or\n"
+				"                   the specified slot\n"
+				"    --list-all     lists all known information for a given slot (if\n"
+				"                   no slot specified, lists for all slots)\n"
+				"-d, --dump (file)  dumps the decrypted information in the specified file\n"
+				"-s, --slot (n)     specify which slot to select (0, 1 or 2)\n"
+				"    --help         prints this help and exit\n\n"
+		<< std::flush;
+	}
+
+	int parse_args(int argc, char *argv[], const char *prog, const char *version) {
+
+		int			c;
+		static struct option	long_options[] = {
+			{"dump",		required_argument, 0,	'd'},
+			{"help",		no_argument,	   0,	0},
+			{"slot",		required_argument, 0,	's'},
+			{"list-all",		no_argument, 	   0,	0},
+			{0, 0, 0, 0}
+		};
+
+		while (1) {
+			// getopt_long stores the option index here
+			int		option_index = 0;
+
+			if(-1 == (c = getopt_long(argc, argv, "d:s:", long_options, &option_index)))
+				break;
+
+			switch (c) {
+				case 0: {
+					// If this option set a flag, do nothing else now
+					if (long_options[option_index].flag != 0)
+					break;
+					if(!std::strcmp("list-all", long_options[option_index].name)) {
+						list_type = LIST_TYPE::all;
+					} else if(!std::strcmp("help", long_options[option_index].name)) {
+						print_help(prog, version);
+						std::exit(0);
+					}
+				} break;
+
+				case 'd': {
+					outfile = optarg;
+					list_type = LIST_TYPE::dump;
+				} break;
+
+				case 's': {
+					const int slot = std::atoi(optarg);
+					switch(slot) {
+						case 0:
+						slot_id = SLOT_ID::s0;
+						break;
+
+						case 1:
+						slot_id = SLOT_ID::s1;
+						break;
+
+						case 2:
+						slot_id = SLOT_ID::s2;
+						break;
+
+						default:
+						throw std::runtime_error("invalid slot id specified (use 0, 1, 2 or don't specify this option for 'all')");
+					}
+				} break;
+
+				case '?':
+				break;
+
+				default:
+					throw std::runtime_error(std::string("Invalid option '") + ((char)c) + "'");
+				break;
+			}
+		}
+
+		return optind;
+	}
+
+	void print_basic_slot(const SLOT_ID slot, const io::buffer& data) {
+		auto fn_read_print = [&data](const int slot) -> void {
+			std::cout  << "Slot: " << slot << std::endl;
+			const auto	hd = layout::get_slot_data(data, slot);
+			const auto	namelen = std::wcslen(hd.name);
+			if(!namelen)
+				std::cout << "\t" << "(no info)" << std::endl;
+
+			std::wcout << "\t" << "Name:\t" << hd.name << '\n';
+			std::cout  << "\t" << "Rank:\t" << hd.rank << '\n'
+				   << "\t" << "Zenny:\t" << hd.zenny << '\n'
+				   << "\t" << "Research:\t" << hd.res_points << '\n'
+				   << "\t" << "Experience:\t" << hd.xp << '\n'
+				   << "\t" << "Playtime:\t" << hd.playtime << '\n'
+				   << "\t" << "Gender:\t" << ((hd.gender==1) ? 'F' : 'M') << '\n'
+				   << std::endl;
+		};
+
+		switch(slot) {
+			case SLOT_ID::s0:
+			case SLOT_ID::s1:
+			case SLOT_ID::s2:
+			fn_read_print((int)slot);
+			break;
+
+			default:
+			for(int i = 0; i < 3; i++)
+				fn_read_print(i);
+			break;
+		}
+	}
+}
+
+
 int main(int argc, char *argv[]) {
 	try {
-		auto		rv = io::read_savegame("SAVEDATA1000");
-		std::cout << "Basic checksum: " << layout::basic_checksum(rv) << std::endl;
-		std::cout << "Steam id: " << layout::get_steamid(rv) << std::endl;
-		const auto	h_data0 = layout::get_slot_data(rv, 0);
-		std::wcout << "name 0: " << h_data0.name << std::endl;
-		const auto	h_data1 = layout::get_slot_data(rv, 1);
-		const auto	h_data2 = layout::get_slot_data(rv, 2);
+		const int	savefile = parse_args(argc, argv, argv[0], VERSION);
+		if(savefile >= argc)
+			throw std::runtime_error("input [savefile] not specified");
+		auto		rv = io::read_savegame(argv[savefile]);
+		std::cout << "Basic checksum: " << layout::basic_checksum(rv) << '\n'
+			  << "Steam id:       " << layout::get_steamid(rv) << '\n'
+			  << std::endl;
+		// print out dedicated info
+		switch(list_type) {
+			case LIST_TYPE::dump: {
+				io::write_dump(outfile, rv);
+			} break;
+
+			case LIST_TYPE::all:
+			break;
+
+			case LIST_TYPE::basic:
+			default:
+			print_basic_slot(slot_id, rv);
+			break;
+		}
 	} catch(const std::exception& e) {
 		std::cerr << "Exception: " << e.what() << std::endl;
 	} catch(...) {
