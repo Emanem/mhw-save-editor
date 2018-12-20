@@ -17,6 +17,7 @@
 
 #include "io.h"
 #include <openssl/blowfish.h>
+#include <openssl/sha.h>
 #include <fstream>
 #include <cstring>
 #include <sstream>
@@ -115,11 +116,26 @@ namespace io {
 		}
 		// swap them again
 		swap_quadbytes(out);
+		// compute SHA-1
+		if(out.size() < 64)
+			throw std::runtime_error("invalid savefile - too small, need at least 64+ bytes");
+		buffer	sha1_buf(20);
+		SHA1(&out[64], out.size() - 64, &sha1_buf[0]);
+		swap_quadbytes(sha1_buf);
+		if(std::memcmp(&sha1_buf[0], &out[12], 20*sizeof(uint8_t)))
+			throw std::runtime_error("SHA-1 check failed");
 		return out;
 	}
 
 	void write_savegame(const std::string& fname, const buffer& buf) {
 		buffer	tmp(buf);
+		// compute SHA-1, swap, and copy into the main buffer
+		if(tmp.size() < 64)
+			throw std::runtime_error("invalid savefile - too small, need at least 64+ bytes");
+		buffer	sha1_buf(20);
+		SHA1(&tmp[64], tmp.size() - 64, &sha1_buf[0]);
+		swap_quadbytes(sha1_buf);
+		std::memcpy(&tmp[12], &sha1_buf[0], 20*sizeof(uint8_t));
 		// swap the bytes
 		swap_quadbytes(tmp);
 		// encrypt
