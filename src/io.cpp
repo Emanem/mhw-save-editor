@@ -19,6 +19,56 @@
 #include <openssl/blowfish.h>
 #include <fstream>
 #include <cstring>
+#include <sstream>
+
+// utility class, taken from https://stackoverflow.com/a/1120224/159094
+class CSVRow {
+	std::vector<std::string>    m_data;
+    public:
+        std::string const& operator[](std::size_t index) const {
+            return m_data[index];
+        }
+
+        std::size_t size() const {
+            return m_data.size();
+        }
+
+	void readNextRow(std::istream& str) {
+		std::string         line;
+		std::getline(str, line);
+
+		std::stringstream   lineStream(line);
+		std::string         cell;
+
+		m_data.clear();
+		while(true) {
+			int c = lineStream.peek();
+			// if the firts char is a "
+			// then we need to read through
+			// until we find another one
+			if(c == '\"') {
+				// remove first character
+				lineStream.get();
+				if(!std::getline(lineStream, cell, '\"'))
+					break;
+			} else {
+				if(!std::getline(lineStream, cell, ','))
+					break;
+			}
+			m_data.push_back(cell);
+		}
+		// This checks for a trailing comma with no data after it.
+		if (!lineStream && cell.empty()) {
+			// If there was a trailing comma then add an empty element.
+			m_data.push_back("");
+		}
+	}
+};
+
+std::istream& operator>>(std::istream& str, CSVRow& data) {
+    data.readNextRow(str);
+    return str;
+}
 
 namespace io {
 
@@ -101,6 +151,62 @@ namespace io {
 			throw std::runtime_error("can't open binary dump file for writing (check path/permission)");
 		if(rv.size() != (size_t)ostr.write((const char*)&rv[0], rv.size()).tellp())
 			throw std::runtime_error("can't write the whole dump file");
+	}
+
+	// the items list is basically a long vector of elements
+	// where we execute the lookup based on index
+	struct item_desc {
+		std::string	name;
+	};
+	std::vector<item_desc>	items;
+
+	bool load_items_csv(const std::string& fname) {
+		std::ifstream	istr(fname);
+		if(!istr)
+			return false;
+		// read first row and lookup the columns
+		CSVRow	row;
+		if(!(istr >> row))
+			throw std::runtime_error("items list file isn't a valid CSV - header row needed");
+		const static std::string	s_col_id = "id",
+		      				s_col_name = "name";
+		int				i_col_id = -1,
+						i_col_name = -1;
+		const size_t			columns_num = row.size();
+		for(int i = 0; i < (int)columns_num; ++i) {
+			if(row[i] == s_col_id) i_col_id = i;
+			if(row[i] == s_col_name) i_col_name = i;
+		}
+		if(-1 == i_col_id)
+			throw std::runtime_error("invalid items list file - column \"id\" is missing");
+		if(-1 == i_col_name)
+			throw std::runtime_error("invalid items list file - column \"name\" is missing");
+		// pre-allocate 1k elements - we should have 999
+		items.resize(1024);
+		// scan the CSV and add elements to the vector
+		int	cur_row = 1;
+		while(istr >> row) {
+			if(row.size() != columns_num)
+				throw std::runtime_error(std::string("malformed items list file - check row: ") + std::to_string(cur_row));
+			char*		endptr = 0;
+			const auto	id_num = strtol(row[i_col_id].c_str(), &endptr, 10);
+			if(*endptr || (id_num < 0))
+				throw std::runtime_error(std::string("malformed items list file - check column \"id\" of row: ") + std::to_string(cur_row));
+			// then add them to the vector of entries
+			if(id_num > 16*1024)
+				throw std::runtime_error("too large number of items");
+			if(items.size() < (size_t)id_num+1)
+				items.resize(id_num+1);
+			items[id_num].name = row[i_col_name];
+			++cur_row;
+		}
+		return true;
+	}
+
+	const char* lookup_item(const size_t id) {
+		if(id >= items.size())
+			return 0;
+		return items[id].name.c_str();
 	}
 }
 

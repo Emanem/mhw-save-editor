@@ -37,18 +37,23 @@ namespace {
 		s2,
 	} slot_id = SLOT_ID::s_all;
 
-	std::string	outfile;
+	std::string	outfile,
+			items_file = "items.csv";
 
 	// settings/options management
 	void print_help(const char *prog, const char *version) {
 		std::cerr <<	"Usage: " << prog << " [options] ... [savefile]\nExecutes mhw-save-editor " << version << "\n\n"
-				"-l, --list         lists the basic save information for all the slots or\n"
-				"                   the specified slot\n"
-				"    --list-all     lists all known information for a given slot (if\n"
-				"                   no slot specified, lists for all slots)\n"
-				"-d, --dump (file)  dumps the decrypted information in the specified file\n"
-				"-s, --slot (n)     specify which slot to select (0, 1 or 2)\n"
-				"    --help         prints this help and exit\n\n"
+				"-l, --list             lists the basic save information for all the slots or\n"
+				"                       the specified slot\n"
+				"    --list-all         lists all known information for a given slot (if\n"
+				"                       no slot specified, lists for all slots)\n"
+				"    --items-list (csv) specify a custom csv file with fir row header, containing\n"
+				"                       at least columns \"id\" (numerical identifier) and\n"
+				"                       \"name\" (name) of items. by default tries to load the\n"
+				"                       file named 'items.csv'\n"
+				"-d, --dump (file)      dumps the decrypted information in the specified file\n"
+				"-s, --slot (n)         specify which slot to select (0, 1 or 2)\n"
+				"    --help             prints this help and exit\n\n"
 		<< std::flush;
 	}
 
@@ -58,6 +63,7 @@ namespace {
 		static struct option	long_options[] = {
 			{"dump",		required_argument, 0,	'd'},
 			{"help",		no_argument,	   0,	0},
+			{"items-list",		required_argument, 0,	0},
 			{"slot",		required_argument, 0,	's'},
 			{"list-all",		no_argument, 	   0,	0},
 			{0, 0, 0, 0}
@@ -77,6 +83,8 @@ namespace {
 					break;
 					if(!std::strcmp("list-all", long_options[option_index].name)) {
 						list_type = LIST_TYPE::all;
+					} if(!std::strcmp("items-list", long_options[option_index].name)) {
+						items_file = optarg;
 					} else if(!std::strcmp("help", long_options[option_index].name)) {
 						print_help(prog, version);
 						std::exit(0);
@@ -139,6 +147,14 @@ namespace {
 	}
 
 	void print_items_slot(const SLOT_ID slot, const io::buffer& data) {
+		// try to load the csv file with item listings
+		static bool loaded_csv = false;
+		if(!loaded_csv) {
+			if(!io::load_items_csv(items_file))
+				std::cerr << "warning: couldn't find items csv file (\"" << items_file << "\")" << std::endl;
+			loaded_csv = true;
+		}
+
 		const auto	items = layout::get_items_data(data, slot);
 		for(size_t i = 0; i < layout::ITEMS_CONTAINER::last; ++i) {
 			const auto&	cur_items = items.containers[i];
@@ -146,7 +162,11 @@ namespace {
 			for(const auto& item_desc : cur_items) {
 				if(0 == item_desc.first)
 					continue;
-				std::cout << "\t\t" << item_desc.first << ", " << item_desc.second << '\n';
+				const char*	item_name = io::lookup_item(item_desc.first);
+				if(item_name)
+					std::cout << "\t\t" << item_name << ", " << item_desc.second << '\n';
+				else
+					std::cout << "\t\t" << item_desc.first << ", " << item_desc.second << '\n';
 			}
 			std::cout << std::endl;
 		}

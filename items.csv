@@ -1,0 +1,1001 @@
+id,subType,storageID,rarity,carryLimit,unk,sortOrder,flags,iconID,iconColor,carryItem,sellPrice,buyPrice,name,description
+0,0,1,0,1,1,1,0,255,0,0,0,0,--------,Invalid Message
+1,0,0,0,10,10,2,8,5,2,0,8,66,Potion,Restores a small amount of health.
+2,0,0,1,10,10,3,72,5,2,0,16,165,Mega Potion,Restores a moderate amount of health.
+3,0,0,2,2,2,4,8,62,4,0,210,2138,Max Potion,Fully restores health and maximizes the size of your Health Gauge.
+4,0,0,4,1,1,5,72,62,4,0,345,3454,Ancient Potion,Fully restores health and maximizes the size of your Health and Stamina Gauges.
+5,0,0,0,10,10,6,8,5,3,0,6,60,Antidote,A cure for poison.
+6,0,0,1,5,5,7,8,62,3,0,25,250,Herbal Medicine,Removes all traces of poison and restores a slight amount of health.
+7,0,0,1,10,10,8,12,21,3,0,120,1200,Nulberry,A mysterious berry that cures various blights.
+8,0,0,1,10,10,9,8,5,9,0,6,60,Energy Drink,"A Guild-approved beverage that boosts your stamina. Helps shake off sleep, too!"
+9,0,0,0,10,10,10,12,7,11,0,3,30,Ration,Food that restores a bit of stamina.
+10,0,0,0,10,10,11,12,7,24,0,3,30,Rare Steak,Provides a moderate boost to your stamina. This one's still red in the middle.
+11,0,0,1,10,10,12,12,7,7,0,48,96,Well-done Steak,Provides a moderate boost to your stamina and keeps it at max for a longer period. Meat done right!
+12,0,0,0,10,10,13,12,7,10,0,1,10,Burnt Meat,Provides a small boost to your stamina. Can be eaten quickly.
+13,0,0,0,5,5,14,8,5,0,0,30,300,Cool Drink,Provides temporary relief from extreme heat.
+14,0,0,1,5,5,15,8,5,6,0,25,760,Nutrients,Very slightly increases your maximum health level.
+15,0,0,2,5,5,16,72,5,6,0,92,920,Mega Nutrients,Slightly increases your maximum health level.
+16,0,0,2,10,10,17,8,5,24,0,92,923,Immunizer,Boosts your natural ability to heal.
+17,0,0,1,5,5,18,12,7,8,0,10,98,Astera Jerky,"Juicy, dried meat made by Astera's chef. Boosts natural healing and cures bleeding."
+18,0,0,1,5,5,19,8,5,4,0,29,293,Dash Juice,Dulls one's sense of exhaustion. Reduces stamina depletion for a time.
+19,0,0,2,5,5,20,4168,0,4,0,205,1028,Mega Dash Juice,Lets you dash without tiring for longer than regular dash juice does.
+20,0,0,1,10,10,21,12,21,1,0,140,280,Might Seed,Temporarily strengthens your attacks when ingested by improving energy flow.
+21,0,0,3,5,5,22,8,5,1,0,67,668,Demondrug,Boosts your attack power by filling you with—guess what?—demonic strength.
+22,0,0,4,5,5,23,72,5,1,0,283,2831,Mega Demondrug,Boosts your attack power even more than a regular Demondrug.
+23,0,0,3,5,5,24,8,62,1,0,280,2831,Might Pill,Temporarily endows you with the strength of a mighty god. Potent!
+24,0,0,1,10,10,25,12,21,7,0,110,220,Adamant Seed,Temporarily raises your defense when ingested by hardening tissue.
+25,0,0,3,5,5,26,8,5,7,0,58,578,Armorskin,Boosts your defense by turning your skin as hard as rock.
+26,0,0,4,5,5,27,72,5,7,0,269,2696,Mega Armorskin,Boosts your defense even more than a regular armorskin.
+27,0,0,3,5,5,28,8,62,7,0,260,2696,Adamant Pill,Temporarily makes your skin as hard as adamant. Potent!
+28,0,0,3,3,3,29,8,13,24,0,315,6300,Lifepowder,Produces a healing cloud in the area around the user.
+29,0,0,3,3,3,30,8,13,3,0,315,6300,Herbal Powder,A mysterious powder that produces a cloud around the area that restores health and neutralizes poison.
+30,0,0,3,3,3,31,8,13,1,0,315,6300,Demon Powder,A mysterious powder that produces a cloud around the area that temporarily strengthens attacks.
+31,0,0,3,3,3,32,8,13,7,0,315,6300,Hardshell Powder,A mysterious powder that produces a cloud around the area that temporarily strengthens defense.
+32,0,0,1,10,10,33,0,3,7,0,45,90,Honey,Highly nutritious honey. Combine this with Potions to craft Mega Potions for maximum potency.
+33,0,0,0,10,10,34,0,4,2,0,2,20,Herb,A primary ingredient in potions.
+34,0,0,0,10,10,35,0,4,3,0,2,20,Antidote Herb,A primary ingredient in antidotes.
+35,0,0,1,20,20,36,0,4,25,0,4,44,Fire Herb,"A wondrous, flammable plant. Useful for crafting explosives."
+36,0,0,0,20,20,37,0,4,15,0,4,44,Flowfern,This plant's leaves store a great amount of water. A component for making Water Ammo.
+37,0,0,1,20,20,38,0,4,0,0,6,64,Snow Herb,A plant that radiates ice-cold air. Use in combinations to create freeze ammo.
+38,0,0,0,10,10,39,0,4,6,0,5,50,Sleep Herb,A plant containing sleeping agents. Used to craft tranquilizers.
+39,0,0,0,10,10,40,0,4,13,0,8,75,Ivy,A lightweight and extremely strong plant. Used to make nets for pitfall traps.
+40,0,0,0,10,10,41,0,21,0,0,4,44,Smokenut,A nut that produces a copious amount of smoke. Combine with other items to create smoke with various properties.
+41,0,0,3,10,10,42,0,21,14,0,78,780,Dragonfell Berry,"A mysterious berry, rumored for eons to be loathed by dragons. Required to craft Dragon Ammo."
+42,0,0,1,10,10,43,0,1,3,0,2,24,Blue Mushroom,A mushroom infused with power-enhancing effects. Used in restorative items.
+43,0,0,2,10,5,44,0,1,7,0,40,400,Mandragora,A dangerous fungus said to draw the life out of people. Beware. Required to craft Max Potions.
+44,0,0,1,20,20,45,0,1,1,0,6,60,Nitroshroom,A hard-to-find mushroom with the power to generate blazing heat. Required to craft Gunpowder.
+45,0,0,1,10,5,46,0,1,14,0,60,600,Devil's Blight,A very rare fungus that pulses with extreme heat. Add to a barrel bomb for a dramatically stronger blast.
+46,0,0,2,10,10,47,0,1,9,0,15,150,Parashroom,A mushroom that induces paralysis. Required to craft Tranq Bombs.
+47,0,0,1,10,10,48,0,1,5,0,8,75,Toadstool,A poisonous fungus. Can be used as a toxin for knives.
+48,0,0,2,10,10,49,0,1,13,0,18,180,Exciteshroom,This one has a very strange aroma. Is it edible? Only one way to find out! Required to craft Farcasters.
+49,0,0,0,10,10,51,0,23,3,0,2,20,Bitterbug,A sharp-tasting bug with innate healing abilities. Used as an ingredient in many medicines.
+50,0,0,1,10,10,52,0,23,4,0,48,96,Flashbug,An insect that emits a powerful flash when it dies. Required to craft Flash Pods.
+51,0,0,3,10,10,53,0,23,0,0,120,320,Godbug,An insect said to live a millennium. Combine it with other items to add their properties to the powder.
+52,0,0,3,10,10,54,0,23,9,0,80,300,Thunderbug,An insect that emits electricity when struck. Required to craft Shock Traps and Thunder Ammo.
+53,0,0,2,10,10,55,8,29,8,0,2,20,Baitbug,"An insect used as fishing bait. A fish favorite, it practically races down the nearest gilly gullet."
+54,0,0,3,99,99,56,0,45,2,0,52,240,Kelbi Horn,"While not practical when forging equipment, Kelbi horns are a vital component of many items."
+55,0,0,3,20,20,57,0,5,4,0,56,560,Dash Extract,A mysterious substance culled from certain monsters that increases endurance.
+56,0,0,3,20,20,58,0,5,0,0,122,1220,Nourishing Extract,Can be obtained from certain large monsters. Has the ability to amplify the effects of certain medicines.
+57,0,0,1,10,10,59,0,13,10,0,15,150,Screamer Sac,A monster organ that emits an earsplitting sonic blast when ruptured. Used to craft screamer pods.
+58,0,0,1,5,5,60,0,13,13,0,48,480,Catalyst,Works with other materials to enhance their effects. Cannot be used by itself.
+59,0,0,2,8,8,61,8,24,1,0,35,350,Tranq Bomb,A hand grenade used to capture monsters ensnared in traps. Can be slammed against the ground.
+60,0,0,1,3,3,62,8,77,4,0,57,572,Flash Pod,Slinger ammo that flashes brightly on impact. Fire it right under a monster's nose to blind it.
+61,0,0,1,3,3,63,8,77,10,0,45,450,Screamer Pod,"Used as ammo for your slinger. Emits a harsh, high-frequency sound that can disrupt sensitive monsters."
+62,0,0,1,3,3,65,8,24,0,0,44,100,Smoke Bomb,Creates a large cloud of smoke wherever it lands.
+63,0,0,1,5,5,66,8,24,5,0,60,600,Poison Smoke Bomb,Releases a toxic cloud of mist when used. Also popular as a household bug bomb.
+64,0,0,2,1,1,67,8,24,2,0,30,150,Farcaster,Call for a wingdrake to transport you to the nearest camp. Can also be used during battles.
+65,0,0,0,10,10,68,8,7,1,0,5,50,Raw Meat,"Meat carved from a monster. Can be cooked, combined, or used to set a trap."
+66,0,0,1,10,10,69,8,7,5,0,19,188,Poisoned Meat,Raw meat that poisons whatever eats it. Makes great bait for traps.
+67,0,0,1,10,10,70,8,7,9,0,30,300,Tinged Meat,Raw meat that paralyzes whatever eats it. Makes great bait for traps.
+68,0,0,1,10,10,71,8,7,6,0,32,315,Drugged Meat,Raw meat that puts whatever eats it to sleep. Makes great bait for traps.
+69,0,0,1,20,20,72,0,13,25,0,45,90,Gunpowder,A dangerous substance that explodes when struck or heated.
+70,0,0,0,10,10,73,0,14,4,0,8,80,Small Barrel,"A small, empty barrel."
+71,0,0,1,10,10,74,8,10,4,0,16,156,Barrel Bomb,A small time bomb.
+72,0,0,1,5,5,75,8,10,6,0,18,150,Bounce Bomb,Launches into the air when set. This modified bomb requires skill to use.
+73,0,0,3,5,5,76,72,10,6,0,68,680,Mega Bounce Bomb,An improved version of the bounce bomb. Requires some skill to use.
+74,0,0,1,5,5,77,0,14,25,0,21,210,Large Barrel,"A large, empty barrel. Combine with gunpowder to make it into a bomb."
+75,0,0,2,2,2,78,8,10,25,0,52,518,Large Barrel Bomb,A powerful bomb triggered by external physical impact.
+76,0,0,3,2,2,79,72,10,25,0,80,800,Mega Barrel Bomb,An upgraded large barrel bomb. Effective against large monsters.
+77,0,0,0,10,10,80,0,20,0,0,6,60,Spider Web,A very sticky web. Used to craft pitfall traps.
+78,0,0,1,10,10,81,0,20,13,0,54,108,Net,A sturdy net that supports a certain amount of weight without breaking. Perfect for pitfall traps.
+79,0,0,2,2,2,82,0,11,0,0,20,200,Trap Tool,A must-have item for putting together pitfall traps and other kinds of traps.
+80,0,0,2,1,1,83,8,12,13,0,200,400,Pitfall Trap,A trap for catching certain large monsters. It is tripped by a heavy weight.
+81,0,0,2,1,1,84,8,12,9,0,160,320,Shock Trap,A trap that immobilizes a target. Use it to capture monsters.
+82,0,0,0,20,20,85,0,8,11,0,10,100,Rolled-up Dung,A ball of condensed monster dung. Used to make dung pods for your slinger.
+83,0,0,0,10,10,86,0,8,11,0,1,10,Dung,Exudes a prodigious smell. Used to make ammo for your slinger called dung pods.
+84,0,0,1,10,10,64,8,77,11,0,20,120,Dung Pod,Slinger ammo that releases a strong odor on impact. Causes certain monsters to flee.
+85,0,0,1,10,10,87,8,29,2,0,15,150,Arowana Bait,A ball of bait favored by fish of the Arowana family.
+86,0,0,1,10,10,88,8,29,10,0,15,150,Gunpowderfish Bait,A ball of bait favored by fish of the Gunpowderfish family.
+87,0,0,1,10,10,89,8,29,4,0,30,300,Goldenfish Bait,A ball of bait favored by fish of the Goldenfish family.
+88,0,0,3,5,5,90,8,30,4,0,15,150,Boomerang,An unusually-shaped weapon from abroad that returns to its user when thrown.
+89,0,0,0,1,1,91,8,32,0,0,5,50,Binoculars,Allows you to see farther and observe from a distance.
+90,0,0,4,1,1,92,0,13,1,0,3600,36000,Powercharm,An amulet that strengthens attacks. Just carrying this gives you demonic strength.
+91,0,0,4,1,1,93,0,45,1,0,6840,68400,Powertalon,A charm that strengthens attacks. Its effects are amplified by the dragon parts it contains.
+92,0,0,4,1,1,94,0,13,7,0,2400,24000,Armorcharm,An amulet that increases defense. Just carrying this hardens your skin like stone.
+93,0,0,4,1,1,95,0,45,7,0,5040,50400,Armortalon,A charm that increases defense. Its effects are amplified by the dragon parts it contains.
+94,0,0,0,99,99,96,0,16,13,0,1,22,Needleberry,A nut covered in needle-like spines. Used to make spread ammo.
+95,0,0,0,30,30,97,0,16,7,0,4,40,Blastnut,A nut used to make sticky ammo.
+96,0,0,1,5,5,98,0,16,11,0,12,60,Dragonstrike Nut,A nut that explodes on impact. Used to make wyvern ammo.
+97,0,0,0,30,30,99,0,16,0,0,4,40,Slashberry,Used to make slicing ammo.
+98,0,0,0,99,99,100,0,16,3,0,4,40,Latchberry,A nut that bears a spiral groove. Used to make pierce ammo.
+99,0,0,1,10,10,101,0,16,14,0,12,60,Bomberry,A nut that ruptures on impact. Used to make cluster bombs.
+100,0,0,1,80,80,102,0,21,10,0,12,60,Flamenut,Used to make gunpowder that increases ammo firepower.
+101,0,0,1,60,60,103,0,21,10,0,12,60,Blazenut,Used to make gunpowder that greatly increases ammo firepower.
+102,0,0,1,80,80,104,256,13,10,0,1,16,Gunpowder Level 2,Combustible powder. Combine with level 1 ammo to raise its level.
+103,0,0,1,80,80,105,512,13,10,0,3,30,Gunpowder Level 3,Highly combustible powder. Combine with level 1 ammo to raise its level.
+104,0,0,1,10,10,106,8,43,4,0,45,135,Whetfish Fin,"A fish fin used to sharpen weapons. Restores sharpness greatly, but good for fewer uses than a whetstone."
+105,0,0,3,5,5,107,72,43,4,0,45,135,Whetfish Fin+,"A fish fin used to sharpen weapons. Works better than a whetstone, and can be reused if you're lucky."
+106,0,0,1,10,10,108,12,43,7,0,45,90,Sushifish Scale,A scale from a Sushifish. Eat to restore a small amount of health. Also works to treat bleeding.
+107,0,0,3,5,5,109,76,43,7,0,45,90,Great Sushifish Scale,"Scale from a Great Sushifish. Eat to get large health boost, a natural healing boost, and treat bleeding."
+108,0,0,2,5,5,110,0,43,10,0,150,300,Gunpowderfish Scale,The scales of a Gunpowderfish. Combine with a large barrel bomb to dramatically increase its firepower.
+109,0,0,3,5,5,111,64,43,10,0,150,300,Great Gunpowderfish Scale,The scales of a Great Gunpowderfish. Combine with a large barrel bomb to make a mega barrel bomb.
+110,0,0,1,5,5,112,0,43,2,0,45,90,Burst Arowana Scale,The scales of a Burst Arowana. Combine with fire herb to make a large amount of level 2 gunpowder.
+111,0,0,3,5,5,113,64,43,2,0,45,90,Great Burst Arowana Scale,The scales of a Great Burst Arowana. Combine with fire herb to make a vast amount of level 2 gunpowder.
+112,0,0,1,5,5,114,0,43,5,0,135,270,Bomb Arowana Scale,The scales of a Bomb Arowana. Combine with fire herb to make a large amount of Lv3 gunpowder.
+113,0,0,3,5,5,115,64,43,5,0,135,270,Great Bomb Arowana Scale,The scales of a Great Bomb Arowana. Combine with fire herb to make a vast amount of Lv3 gunpowder.
+114,0,0,3,1,1,116,4137,6,4,0,0,0,Whetstone,A standard-sized whetstone. Use it to restore a weapon's sharpness.
+115,0,0,3,1,1,117,4137,64,0,0,0,0,Capture Net,A net that can be fired from your slinger. Use it to capture small creatures.
+116,0,0,3,1,1,118,4137,29,0,0,0,0,Fishing Rod,A tool used for fishing.
+117,0,0,3,1,1,119,4137,34,1,0,0,0,BBQ Spit,Just what you need to cook meat. A must-have item for any hungry hunter.
+118,0,0,3,1,1,120,4136,9,3,0,0,0,Ghillie Mantle,Conceal yourself from view temporarily. The effect ends if you perform an attack or take damage.
+119,0,0,3,1,1,121,4136,9,0,0,0,0,Temporal Mantle,Nullify damage from powerful attacks by automatically evading.
+120,0,0,3,1,1,122,4136,9,0,0,0,0,Health Booster,"Once spiked into the ground, it emits a healing cloud that gradually restores the health of anyone who stands in it."
+121,0,0,3,1,1,123,4136,9,0,0,0,0,Rocksteady Mantle,"Stands firm against certain attacks, and gives you protection against wind pressure, roars, tremors. Also lessens damage."
+122,0,0,3,1,1,124,4136,9,0,0,0,0,Challenger Mantle,"Attracts monsters to you, making it easier to lure them to a favorable position."
+123,0,0,3,1,1,125,4136,9,0,0,0,0,Vitality Mantle,Nullifies a set amount of damage. The effect ends if more than that amount is taken.
+124,0,0,3,1,1,126,4136,9,0,0,0,0,Fireproof Mantle,"Reduces fire element damage and nullifies fireblight, blastblight, and heat damage."
+125,0,0,3,1,1,127,4136,9,0,0,0,0,Waterproof Mantle,"Reduces water element damage, nullifies waterblight and mud. Lets you wade through deep water easier."
+126,0,0,3,1,1,128,4136,9,0,0,0,0,Iceproof Mantle,Reduces ice element damage and nullifies iceblight.
+127,0,0,3,1,1,129,4136,9,0,0,0,0,Thunderproof Mantle,Reduces thunder element damage. Nullifies thunderblight and paralysis.
+128,0,0,3,1,1,130,4136,9,0,0,0,0,Dragonproof Mantle,Reduces dragon element damage. Nullifies dragonblight while raising dragon element attack.
+129,0,0,3,1,1,131,4136,9,0,0,0,0,Cleanser Booster,"Once spiked into the ground, it emits a healing cloud that cures any abnormal status of anyone who stands in it."
+130,0,0,3,1,1,132,4136,9,0,0,0,0,Glider Mantle,"Extends air time when jumping, lets you ride on strong winds, and makes it easier to mount monsters."
+131,0,0,3,1,1,133,4136,9,0,0,0,0,Evasion Mantle,Extends the invulnerability window of evasive actions. Dodge attacks at the last minute for an attack boost.
+132,0,0,3,1,1,134,4136,9,0,0,0,0,Impact Mantle,"Adds a stun value to most attacks, and enhances the effect of attacks which cause stun."
+133,0,0,3,1,1,135,4136,9,0,0,0,0,Apothecary Mantle,Increases the likelihood of weapons with abnormal status attacks to contribute to status buildup.
+134,0,0,3,1,1,136,4136,9,0,0,0,0,Immunity Mantle,Clears all abnormal statuses and grants immunity from them for a limited amount of time.
+135,0,0,3,1,1,137,4136,9,0,0,0,0,Affinity Booster,"Once spiked into the ground, it emits a cloud of mist that boosts affinity for you and surrounding teammates."
+136,0,0,3,1,1,138,4136,9,0,0,0,0,Bandit Mantle,Makes attacks against large monsters drop rare and valuable trade-in items.
+137,1,3,3,1,1,139,4257,17,0,0,0,0,Normal Ammo 1,"Ammo for novices. Gets the job done, but it doesn't pack much oomph."
+138,1,3,1,99,99,140,256,17,0,0,1,3,Normal Ammo 2,Non-specialized ammo. More powerful than Normal Ammo 1. Capacity: 99
+139,1,3,2,99,99,141,512,17,0,0,2,5,Normal Ammo 3,Ammo made with high-quality gunpowder. Each shot packs considerable punch. Capacity: 99
+140,1,3,0,60,60,142,128,17,3,0,2,4,Pierce Ammo 1,Armor-piercing ammo that deals multiple hits to some monsters. Capacity: 60
+141,1,3,1,60,60,143,256,17,3,0,2,8,Pierce Ammo 2,High-grade armor-piercing ammo. Deals more hits than Pierce Ammo 1. Capacity: 60
+142,1,3,2,60,60,144,512,17,3,0,3,12,Pierce Ammo 3,Max-grade armor-piercing ammo. Deals numerous hits. Capacity: 60
+143,1,3,0,80,80,145,128,17,13,0,1,4,Spread Ammo 1,Ammo that covers a wide area. Deals multiple hits at close range. Capacity: 80
+144,1,3,1,70,70,146,256,17,13,0,2,8,Spread Ammo 2,High-grade ammo that covers a wide area. Deals more hits than Spread Ammo 1. Capacity: 70
+145,1,3,2,60,60,147,512,17,13,0,2,12,Spread Ammo 3,Max-grade ammo that covers a wide area and deals numerous hits. Capacity: 60
+146,1,3,0,9,9,148,128,17,7,0,2,12,Sticky Ammo 1,Powerful ammo that lodges in a target and explodes. Also stuns. Capacity: 9
+147,1,3,1,9,9,149,256,17,7,0,3,24,Sticky Ammo 2,Very powerful ammo that lodges in a target and explodes. Also stuns. Capacity: 9
+148,1,3,2,9,9,150,512,17,7,0,4,36,Sticky Ammo 3,Extremely powerful ammo that lodges in a target and explodes. Also stuns. Capacity: 9
+149,1,3,1,3,3,151,128,17,14,0,6,30,Cluster Bomb 1,Ammo that fragments into three shells upon impact. Beware of friendly fire! Capacity: 3
+150,1,3,2,3,3,152,256,17,14,0,6,60,Cluster Bomb 2,Ammo that fragments into four shells upon impact. Beware of friendly fire! Capacity: 3
+151,1,3,3,3,3,153,512,17,14,0,10,90,Cluster Bomb 3,Ammo that fragments into five shells upon impact. Beware of friendly fire! Capacity: 3
+152,1,3,1,60,60,154,0,17,25,0,2,20,Flaming Ammo,Ammo that packs a punch against monsters susceptible to fire. Capacity: 60
+153,1,3,1,60,60,155,0,17,15,0,2,20,Water Ammo,Ammo that packs a punch against monsters susceptible to water. Capacity: 60
+154,1,3,1,60,60,156,0,17,4,0,2,20,Thunder Ammo,Ammo that packs a punch against monsters susceptible to thunder. Capacity: 60
+155,1,3,1,60,60,157,0,17,0,0,2,20,Freeze Ammo,Ammo that packs a punch against monsters susceptible to ice. Capacity: 60
+156,1,3,2,3,3,158,0,17,14,0,10,100,Dragon Ammo,Elderseal-imbued ammo that packs a punch against monsters weak to dragon. Capacity: 3
+157,1,3,1,12,12,159,128,17,5,0,2,15,Poison Ammo 1,"Poisons target, but may require several shots. Capacity: 12"
+158,1,3,2,12,12,160,256,17,5,0,2,30,Poison Ammo 2,Enhanced ammo that inflicts poison. Some targets require multiple shots. Capacity: 12
+159,1,3,1,12,12,161,128,17,9,0,3,15,Paralysis Ammo 1,Ammo that causes paralysis. Some targets require multiple shots. Capacity: 12
+160,1,3,2,8,8,162,256,17,9,0,5,30,Paralysis Ammo 2,Enhanced ammo that causes paralysis. Some targets require multiple shots. Capacity: 8
+161,1,3,1,12,12,163,128,17,6,0,2,15,Sleep Ammo 1,Ammo that induces sleep. Some targets require multiple shots. Capacity: 12
+162,1,3,2,8,8,164,256,17,6,0,3,30,Sleep Ammo 2,Enhanced ammo that induces sleep. Some targets require multiple shots. Capacity: 8
+163,1,3,1,12,12,165,128,17,15,0,3,15,Exhaust Ammo 1,Ammo that drains a monster's stamina. Capacity: 12
+164,1,3,2,8,8,166,256,17,15,0,5,30,Exhaust Ammo 2,Enhanced ammo that drains a monster's stamina. Capacity: 8
+165,1,3,1,12,12,167,128,17,2,0,2,8,Recover Ammo 1,Ammo that restores a small amount of health to an ally upon impact. Capacity: 12
+166,1,3,2,12,12,168,256,17,2,0,2,15,Recover Ammo 2,Ammo that restores a moderate amount of health to an ally upon impact. Capacity: 12
+167,1,3,2,5,5,169,0,17,11,0,6,62,Wyvern Ammo,Ammo created through years of research into Wyvern's Fire. Capacity: 5
+168,1,3,1,30,30,170,0,17,0,0,3,12,Slicing Ammo,"Ammo that ejects sharp blades on impact, which can sever tails. Capacity: 30"
+169,1,3,2,8,8,171,0,17,8,0,4,45,Tranq Ammo,Bowgun ammo used to capture monsters ensnared in traps. Capacity: 8
+170,1,3,3,5,5,172,0,17,1,0,9,1,Demon Ammo,Ammo that fills the target with savage amounts of strength. Capacity: 5
+171,1,3,3,5,5,173,0,17,7,0,7,1,Armor Ammo,Ammo that makes the target's skin as hard as stone. Capacity: 5
+172,4,3,0,1,1,174,4096,18,10,0,0,0,(None),Program Data
+173,4,3,3,1,1,175,4129,19,0,0,0,0,Close-range Coating,"Arrows designed to deal more damage to nearby targets, at the cost of a reduced maximum range."
+174,0,0,0,100,99,176,0,18,0,0,1,5,Empty Phial,"A regular old empty phial. Nothing more, nothing less."
+175,4,3,1,70,50,177,0,19,1,0,2,20,Power Coating,An arrow coating that increases the attack power of arrows. Capacity: 50
+176,4,3,2,20,20,178,0,19,5,0,2,17,Poison Coating,An arrow coating that applies poison effects to arrows. Capacity: 20
+177,4,3,2,30,20,179,0,19,9,0,3,26,Paralysis Coating,An arrow coating that applies paralysis effects to arrows. Capacity: 20
+178,4,3,2,30,20,180,0,19,6,0,2,17,Sleep Coating,An arrow coating that induces sleep. Capacity: 20
+179,4,3,2,20,20,181,4096,0,15,0,2,19,Exhaust Coating,An arrow coating that causes arrows to drain monsters' stamina. Capacity: 20
+180,4,3,2,100,20,182,0,19,26,0,6,20,Blast Coating,An arrow coating that applies explosive powder to arrows. Capacity: 20
+181,0,0,0,10,10,183,4106,5,2,0,0,1,First-aid Med,Restores a small amount of health. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+182,0,0,1,10,10,189,4170,5,2,0,0,1,First-aid Med+,Restores a moderate amount of health. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+183,0,0,0,10,10,190,4110,7,11,0,0,1,EZ Ration,Restores a small amount of stamina. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+184,0,0,1,3,3,191,4106,13,24,0,0,1,EZ Lifepowder,Produces a healing cloud around the area that heals anyone that comes in contact with it. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+185,0,0,1,2,2,192,4106,62,24,0,0,1,EZ Max Potion,Fully restores health and maximizes your Health Gauge. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+186,0,0,2,2,2,193,4170,10,25,0,0,1,EZ Large Barrel Bomb,A powered-up large barrel bomb. Just as powerful as a mega barrel bomb. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+187,0,0,2,1,1,194,4106,12,9,0,0,1,EZ Shock Trap,Immobilizes a target for easy capture. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+188,0,0,2,1,1,195,4106,12,13,0,0,1,EZ Pitfall Trap,Activates a pitfall to catch monsters with. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+189,0,0,3,3,3,196,4106,13,3,0,0,1,EZ Herbal Powder,Cures poison and restores a bit of health for everyone nearby. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+190,0,0,3,3,3,197,4106,13,1,0,0,1,EZ Demon Powder,Temporarily strengthens attacks for everyone nearby. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+191,0,0,3,3,3,198,4106,13,7,0,0,1,EZ Hardshell Powder,Temporarily increases defense strength for everyone nearby. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+192,0,0,1,10,10,201,4106,77,11,0,0,1,EZ Dung Pod,Releases a strong odor on impact. Causes certain monsters to flee. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+193,0,0,1,3,3,199,4106,77,4,0,0,1,EZ Flash Pod,Slinger ammo that flashes brightly on impact. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+194,0,0,1,3,3,200,4106,77,10,0,0,1,EZ Screamer Pod,Slinger ammo that emits an earsplitting sonic blast. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+195,0,0,0,10,10,202,4106,33,0,0,0,1,Throwing Knife,A knife that can be shot from your slinger. Can be coated with a range of chemicals. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+196,0,0,1,5,5,203,4106,33,5,0,0,1,Poison Knife,A knife coated with poison that can be shot from your slinger. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+197,0,0,1,5,5,204,4106,33,6,0,0,1,Sleep Knife,A knife coated with a sedative that can be shot from your slinger. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+198,0,0,1,5,5,205,4106,33,9,0,0,1,Paralysis Knife,A knife coated with a paralyzing toxin that can be shot from your slinger. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+199,0,0,2,8,8,206,4106,33,8,0,0,1,Tranq Knife,A knife coated with a tranquilizer that can be shot from your slinger. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+200,0,0,2,1,1,207,4106,24,2,0,0,1,EZ Farcaster,Call for a wingdrake to transport you to the nearest camp. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+201,0,0,2,8,8,208,4106,24,1,0,0,1,EZ Tranq Bomb,A hand grenade used to capture monsters ensnared in traps. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+202,1,3,3,10,10,209,4106,78,10,0,0,1,Ballista Ammo,Ammunition for the large Ballista. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+203,1,3,3,1,1,210,4106,78,7,0,0,1,One-shot Binder,"Ballista ammo that restrains targets. Disposable ammo, no cooldown. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>"
+204,0,0,3,1,1,211,4098,79,10,1,0,0,Cannon Ammo,Steel ammo made for hunting giant dragons. A real pain to lug around. <STYL MOJI_YELLOW_DEFAULT>(Supply Item)</STYL>
+205,0,1,3,99,10,212,0,22,10,0,60,600,Iron Ore,Ore that can be smelted into metal and used for many different purposes.
+206,0,1,3,99,10,213,0,22,3,0,160,1600,Machalite Ore,Ore that's more difficult to procure than Iron Ore. Produces fine metal.
+207,0,1,3,99,10,214,0,22,2,0,480,4800,Dragonite Ore,An ore that yields metal superior to that of Machalite. Invaluable for making durable armor.
+208,0,1,5,99,5,215,0,22,5,0,680,6800,Carbalite Ore,"Ore obtained from mining outcrops. Still under research, but known to yield highly pure metal."
+209,0,1,5,99,5,216,0,22,8,0,1020,10200,Fucium Ore,"Ore obtained from the Elder's Recess. A mysterious metal, capable of fusing nearly any two materials together."
+210,0,1,3,99,10,217,0,22,0,0,80,800,Earth Crystal,Crystallized microbes prized as an abrasive when forging weapons. Mainly found in the Wildspire Waste.
+211,0,1,3,99,10,218,0,22,3,0,600,6000,Coral Crystal,Crystal prized at the Smithy for use in high-grade abrasives. Mainly found in the Coral Highlands.
+212,0,1,5,99,5,219,0,22,1,0,800,800,Dragonvein Crystal,Mined from high rank areas. Many expect this newly-discovered crystal to usher in a new era of metalwork.
+213,0,1,4,99,5,220,0,22,10,0,1150,11500,Lightcrystal,A precious and extremely hard substance with a faint glow. Sometimes used for crafting tools.
+214,0,1,6,99,3,221,0,22,0,0,2440,24400,Novacrystal,"High quality Lightcrystal. Highly coveted for its rarity, it's used for only the finest of metalworking."
+215,0,1,6,99,3,222,0,22,7,0,1720,17200,Firecell Stone,A magma-like deposit that only trained hands can work with. Armor made from it is first-class.
+216,0,1,3,99,10,223,0,37,3,0,400,4000,Aquacore Ore,A valuable mineral used to create charms. Gives off a vibrant glow that mirrors the ocean.
+217,0,1,5,99,5,224,0,37,0,0,800,8000,Spiritcore Ore,"A valuable mineral used to create charms. Gives off a warm, sunny glow."
+218,0,1,6,99,3,225,0,37,5,0,1200,12000,Dreamcore Ore,A valuable mineral used to create charms. Gives off a blazing glow reminiscent of a bonfire.
+219,0,1,7,99,99,226,0,37,4,0,2000,20000,Dragoncore Ore,A valuable mineral used to create charms. Gives off a mysterious glow that grants the holder sagely wisdom.
+220,0,1,3,99,99,227,0,38,3,0,80,800,Armor Sphere,Reacts uniquely to heat. Fuse this to armor to improve it by a tiny amount.
+221,0,1,4,99,99,228,0,38,2,0,200,2000,Armor Sphere+,Reacts uniquely to heat. Fuse this to armor to improve it by a small amount.
+222,0,1,5,99,99,229,0,38,7,0,300,3000,Advanced Armor Sphere,Reacts uniquely to heat. Fuse this to armor to improve it.
+223,0,1,6,99,99,230,0,38,5,0,400,4000,Hard Armor Sphere,Reacts uniquely to heat. Fuse this to armor to significantly improve it.
+224,0,1,7,99,99,231,0,38,1,0,600,6000,Heavy Armor Sphere,Reacts uniquely to heat. Fuse this to armor to greatly improve it.
+225,0,1,3,99,10,232,0,42,0,0,500,5000,Sturdy Bone,A bone used as crafting material. Can be found in bonepiles in the Coral Highlands and Rotten Vale.
+226,0,1,5,99,5,233,0,42,0,0,750,7500,Quality Bone,A bone used as crafting material. Its ease of use and hardness allow it to be shaped into better gear.
+227,0,1,3,99,10,234,0,42,2,0,400,4000,Ancient Bone,A bone used as crafting material. Can be found in bonepiles in the Ancient Forest. Its size evokes a certain primal quality.
+228,0,1,3,99,10,235,0,42,4,0,400,4000,Boulder Bone,A bone used as crafting material. Can be found in bonepiles in the Wildspire Waste. Its size evokes a certain primal quality.
+229,0,1,3,99,10,236,0,42,8,0,800,8000,Coral Bone,A bone used as crafting material. Can be found in bonepiles in the Coral Highlands. Its size evokes a certain primal quality.
+230,0,1,3,99,10,237,0,42,11,0,800,8000,Warped Bone,A bone used as crafting material. Can be found in bonepiles in the Rotten Vale. Its size evokes a certain primal quality.
+231,0,1,5,99,5,238,0,42,10,0,1200,12000,Brutal Bone,A bone used as crafting material. Can be found in bonepiles in the Elder's Recess. Its size evokes a certain primal quality.
+232,0,1,6,99,3,239,0,42,0,0,1600,12000,Dragonbone Relic,A high quality material found in bone piles. The only remains left of a species of dragon now lost to time.
+233,0,1,6,99,3,240,0,42,4,0,1800,18000,Unknown Skull,A rare material found in bonepiles in the Elder's Recess. It appears to be some kind of animal skull.
+234,0,1,4,99,99,241,0,23,4,0,200,2000,Great Hornfly,"Discovered by Botanical Research. An insect with a giant horn, massive shell, and butterfly-like wings."
+235,0,1,4,99,99,242,0,58,10,0,350,3500,Sinister Cloth,Suspect cloth the Tailraider Safari dug up from who-knows-where. Drips with an aura of pure evil.
+236,0,1,3,99,10,243,0,42,4,0,30,300,Monster Bone S,A material found in bonepiles. Indispensable for both hunting and daily life.
+237,0,1,3,99,99,244,0,42,4,0,300,3000,Monster Bone M,"Bone obtained from large monsters. Strong yet flexible, it's as reliable as steel or wood."
+238,0,1,3,99,99,245,0,42,4,0,400,4000,Monster Bone L,"Bone obtained from large monsters. Hard to work with due to its size, but vital when crafting larger items."
+239,0,1,3,99,99,246,0,42,7,0,500,5000,Monster Bone+,"Bone obtained from large monsters. Hard to obtain, but vital for crafting powerful equipment."
+240,0,1,5,99,99,247,0,42,8,0,800,8000,Monster Keenbone,Bone obtained from high rank large monsters. It has a razor-sharp tip that retains its strength after forging.
+241,0,1,5,99,99,248,0,42,1,0,1200,12000,Monster Hardbone,Precious bone obtained from high rank large monsters. Their rarity makes them highly sought after.
+242,0,1,6,99,99,249,0,42,5,0,1600,16000,Elder Dragon Bone,A bone from an elder dragon. It exudes the great majesty of the beast that bore it.
+243,0,1,3,99,99,250,0,45,10,0,200,2000,Sharp Claw,"Obtained from small fanged wyverns. Unlike wyvern claws, this is shaped to grip objects."
+244,0,1,5,99,99,251,0,45,10,0,800,8000,Piercing Claw,Material from high rank small fanged wyverns. Sharp enough that it might serve as a makeshift knife.
+245,0,1,3,99,99,252,0,5,6,0,200,2000,Monster Fluid,Material obtained from small insects. Mixes with insect gastric fluids to form adhesive.
+246,0,1,5,99,99,253,0,5,3,0,800,8000,Monster Broth,Material from high rank insects. A rich broth made from only the thickest of monster juices.
+247,0,1,3,99,99,254,0,13,5,0,600,6000,Poison Sac,A monster organ that contains a lethal toxin. Handle with extreme care.
+248,0,1,5,99,99,255,0,13,5,0,1600,16000,Toxin Sac,A monster organ filled with an extremely potent toxin. Just touching it is dangerous.
+249,0,1,3,99,99,256,0,13,9,0,800,8000,Paralysis Sac,A monster organ that contains paralyzing neurotoxins.
+250,0,1,5,99,99,257,0,13,9,0,1600,16000,Omniplegia Sac,A monster organ filled with potent neurotoxins. A single touch can cause paralysis.
+251,0,1,3,99,99,258,0,13,3,0,800,8000,Sleep Sac,A monster organ that contains a knockout powder capable of inducing sleep.
+252,0,1,5,99,99,259,0,13,3,0,1600,16000,Coma Sac,A monster organ that contains dangerous powder. One whiff can induce a coma.
+253,0,1,3,99,99,260,0,13,1,0,800,8000,Flame Sac,A monster organ filled with flammable powder. Handle with extreme care.
+254,0,1,5,99,99,261,0,13,1,0,1600,16000,Inferno Sac,A monster organ filled with powder that ignites if it so much as touches air. Danger!
+255,0,1,3,99,99,262,0,13,6,0,600,6000,Aqua Sac,A monster organ designed to hold and preserve water.
+256,0,1,5,99,99,263,0,13,6,0,1600,16000,Torrent Sac,A monster organ designed to hold and preserve copious amounts of water.
+257,0,1,3,99,99,264,0,13,0,0,1000,10000,Frost Sac,"A monster internal organ, filled with extremely low temperature fluid. Handle with care."
+258,0,1,5,99,99,265,0,13,0,0,2400,24000,Freezer Sac,A monster organ with tremendous freezing power. Turns its surroundings to ice.
+259,0,1,3,99,99,266,0,13,4,0,1000,10000,Electro Sac,"A monster organ that can store up electricity, which is released on impact."
+260,0,1,5,99,99,267,0,13,4,0,1600,16000,Thunder Sac,A monster organ that can store up large amounts of high voltage electricity.
+261,0,1,6,99,99,268,1024,9,3,0,4000,40000,Bird Wyvern Gem,A valuable gem that can be harvested from bird wyverns. Said to fetch a high price on the market.
+262,0,1,6,99,99,269,1024,9,6,0,4000,40000,Wyvern Gem,"Throughout a wyvern's life, impurities gather and form this peculiar gem."
+263,0,1,6,99,99,270,0,5,1,0,1600,16000,Elder Dragon Blood,Contains an unknown compound. The object of much scholarly research.
+264,0,1,3,99,99,271,0,44,13,0,200,2000,Mosswine Hide,A musty hide covered in moss.
+265,0,1,3,99,99,272,0,44,2,0,120,1200,Warm Pelt,"A pelt from a small animal. Used for many things, but mostly just regular clothes."
+266,0,1,5,99,99,273,0,44,7,0,320,3200,High-quality Pelt,Rare pelt from a small animal. Feels wonderful to the touch and valued highly by the Commission.
+267,0,1,3,99,99,274,0,23,4,0,160,1600,Vespoid Shell,Vespoid material. Obtained by carving. Used for many purposes.
+268,0,1,5,99,99,276,0,23,4,0,460,4600,Vespoid Carapace,Rare Vespoid material. Obtained by carving. Used for many purposes.
+269,0,1,3,99,99,275,0,3,4,0,210,2100,Vespoid Wing,"Vespoid material. Obtained by carving. Light and sharp, used in many weapons."
+270,0,1,5,99,99,277,0,3,4,0,560,5600,Vespoid Innerwing,"Rare Vespoid material. Obtained by carving. Light and sharp, used in many weapons."
+271,0,1,3,99,99,278,0,23,10,0,260,2600,Hornetaur Shell,Hornetaur material. Obtained by carving. Used for many purposes.
+272,0,1,3,99,99,279,0,3,10,0,310,3100,Hornetaur Wing,Hornetaur material. Obtained by carving. Used for many purposes.
+273,0,1,3,99,99,280,0,23,10,0,360,3600,Hornetaur Head,"Hornetaur material. Obtained by carving. Unusual, used in select gear."
+274,0,1,5,99,99,281,0,23,10,0,560,5600,Hornetaur Carapace,Rare Hornetaur material. Obtained by carving. Used for many purposes.
+275,0,1,5,99,99,282,0,3,10,0,660,6600,Hornetaur Innerwing,"Rare Hornetaur material. Obtained by carving. Light and sharp, used in many weapons."
+276,0,1,3,99,99,283,0,44,11,0,220,2200,Gajau Skin,"Gajau material. Obtained by carving. Water- resistant, used to craft gear."
+277,0,1,3,99,99,284,0,41,11,0,270,2700,Gajau Whisker,"Gajau material. Obtained by carving. Hardy, used to craft gear."
+278,0,1,5,99,99,285,0,44,11,0,420,4200,Gajau Scale,"Rare Gajau material. Obtained by carving. Water- resistant, used to craft gear."
+279,0,1,5,99,99,286,0,41,11,0,520,5200,Grand Gajau Whisker,"Rare Gajau material. Obtained by carving. Hardy, used to craft gear."
+280,0,1,3,99,99,287,0,59,24,0,180,1800,Wingdrake Hide,A material carved from wingdrakes. Lightweight and often used when crafting armor.
+281,0,1,5,99,99,288,0,59,24,0,380,3800,Wingdrake Hide+,A rare material carved from wingdrakes. Lightweight and often used when crafting armor.
+282,0,1,5,99,99,289,0,44,11,0,720,7200,Barnos Hide+,"Rare Barnos material. Obtained by carving. Supple, used to craft gear."
+283,0,1,5,99,99,290,0,45,11,0,820,8200,Barnos Talon,"Rare Barnos material. Obtained by carving. Unusual, used in select gear."
+284,0,1,3,99,99,291,0,46,7,0,180,1800,Kestodon Shell,"Kestodon material. Obtained by carving. Sturdy, used to craft gear."
+285,0,1,3,99,99,292,0,60,7,0,230,2300,Kestodon Scalp,"Kestodon material. Obtained by carving. Unusual, used in select gear."
+286,0,1,5,99,99,293,0,46,7,0,430,4300,Kestodon Carapace,"Superior Kestodon material. Obtained by carving. Sturdy, used to craft gear."
+287,0,1,5,99,99,294,0,46,14,0,760,7600,Gastodon Carapace,"Rare Gastodon material. Obtained by carving. Sturdy, used to craft gear."
+288,0,1,5,99,99,295,0,45,14,0,860,8600,Gastodon Horn,"Rare Gastodon material. Obtained by carving. Unusual, used in select gear."
+289,0,1,3,99,99,296,0,43,4,0,140,1400,Jagras Scale,Jagras material. Obtained by carving. Used for many purposes.
+290,0,1,3,99,99,297,0,44,4,0,180,1800,Jagras Hide,"Jagras material. Obtained by carving. Supple, used to craft gear."
+291,0,1,5,99,99,298,0,43,4,0,340,3400,Jagras Scale+,Rare Jagras material. Obtained by carving. Used for many purposes.
+292,0,1,5,99,99,299,0,44,4,0,480,4800,Jagras Hide+,"Rare Jagras material. Obtained by carving. Supple, used to craft gear."
+293,0,1,3,99,99,300,0,43,1,0,220,2200,Shamos Scale,Shamos material. Obtained by carving. Used for many purposes.
+294,0,1,3,99,99,301,0,44,1,0,280,2800,Shamos Hide,"Shamos material. Obtained by carving. Supple, used to craft gear."
+295,0,1,5,99,99,302,0,43,1,0,420,4200,Shamos Scale+,Rare Shamos material. Obtained by carving. Used for many purposes.
+296,0,1,5,99,99,303,0,44,1,0,480,4800,Shamos Hide+,"Rare Shamos material. Obtained by carving. Supple, used to craft gear."
+297,0,1,3,99,99,304,0,43,10,0,240,2400,Girros Scale,Girros material. Obtained by carving. Used for many purposes.
+298,0,1,3,99,99,305,0,44,10,0,300,3000,Girros Hide,"Girros material. Obtained by carving. Supple, used to craft gear."
+299,0,1,3,99,99,306,0,45,9,0,260,2600,Girros Fang,Girros material. Obtained by carving. Grants paralytic properties.
+300,0,1,5,99,99,307,0,43,10,0,460,4600,Girros Scale+,Rare Girros material. Obtained by carving. Used for many purposes.
+301,0,1,5,99,99,308,0,44,10,0,520,5200,Girros Hide+,"Rare Girros material. Obtained by carving. Supple, used to craft gear."
+302,0,1,3,99,99,309,0,43,4,0,260,260,Great Jagras Scale,Great Jagras material. Mostly obtained by carving. Broadly used for many purposes.
+303,0,1,3,99,99,310,0,44,4,0,360,360,Great Jagras Hide,Great Jagras material. Mostly obtained as a reward. Broadly used for many purposes.
+304,0,1,3,99,99,311,0,41,4,0,440,440,Great Jagras Mane,Great Jagras material. Obtained by breaking its head. Used for many purposes.
+305,0,1,3,99,99,312,0,45,4,0,420,420,Great Jagras Claw,"Great Jagras material. Obtained by breaking its forelegs. Sharp, used in many weapons."
+306,0,1,5,99,99,313,0,43,4,0,860,860,Great Jagras Scale+,Rare Great Jagras material. Mostly obtained by carving. Broadly used for many purposes.
+307,0,1,5,99,99,314,0,44,4,0,1220,1220,Great Jagras Hide+,"Rare Great Jagras material. Mostly obtained as a reward. Supple, used to craft gear."
+308,0,1,5,99,99,315,0,45,4,0,1620,1620,Great Jagras Claw+,"Rare Great Jagras material. Obtained by breaking its forelegs. Sharp, used in many weapons."
+309,0,1,3,99,99,316,0,43,24,0,290,290,Kulu-Ya-Ku Scale,Kulu-Ya-Ku material. Mostly obtained as a reward. Broadly used for many purposes.
+310,0,1,3,99,99,317,0,44,24,0,390,390,Kulu-Ya-Ku Hide,"Kulu-Ya-Ku material. Mostly obtained by carving. Supple, often used in gear."
+311,0,1,3,99,99,318,0,41,25,0,460,460,Kulu-Ya-Ku Plume,Kulu-Ya-Ku material. Obtained by breaking its forelimbs. Used for many purposes.
+312,0,1,3,99,99,319,0,60,24,0,490,490,Kulu-Ya-Ku Beak,"Kulu-Ya-Ku material. Obtained by breaking its head. Hard, used in many weapons."
+313,0,1,5,99,99,320,0,43,24,0,890,890,Kulu-Ya-Ku Scale+,Rare Kulu-Ya-Ku material. Mostly obtained by carving. Broadly used for many purposes.
+314,0,1,5,99,99,321,0,44,24,0,1290,1290,Kulu-Ya-Ku Hide+,"Rare Kulu-Ya-Ku material. Mostly obtained as a reward. Supple, often used in gear."
+315,0,1,5,99,99,322,0,41,25,0,1660,1660,Kulu-Ya-Ku Plume+,Rare Kulu-Ya-Ku material. Obtained by breaking its forelimbs. Used for many purposes.
+316,0,1,5,99,99,323,0,60,24,0,1660,1660,Kulu-Ya-Ku Beak+,"Rare Kulu-Ya-Ku material. Obtained by breaking its head. Hard, used in many weapons."
+317,0,1,3,99,99,324,0,43,26,0,360,360,Pukei-Pukei Scale,Pukei-Pukei material. Mostly obtained by carving. Broadly used for many purposes.
+318,0,1,3,99,99,325,0,46,26,0,470,470,Pukei-Pukei Shell,"Pukei-Pukei material. Mostly obtained as a reward. Solid, used to craft gear."
+319,0,1,3,99,99,326,0,59,26,0,640,640,Pukei-Pukei Quill,Pukei-Pukei material. Obtained by breaking its wings. Used for many purposes.
+320,0,1,3,99,99,327,0,13,26,0,660,660,Pukei-Pukei Sac,Pukei-Pukei material. Obtained by breaking its head. Grants poisonous properties.
+321,0,1,3,99,99,328,0,52,26,0,620,620,Pukei-Pukei Tail,"Rare Pukei-Pukei material. Obtained by carving its severed tail. Unusual, used to craft gear."
+322,0,1,5,99,99,329,0,43,26,0,950,950,Pukei-Pukei Scale+,Rare Pukei-Pukei material. Mostly obtained by carving. Broadly used for many purposes.
+323,0,1,5,99,99,330,0,46,26,0,1350,1350,Pukei-Pukei Carapace,"Rare Pukei-Pukei material. Mostly obtained as a reward. Solid, used to craft gear."
+324,0,1,5,99,99,331,0,59,26,0,1700,1700,Pukei-Pukei Wing,Rare Pukei-Pukei material. Obtained by breaking its wings. Used for many purposes.
+325,0,1,5,99,99,332,0,13,26,0,1750,1750,Pukei-Pukei Sac+,Rare Pukei-Pukei material. Obtained by breaking its head. Grants poisonous properties.
+326,0,1,3,99,99,333,0,46,7,0,330,330,Barroth Shell,Barroth material. Mostly obtained by carving. Broadly used for many purposes.
+327,0,1,3,99,99,334,0,41,7,0,480,480,Barroth Ridge,"Barroth material. Mostly obtained as a reward. Solid, used to craft gear."
+328,0,1,3,99,99,335,0,45,7,0,630,630,Barroth Claw,"Barroth material. Obtained by breaking its forelimbs. Hardy, used in many weapons."
+329,0,1,3,99,99,336,0,60,7,0,870,870,Barroth Scalp,"Barroth material. Obtained by breaking its scalp. Tough, used in many weapons."
+330,0,1,3,99,99,337,0,52,7,0,800,800,Barroth Tail,"Barroth material. Obtained by carving its severed tail. Stiff, used to craft gear."
+331,0,1,3,99,99,338,0,8,7,0,390,390,Fertile Mud,"Barroth material. Obtained by breaking its mud covering. Unusual, used in select gear."
+332,0,1,5,99,99,339,0,46,7,0,870,870,Barroth Carapace,Rare Barroth material. Mostly obtained by carving. Broadly used for many purposes.
+333,0,1,5,99,99,340,0,41,7,0,1270,1270,Barroth Ridge+,"Rare Barroth material. Mostly obtained as a reward. Solid, used to craft gear."
+334,0,1,5,99,99,341,0,45,7,0,1670,1670,Barroth Claw+,"Rare Barroth material. Obtained by breaking its forelimbs. Hardy, used in many weapons."
+335,0,1,3,99,99,342,0,43,24,0,340,340,Jyuratodus Scale,Jyuratodus material. Mostly obtained by carving. Used for many purposes.
+336,0,1,3,99,99,343,0,46,24,0,490,490,Jyuratodus Shell,"Jyuratodus material. Mostly obtained as a reward. Hardy, used to craft gear."
+337,0,1,3,99,99,344,0,45,24,0,640,640,Jyuratodus Fang,"Jyuratodus material. Obtained by breaking its head. Sharp, used in many weapons."
+338,0,1,3,99,99,345,0,41,24,0,720,720,Jyuratodus Fin,Jyuratodus material. Obtained by breaking its back. Used for many purposes.
+339,0,1,5,99,99,346,0,43,24,0,1040,1040,Jyuratodus Scale+,Rare Jyuratodus material. Mostly obtained by carving. Used for many purposes.
+340,0,1,5,99,99,347,0,46,24,0,1540,1540,Jyuratodus Carapace,"Rare Jyuratodus material. Mostly obtained as a reward. Hardy, used to craft gear."
+341,0,1,5,99,99,348,0,45,24,0,2040,2040,Jyuratodus Fang+,"Rare Jyuratodus material. Obtained by breaking its head. Sharp, used in many weapons."
+342,0,1,5,99,99,349,0,41,24,0,2120,2120,Jyuratodus Fin+,Rare Jyuratodus material. Obtained by breaking its back. Used for many purposes.
+343,0,1,3,99,99,350,0,43,12,0,360,360,Tobi-Kadachi Scale,Tobi-Kadachi material. Mostly obtained by carving. Broadly used for many purposes.
+344,0,1,3,99,99,351,0,44,12,0,510,510,Tobi-Kadachi Pelt,"Tobi-Kadachi material. Mostly obtained as a reward. Highly thunder-resistant, used to craft gear."
+345,0,1,3,99,99,352,0,59,12,0,800,800,Tobi-Kadachi Membrane,"Tobi-Kadachi material. Mostly obtained by carving. Supple, used to craft gear."
+346,0,1,3,99,99,353,0,45,12,0,660,660,Tobi-Kadachi Claw,"Tobi-Kadachi material. Obtained by breaking its forelimbs. Sharp, used in many weapons."
+347,0,1,3,99,99,354,0,41,12,0,720,720,Tobi-Kadachi Electrode,Tobi-Kadachi material. Obtained by breaking its head. Grants thunder element properties.
+348,0,1,5,99,99,355,0,43,12,0,1050,1050,Tobi-Kadachi Scale+,Rare Tobi-Kadachi material. Mostly obtained by carving. Broadly used for many purposes.
+349,0,1,5,99,99,356,0,44,12,0,1550,1550,Tobi-Kadachi Pelt+,"Rare Tobi-Kadachi material. Mostly obtained as a reward. Highly thunder-resistant, used to craft gear."
+350,0,1,5,99,99,357,0,45,12,0,1650,1650,Tobi-Kadachi Claw+,"Rare Tobi-Kadachi material. Obtained by breaking its forelimbs. Sharp, used in many weapons."
+351,0,1,5,99,99,358,0,41,12,0,1750,1750,Tobi-Kadachi Electrode+,Rare Tobi-Kadachi material. Obtained by breaking its head. Grants thunder element properties.
+352,0,1,3,99,99,359,0,43,8,0,430,430,Anjanath Scale,Anjanath material. Mostly obtained by carving. Broadly used for many purposes.
+353,0,1,3,99,99,360,0,44,8,0,630,630,Anjanath Pelt,"Anjanath material. Mostly obtained as a reward. Highly heat-resistant, used to craft gear."
+354,0,1,3,99,99,361,0,45,8,0,830,830,Anjanath Fang,"Anjanath material. Obtained by breaking its head. Sharp, used in many weapons."
+355,0,1,3,99,99,362,0,42,8,0,890,890,Anjanath Nosebone,Anjanath material. Obtained by breaking its head. Unusual and difficult to handle.
+356,0,1,3,99,99,363,0,52,8,0,860,860,Anjanath Tail,"Anjanath material. Obtained by carving its severed tail. Stiff, used to craft gear."
+357,0,1,4,99,99,364,1024,61,8,0,2400,2400,Anjanath Plate,"Anjanath material. A valuable find, used to fortify gear. Said to be quite hard to come by."
+358,0,1,5,99,99,365,0,43,8,0,1060,1060,Anjanath Scale+,Rare Anjanath material. Mostly obtained by carving. Broadly used for many purposes.
+359,0,1,5,99,99,366,0,44,8,0,1560,1560,Anjanath Pelt+,"Rare Anjanath material. Mostly obtained as a reward. Highly heat-resistant, used to craft gear."
+360,0,1,5,99,99,367,0,45,8,0,2060,2060,Anjanath Fang+,"Rare Anjanath material. Obtained by breaking its head. Sharp, used in many weapons."
+361,0,1,5,99,99,368,0,42,8,0,2120,2120,Anjanath Nosebone+,"Rare Anjanath material. Obtained by breaking its head. Unusual, used in select gear."
+362,0,1,6,99,99,369,1024,9,8,0,6000,6000,Anjanath Gem,A rare gem said to have formed within Anjanath tissue. Used to dramatically improve gear.
+363,0,1,3,99,99,370,0,43,2,0,460,460,Rathian Scale,Rathian material. Mostly obtained by carving. Broadly used for many purposes.
+364,0,1,3,99,99,371,0,46,2,0,660,660,Rathian Shell,"Rathian material. Mostly obtained as a reward. Solid, used to craft gear."
+365,0,1,3,99,99,372,0,59,2,0,860,860,Rathian Webbing,"Rathian material. Obtained by breaking its wings. Supple, used to craft gear."
+366,0,1,3,99,99,373,0,41,2,0,980,980,Rathian Spike,Rathian material. Obtained by carving its severed tail. Grants poisonous properties.
+367,0,1,4,99,99,374,1024,61,2,0,2400,2400,Rathian Plate,"Rathian material. A valuable find, used to fortify gear. Said to be quite hard to come by."
+368,0,1,5,99,99,375,0,43,2,0,1060,1060,Rathian Scale+,Rare Rathian material. Mostly obtained by carving. Broadly used for many purposes.
+369,0,1,5,99,99,376,0,46,2,0,1560,1560,Rathian Carapace,"Rare Rathian material. Mostly obtained as a reward. Solid, used to craft gear."
+370,0,1,5,99,99,377,0,41,2,0,2240,2240,Rathian Spike+,Rare Rathian material. Obtained by carving its severed tail. Grants poisonous properties.
+371,0,1,6,99,99,378,1024,9,2,0,6000,6000,Rathian Ruby,A rare gem said to have formed within Rathian tissue. Used to dramatically improve gear.
+372,0,1,5,99,99,379,0,43,8,0,1260,1260,Pink Rathian Scale+,Rare Pink Rathian material. Mostly obtained by carving. Broadly used for many purposes.
+373,0,1,5,99,99,380,0,46,8,0,1860,1860,Pink Rathian Carapace,"Rare Pink Rathian material. Mostly obtained as a reward. Solid, used to craft gear."
+374,0,1,3,99,99,381,0,43,3,0,440,440,Tzitzi-Ya-Ku Scale,Tzitzi-Ya-Ku material. Mostly obtained by carving. Broadly used for many purposes.
+375,0,1,3,99,99,382,0,44,3,0,640,640,Tzitzi-Ya-Ku Hide,"Tzitzi-Ya-Ku material. Mostly obtained as a reward. Supple, used to craft gear."
+376,0,1,3,99,99,383,0,45,3,0,840,840,Tzitzi-Ya-Ku Claw,"Tzitzi-Ya-Ku material. Mostly obtained by carving. Sharp, used in many weapons."
+377,0,1,3,99,99,384,0,41,3,0,920,920,Tzitzi-Ya-Ku Photophore,"Tzitzi-Ya-Ku material obtained by breaking its pulse organs. Unusual, used for many purposes."
+378,0,1,5,99,99,385,0,43,3,0,840,840,Tzitzi-Ya-Ku Scale+,Rare Tzitzi-Ya-Ku material. Mostly obtained by carving. Broadly used for many purposes.
+379,0,1,5,99,99,386,0,44,3,0,1240,1240,Tzitzi-Ya-Ku Hide+,"Rare Tzitzi-Ya-Ku material. Mostly obtained as a reward. Supple, used to craft gear."
+380,0,1,5,99,99,387,0,45,3,0,1640,1640,Tzitzi-Ya-Ku Claw+,"Rare Tzitzi-Ya-Ku material. Mostly obtained by carving. Sharp, used in many weapons."
+381,0,1,5,99,99,388,0,41,3,0,1680,1680,Tzitzi-Ya-Ku Photophore+,"Rare Tzitzi-Ya-Ku material obtained by breaking its pulse organs. Unusual, used for many purposes."
+382,0,1,3,99,99,389,0,44,0,0,650,650,Paolumu Pelt,Paolumu material. Mostly obtained as a reward. Broadly used for many purposes.
+383,0,1,3,99,99,390,0,43,0,0,450,450,Paolumu Scale,"Paolumu material. Mostly obtained by carving. Solid, used to craft gear."
+384,0,1,3,99,99,391,0,46,8,0,950,950,Paolumu Shell,Paolumu material. Obtained by breaking its tail. Used for many purposes.
+385,0,1,3,99,99,392,0,59,0,0,850,850,Paolumu Webbing,"Paolumu material. Obtained by breaking its wings. Lightweight, used to craft gear."
+386,0,1,5,99,99,393,0,44,0,0,1570,1570,Paolumu Pelt+,Rare Paolumu material. Mostly obtained as a reward. Broadly used for many purposes.
+387,0,1,5,99,99,394,0,43,0,0,1070,1070,Paolumu Scale+,"Rare Paolumu material. Mostly obtained by carving. Solid, used to craft gear."
+388,0,1,5,99,99,395,0,46,8,0,2140,2140,Paolumu Carapace+,Rare Paolumu material. Obtained by breaking its tail. Used for many purposes.
+389,0,1,5,99,99,396,0,59,0,0,2070,2070,Paolumu Wing,"Rare Paolumu material. Obtained by breaking its wings. Lightweight, used to craft gear."
+390,0,1,3,99,99,397,0,43,10,0,450,450,Great Girros Scale,Great Girros material. Mostly obtained by carving. Broadly used for many purposes.
+391,0,1,3,99,99,398,0,44,10,0,650,650,Great Girros Hide,"Great Girros material. Mostly obtained as a reward. Supple, used to craft gear."
+392,0,1,3,99,99,399,0,41,10,0,950,950,Great Girros Hood,Great Girros material. Obtained by breaking its head. Unusual and difficult to handle.
+393,0,1,3,99,99,400,0,45,10,0,750,750,Great Girros Fang,Great Girros material. Obtained by breaking its head. Grants paralytic properties.
+394,0,1,3,99,99,401,0,52,10,0,850,850,Great Girros Tail,"Great Girros material. Obtained by carving its severed tail. Stiff, used to craft gear."
+395,0,1,5,99,99,402,0,43,10,0,1060,1060,Great Girros Scale+,Rare Great Girros material. Mostly obtained by carving. Broadly used for many purposes.
+396,0,1,5,99,99,403,0,44,10,0,1560,1560,Great Girros Hide+,"Rare Great Girros material. Mostly obtained as a reward. Supple, used to craft gear."
+397,0,1,5,99,99,404,0,41,10,0,2180,2180,Great Girros Hood+,"Rare Great Girros material. Obtained by breaking its head. Unusual, used in select gear."
+398,0,1,5,99,99,405,0,45,10,0,2060,2060,Great Girros Fang+,Rare Great Girros material. Obtained by breaking its head. Grants paralytic properties.
+399,0,1,3,99,99,406,0,43,0,0,480,480,Radobaan Scale,Radobaan material. Mostly obtained by carving. Broadly used for many purposes.
+400,0,1,3,99,99,407,0,46,0,0,680,680,Radobaan Shell,"Radobaan material. Mostly obtained as a reward. Solid, used to craft gear."
+401,0,1,3,99,99,408,0,41,0,0,960,960,Radobaan Oilshell,"Radobaan material. Obtained by carving its severed tail. Impact- resistant, used to craft gear."
+402,0,1,3,99,99,409,0,42,0,0,880,880,Wyvern Bonemass,"Radobaan material. Obtained by collecting rare drops. Highly dense, used for many purposes."
+403,0,1,3,99,99,410,4096,0,0,0,400,400,Radobaan Jaw,"Radobaan material. Obtained by breaking its head. Unusual, used in select gear."
+404,0,1,3,99,99,411,0,41,0,0,1120,1120,Radobaan Marrow,"Radobaan material. A valuable find, used to fortify gear. Said to be quite hard to come by."
+405,0,1,5,99,99,412,0,43,0,0,1080,1080,Radobaan Scale+,Rare Radobaan material. Mostly obtained by carving. Broadly used for many purposes.
+406,0,1,5,99,99,413,0,46,0,0,1580,1580,Radobaan Carapace,"Rare Radobaan material. Mostly obtained as a reward. Solid, used to craft gear."
+407,0,1,5,99,99,414,0,41,0,0,2240,2240,Radobaan Medulla,"Rare Radobaan material. A valuable find, used to fortify gear. Said to be quite hard to come by."
+408,0,1,3,99,99,415,0,43,3,0,540,540,Legiana Scale,Legiana material. Mostly obtained by carving. Broadly used for many purposes.
+409,0,1,3,99,99,416,0,44,3,0,790,790,Legiana Hide,"Legiana material. Mostly obtained as a reward. Solid, used to craft gear."
+410,0,1,3,99,99,417,0,45,3,0,1040,1040,Legiana Claw,Legiana material. Mostly obtained by carving. Grants ice element properties.
+411,0,1,3,99,99,418,0,59,3,0,1080,1080,Legiana Webbing,"Legiana material. Obtained by breaking its wings. Supple, used to craft gear."
+412,0,1,3,99,99,419,0,52,3,0,1160,1160,Legiana Tail Webbing,"Legiana material. Obtained by breaking its tail. Supple, used to craft gear."
+413,0,1,4,99,99,420,1024,61,3,0,3000,3000,Legiana Plate,"Legiana material. A valuable find, used to fortify gear. Said to be quite hard to come by."
+414,0,1,5,99,99,421,0,43,3,0,1230,1230,Legiana Scale+,Rare Legiana material. Mostly obtained by carving. Broadly used for many purposes.
+415,0,1,5,99,99,422,0,44,3,0,1830,1830,Legiana Hide+,"Rare Legiana material. Mostly obtained as a reward. Lightweight, used to craft gear."
+416,0,1,5,99,99,423,0,45,3,0,2430,2430,Legiana Claw+,Rare Legiana material. Mostly obtained by carving. Grants ice element properties.
+417,0,1,5,99,99,424,0,59,3,0,2460,2460,Legiana Wing,"Rare Legiana material. Obtained by breaking its wings. Supple, used to craft gear."
+418,0,1,6,99,99,425,1024,9,3,0,7200,7200,Legiana Gem,A rare gem said to have formed within Legiana tissue. Used to dramatically improve gear.
+419,0,1,3,99,99,426,0,43,14,0,560,560,Odogaron Scale,Odogaron material. Mostly obtained by carving. Broadly used for many purposes.
+420,0,1,3,99,99,427,0,41,14,0,810,810,Odogaron Sinew,"Odogaron material. Mostly obtained as a reward. Solid, used to craft gear."
+421,0,1,3,99,99,428,0,45,14,0,1060,1060,Odogaron Claw,"Odogaron material. Obtained by breaking its forelegs. Sharp, used in many weapons."
+422,0,1,3,99,99,429,0,45,14,0,1120,1120,Odogaron Fang,"Odogaron material. Obtained by breaking its head. Sharp, used in many weapons."
+423,0,1,3,99,99,430,0,52,14,0,1240,1240,Odogaron Tail,"Odogaron material. Obtained by carving its severed tail. Stiff, used to craft gear."
+424,0,1,4,99,99,431,1024,61,14,0,3000,3000,Odogaron Plate,"Odogaron material. A valuable find, used to fortify gear. Said to be quite hard to come by."
+425,0,1,5,99,99,432,0,43,14,0,1240,1240,Odogaron Scale+,Rare Odogaron material. Mostly obtained by carving. Broadly used for many purposes.
+426,0,1,5,99,99,433,0,41,14,0,1840,1840,Odogaron Sinew+,"Rare Odogaron material. Mostly obtained as a reward. Solid, used to craft gear."
+427,0,1,5,99,99,434,0,45,14,0,2440,2440,Odogaron Claw+,"Rare Odogaron material. Obtained by breaking its forelegs. Sharp, used in many weapons."
+428,0,1,5,99,99,435,0,45,14,0,2480,2480,Odogaron Fang+,"Rare Odogaron material. Obtained by breaking its head. Sharp, used in many weapons."
+429,0,1,6,99,99,436,1024,9,14,0,7200,7200,Odogaron Gem,A rare gem said to have formed within Odogaron tissue. Used to dramatically improve gear.
+430,0,1,3,99,99,437,0,43,1,0,590,590,Rathalos Scale,Rathalos material. Mostly obtained by carving. Broadly used for many purposes.
+431,0,1,3,99,99,438,0,46,1,0,840,840,Rathalos Shell,"Rathalos material. Mostly obtained as a reward. Solid, used to craft gear."
+432,0,1,3,99,99,439,0,59,1,0,1180,1180,Rathalos Webbing,"Rathalos material. Obtained by breaking its wings. Supple, used to craft gear."
+433,0,1,3,99,99,440,0,52,1,0,1270,1270,Rathalos Tail,Rathalos material. Obtained by carving its severed tail. Compatible with fire element.
+434,0,1,3,99,99,441,0,45,1,0,1090,1090,Rath Wingtalon,"Material from Rathian and Rathalos. Obtained by breaking its wings. Sharp, used in many weapons."
+435,0,1,3,99,99,442,0,41,1,0,1360,1360,Rathalos Marrow,Rathalos material. Mostly obtained by carving. Grants fire element properties.
+436,0,1,4,99,99,443,1024,61,1,0,3000,3000,Rathalos Plate,"Rathalos material. A valuable find, used to fortify gear. Said to be quite hard to come by."
+437,0,1,5,99,99,444,0,43,1,0,1250,1250,Rathalos Scale+,Rare Rathalos material. Mostly obtained by carving. Broadly used for many purposes.
+438,0,1,5,99,99,445,0,46,1,0,1850,1850,Rathalos Carapace,"Rare Rathalos material. Mostly obtained as a reward. Solid, used to craft gear."
+439,0,1,5,99,99,446,0,59,1,0,2500,2500,Rathalos Wing,"Rare Rathalos material. Obtained by breaking its wings. Supple, used to craft gear."
+440,0,1,5,99,99,447,0,41,1,0,2600,2600,Rathalos Medulla,Rare Rathalos material. Obtained by carving. Grants fire element properties.
+441,0,1,6,99,99,448,1024,9,1,0,7200,7200,Rathalos Ruby,A rare gem said to have formed within Rathalos tissue. Almost too nice to use.
+442,0,1,5,99,99,449,0,43,3,0,1450,1450,Azure Rathalos Scale+,Rare Azure Rathalos material. Mostly obtained by carving. Broadly used for many purposes.
+443,0,1,5,99,99,450,0,46,3,0,2150,2150,Azure Rathalos Carapace,"Rare Azure Rathalos material. Mostly obtained as a reward. Solid, used to craft gear."
+444,0,1,5,99,99,451,0,52,3,0,3000,3000,Azure Rathalos Tail,Rare Azure Rathalos material. Obtained by carving its severed tail. Compatible with fire element.
+445,0,1,5,99,99,452,0,59,3,0,2850,2850,Azure Rathalos Wing,"Rare Azure Rathalos material. Obtained by breaking its wings. Supple, used to craft gear."
+446,0,1,3,99,99,453,0,46,11,0,620,620,Diablos Shell,Diablos material. Mostly obtained by carving. Broadly used for many purposes.
+447,0,1,3,99,99,454,0,41,11,0,870,870,Diablos Ridge,"Diablos material. Mostly obtained as a reward. Solid, used to craft gear."
+448,0,1,3,99,99,455,0,41,11,0,1240,1240,Diablos Tailcase,"Diablos material. Obtained by carving its severed tail. Sturdy, but difficult to handle."
+449,0,1,3,99,99,456,0,45,11,0,1120,1120,Diablos Fang,"Diablos material. Mostly obtained by carving. Sharp, used in many weapons."
+450,0,1,3,99,99,457,0,45,11,0,1360,1360,Twisted Horn,"Diablos material. Obtained by breaking its horns. Stout, used in many weapons."
+451,0,1,3,99,99,458,0,41,11,0,1480,1480,Diablos Marrow,"Diablos material. A valuable find, used to fortify gear. Said to be quite hard to come by."
+452,0,1,5,99,99,459,0,46,11,0,1260,1260,Diablos Carapace,Rare Diablos material. Mostly obtained by carving. Broadly used for many purposes.
+453,0,1,5,99,99,460,0,41,11,0,1860,1860,Diablos Ridge+,"Rare Diablos material. Mostly obtained as a reward. Solid, used to craft gear."
+454,0,1,5,99,99,461,0,45,11,0,2980,2980,Majestic Horn,"Rare Diablos material. Obtained by breaking its horns. Stout, used in many weapons."
+455,0,1,5,99,99,462,0,41,11,0,3040,3040,Blos Medulla,"Rare Diablos material. A valuable find, used to fortify gear. Said to be quite hard to come by."
+456,0,1,5,99,99,463,0,46,10,0,1450,1450,Black Diablos Carapace,Rare Black Diablos material. Mostly obtained by carving. Broadly used for many purposes.
+457,0,1,5,99,99,464,0,41,10,0,2150,2150,Black Diablos Ridge+,"Rare Black Diablos material. Mostly obtained as a reward. Solid, used to craft gear."
+458,0,1,5,99,99,465,0,45,10,0,5700,5700,Black Spiral Horn+,"Rare Black Diablos material. Obtained by breaking its horns. Stout, used in many weapons."
+459,0,1,3,99,99,466,0,44,0,0,750,750,Kirin Hide,Kirin material. Mostly obtained by carving. Broadly used for many purposes.
+460,0,1,3,99,99,467,0,41,0,0,1000,1000,Kirin Tail,Kirin material. Mostly obtained as a reward. Compatible with thunder element.
+461,0,1,3,99,99,468,0,41,0,0,1250,1250,Kirin Mane,"Kirin material. Mostly obtained by carving. Highly thunder-resistant, used to craft gear."
+462,0,1,3,99,99,469,0,45,3,0,1750,1750,Kirin Thunderhorn,Kirin material. Obtain by breaking its horn. Grants thunder element properties.
+463,0,1,6,99,99,470,0,44,0,0,1630,1630,Kirin Hide+,Rare Kirin material. Mostly obtained by carving. Broadly used for many purposes.
+464,0,1,6,99,99,471,0,41,0,0,2430,2430,Kirin Thundertail,Rare Kirin material. Mostly obtained as a reward. Compatible with thunder element.
+465,0,1,6,99,99,472,0,45,3,0,3200,3200,Kirin Azure Horn,Rare Kirin material. Obtain by breaking its horn. Grants thunder element properties.
+466,0,1,5,99,99,473,4096,0,10,0,10,10,Zorah Magdaros Inner Scale,Rare Zorah Magdaros material. Obtained through quest rewards. Broadly used for many purposes.
+467,0,1,5,99,99,474,0,43,10,0,800,800,Zorah Magdaros Heat Scale,Zorah Magdaros material. Mostly obtained as a reward. Broadly used for many purposes.
+468,0,1,5,99,99,475,0,46,10,0,1200,1200,Zorah Magdaros Carapace,"Zorah Magdaros material. Obtained as a rare drop or by mining. Solid, used to craft gear."
+469,0,1,5,99,99,476,0,41,10,0,1400,1400,Zorah Magdaros Ridge,"Rare Zorah Magdaros material. Mostly obtained as a reward. Stout, used in many weapons."
+470,0,1,5,99,99,477,0,41,10,0,1600,1600,Zorah Magdaros Pleura,"Rare Zorah Magdaros material. Obtained by breaking its chest. Heavy, used to craft armor."
+471,0,1,5,99,99,478,4096,0,10,0,10,10,Zorah Magdaros Brace,"Rare Zorah Magdaros material. Obtained by breaking pieces off of its chest. Solid, used to craft gear."
+472,0,1,5,99,99,479,0,22,1,0,3200,3200,Zorah Magdaros Magma,Rare Zorah Magdaros material. Obtained by breaking its head. Unusual and difficult to handle.
+473,0,1,6,99,99,480,1024,9,10,0,6000,6000,Zorah Magdaros Gem,A rare gem said to have formed within Zorah Magdaros tissue. Holds untold potential.
+474,0,1,5,99,99,481,0,43,3,0,1030,1030,Dodogama Scale+,Rare Dodogama material. Mostly obtained by carving. Broadly used for many purposes.
+475,0,1,5,99,99,482,0,44,3,0,1530,1530,Dodogama Hide+,"Rare Dodogama material. Mostly obtained as a reward. Supple, used to craft gear."
+476,0,1,5,99,99,483,0,60,3,0,2120,2120,Dodogama Jaw,Rare Dodogama material. Obtained by breaking its head. Unusual and difficult to handle.
+477,0,1,5,99,99,484,0,45,3,0,2060,2060,Dodogama Talon,"Rare Dodogama material. Obtained by breaking its forelegs. Heavy, used to craft armor."
+478,0,1,5,99,99,485,0,52,3,0,2210,2210,Dodogama Tail,"Rare Dodogama material. Obtained by carving its severed tail. Tough, used in many weapons."
+479,0,1,5,99,99,486,0,43,10,0,1280,1280,Lavasioth Scale+,Rare Lavasioth material. Mostly obtained by carving. Broadly used for many purposes.
+480,0,1,5,99,99,487,0,46,10,0,1880,1880,Lavasioth Carapace,"Rare Lavasioth material. Mostly obtained as a reward. Solid, used to craft gear."
+481,0,1,5,99,99,488,0,45,10,0,2480,2480,Lavasioth Fang+,"Rare Lavasioth material. Obtained by breaking its head. Sharp, used in many weapons."
+482,0,1,5,99,99,489,0,41,10,0,2560,2560,Lavasioth Fin+,Rare Lavasioth material. Obtained by breaking its dorsal fin. Used for many purposes.
+483,0,1,5,99,99,490,0,43,4,0,1460,1460,Uragaan Scale+,Rare Uragaan material. Mostly obtained by carving. Broadly used for many purposes.
+484,0,1,5,99,99,491,0,46,4,0,2160,2160,Uragaan Carapace,"Rare Uragaan material. Mostly obtained as a reward. Solid, used to craft gear."
+485,0,1,5,99,99,492,0,60,4,0,2980,2980,Uragaan Jaw,"Rare Uragaan material. Obtained from breaking its jaw. Unusual, used in select gear."
+486,0,1,5,99,99,493,0,41,4,0,2880,2880,Uragaan Scute,"Rare Uragaan material. Obtained by carving its severed tail. Highly heat- resistant, used to craft gear."
+487,0,1,5,99,99,494,0,41,4,0,3100,3100,Uragaan Marrow,"Rare Uragaan material. A valuable find, used to fortify gear. Said to be quite hard to come by."
+488,0,1,6,99,99,495,1024,9,4,0,8400,8400,Uragaan Ruby,A rare gem said to have formed within Uragaan tissue. Used to dramatically improve gear.
+489,0,1,5,99,99,496,0,22,7,0,1580,1580,Lava Nugget,"A rare conglomerate or ore found growing on an Uragaan. Comprised of various ores, melted together."
+490,0,1,5,99,99,497,0,43,0,0,1600,1600,Bazelgeuse Scale+,Rare Bazelgeuse material. Mostly obtained by carving. Broadly used for many purposes.
+491,0,1,5,99,99,498,0,46,0,0,2400,2400,Bazelgeuse Carapace,"Rare Bazelgeuse material. Mostly obtained as a reward. Solid, used to craft gear."
+492,0,1,5,99,99,499,0,52,0,0,3600,3600,Bazelgeuse Tail,"Rare Bazelgeuse material. Obtained by carving its severed tail. Stiff, used to craft gear."
+493,0,1,5,99,99,500,0,41,1,0,4000,4000,Bazelgeuse Fuse,Rare Bazelgeuse material. Obtained by breaking its head. Grants blast element properties.
+494,0,1,5,99,99,501,0,45,0,0,3200,3200,Bazelgeuse Talon,Rare Bazelgeuse material. Mostly obtained by carving. Compatible with blast element.
+495,0,1,5,99,99,502,0,59,0,0,3400,3400,Bazelgeuse Wing,"Rare Bazelgeuse material. Obtained by breaking its wings. Hard, used in many weapons."
+496,0,1,6,99,99,503,1024,9,0,0,9600,9600,Bazelgeuse Gem,A rare gem said to have formed within Bazelgeuse tissue. Used to dramatically improve gear.
+497,0,1,6,99,99,512,0,43,10,0,2100,2100,Immortal Dragonscale,Rare Nergigante material. Mostly obtained by carving. Broadly used for many purposes.
+498,0,1,6,99,99,513,0,46,10,0,3200,3200,Nergigante Carapace,"Rare Nergigante material. Mostly obtained as a reward. Solid, used to craft gear."
+499,0,1,6,99,99,514,4096,0,10,0,10,10,Nergigante Barbs,"Rare Nergigante material. Obtained by carving. Sharp, used in many weapons."
+500,0,1,6,99,99,515,0,52,10,0,4300,4300,Nergigante Tail,"Rare Nergigante material. Obtained by carving its severed tail. Stiff, used to craft gear."
+501,0,1,6,99,99,516,0,45,10,0,5000,5000,Nergigante Horn+,"Rare Nergigante material. Obtained by breaking its horns. Stout, used in many weapons."
+502,0,1,6,99,99,517,0,45,10,0,4500,4500,Nergigante Talon,"Rare Nergigante material. Mostly obtained by carving. Sharp, used in many weapons."
+503,0,1,6,99,99,518,0,41,0,0,3400,3400,Nergigante Regrowth Plate,"Rare Nergigante material. Obtained by collecting rare drops. Unusual, used to craft gear."
+504,0,1,7,99,99,519,1024,9,10,0,12000,12000,Nergigante Gem,A rare gem said to have formed within Nergigante tissue. Holds untold potential.
+505,0,1,6,99,99,520,0,43,0,0,2250,2250,Deceased Scale,Rare Vaal Hazak material. Mostly obtained by carving. Broadly used for many purposes.
+506,0,1,6,99,99,521,0,46,0,0,3350,3350,Vaal Hazak Carapace,"Rare Vaal Hazak material. Mostly obtained as a reward. Solid, used to craft gear."
+507,0,1,6,99,99,522,0,41,14,0,3500,3500,Vaal Hazak Membrane,Rare Vaal Hazak material. Obtained by collecting rare drops. Grants dragon element properties.
+508,0,1,6,99,99,523,0,52,0,0,4900,4900,Vaal Hazak Tail,"Rare Vaal Hazak material. Obtained by carving its severed tail. Stiff, used to craft gear."
+509,0,1,6,99,99,524,0,45,0,0,4600,4600,Vaal Hazak Fang+,"Rare Vaal Hazak material. Obtained by breaking its head. Sharp, used in many weapons."
+510,0,1,6,99,99,525,0,45,0,0,4750,4750,Vaal Hazak Talon,"Rare Vaal Hazak material. Obtained by breaking its forelegs. Sharp, used in many weapons."
+511,0,1,6,99,99,526,0,59,0,0,4450,4450,Vaal Hazak Wing,"Rare Vaal Hazak material. Obtained by breaking its torso. Light yet firm, used to craft gear."
+512,0,1,6,99,99,527,4096,0,0,0,3480,3480,Vaal Hazak Miasmacryst,"Rare Vaal Hazak material. Obtained by collecting rare drops. Unusual, used in select gear."
+513,0,1,7,99,99,528,1024,9,0,0,12000,12000,Vaal Hazak Gem,A rare gem said to have formed within Vaal Hazak tissue. Holds untold potential.
+514,0,1,6,99,99,530,0,46,1,0,3400,3400,Teostra Carapace,"Rare Teostra material. Mostly obtained as a reward. Solid, used to craft gear."
+515,0,1,6,99,99,531,0,41,1,0,3400,3400,Teostra Mane,"Rare Teostra material. Obtained by breaking its head. Highly fire-resistant, used to craft gear."
+516,0,1,6,99,99,532,0,52,1,0,4900,4900,Teostra Tail,"Rare Teostra material. Obtained by carving its severed tail. Stiff, used to craft gear."
+517,0,1,6,99,99,533,0,45,1,0,5500,5500,Teostra Horn+,"Rare Teostra material. Obtained by breaking its head. Stout, used in many weapons."
+518,0,1,6,99,99,529,0,43,1,0,2300,2300,Fire Dragon Scale+,Rare Teostra material. Mostly obtained by carving. Broadly used for many purposes.
+519,0,1,6,99,99,534,0,45,1,0,4700,4700,Teostra Claw+,"Rare Teostra material. Mostly obtained by carving. Sharp, used in many weapons."
+520,0,1,6,99,99,535,0,59,1,0,4500,4500,Teostra Webbing,"Rare Teostra material. Obtained by breaking its wings. Supple, used to craft gear."
+521,0,1,6,99,99,536,0,13,1,0,3600,3600,Teostra Powder,"Rare Teostra material. Obtained by collecting rare drops. Unusual, used in select gear."
+522,0,1,7,99,99,537,1024,9,1,0,12000,12000,Teostra Gem,A rare gem said to have formed within Teostra tissue. Within it lies unimaginable power.
+523,0,1,6,99,99,546,0,46,10,0,3300,3300,Daora Carapace,"Rare Kushala Daora material. Mostly obtained as a reward. Solid, used to craft gear."
+524,0,1,6,99,99,545,0,43,10,0,2200,2200,Daora Dragon Scale+,Rare Kushala Daora material. Mostly obtained by carving. Broadly used for many purposes.
+525,0,1,6,99,99,547,0,59,10,0,4300,4300,Daora Webbing,"Rare Kushala Daora material. Obtained by breaking its wings. Lightweight, used to craft gear."
+526,0,1,6,99,99,548,0,45,10,0,4500,4500,Daora Horn+,"Rare Kushala Daora material. Obtained by breaking its head. Stout, used in many weapons."
+527,0,1,6,99,99,549,0,52,10,0,4800,4800,Daora Tail,"Rare Kushala Daora material. Obtained by carving its severed tail. Stiff, used to craft gear."
+528,0,1,6,99,99,550,0,45,10,0,4400,4400,Daora Claw+,Rare Kushala Daora material. Mostly obtained by carving. Imbued with potent ice element.
+529,0,1,7,99,99,551,1024,9,10,0,12000,12000,Daora Gem,A rare gem said to have formed within Kushala Daora tissue. Holds untold potential.
+530,0,1,6,99,99,552,0,43,0,0,3000,3000,Xeno'jiiva Soulscale,Rare Xeno'jiiva material. The burnt scale still radiates vestiges of the hereafter.
+531,0,1,6,99,99,553,0,46,0,0,4000,4000,Xeno'jiiva Shell,"A rare piece of Xeno'jiiva shell, tempered to act as a vessel for the flames of the underworld."
+532,0,1,6,99,99,554,0,41,3,0,4300,4300,Xeno'jiiva Veil,A rare Xeno'jiiva organ that stores energy that can be released in a violent torrent.
+533,0,1,6,99,99,555,0,52,0,0,6000,6000,Xeno'jiiva Tail,"A rare, strong Xeno'jiiva tail that can brush aside all enemies in a single lash."
+534,0,1,6,99,99,556,0,45,0,0,5600,5600,Xeno'jiiva Horn,"A rare Xeno'jiiva horn. During growth, it's theorized that it helps control the beast's power."
+535,0,1,6,99,99,557,0,45,0,0,5300,5300,Xeno'jiiva Claw,"A rare Xeno'jiiva claw, said to cleave soul from flesh."
+536,0,1,6,99,99,558,0,59,0,0,5000,5000,Xeno'jiiva Wing,A rare Xeno'jiiva wing. The wing membrane shines with the divine light of a powerful deity.
+537,0,1,6,99,99,559,4096,0,3,0,4320,4320,Xeno'jiiva Crystal,"A rare Xeno'jiiva crystal, said to house the unrelenting power of the elder dragon's power within."
+538,0,1,7,99,99,560,1024,9,0,0,15000,15000,Xeno'jiiva Gem,A phantasmal gem formed inside the tissue of Xeno'jiiva. The power it holds defies comprehension.
+539,0,1,6,99,99,561,0,43,0,0,3000,3000,??? Scale,A part from an unknown monster. You sense a strange power within it.
+540,0,1,6,99,99,562,0,46,0,0,4000,4000,??? Shell,A part from an unknown monster. You sense a strange power within it.
+541,0,1,6,99,99,563,0,41,3,0,4300,4300,??? Membrane,A part from an unknown monster. You sense a strange power within it.
+542,0,1,6,99,99,564,0,52,0,0,6000,6000,??? Tail,A part from an unknown monster. You sense a strange power within it.
+543,0,1,6,99,99,565,0,45,0,0,5600,5600,??? Horn,A part from an unknown monster. You sense a strange power within it.
+544,0,1,6,99,99,566,0,45,0,0,5300,5300,??? Claw,A part from an unknown monster. You sense a strange power within it.
+545,0,1,6,99,99,567,0,59,0,0,5000,5000,??? Wing,A part from an unknown monster. You sense a strange power within it.
+546,0,1,6,99,99,568,4096,0,3,0,4320,4320,??? Crystal,A part from an unknown monster. You sense a strange power within it.
+547,0,1,7,99,99,569,0,9,0,0,15000,15000,??? Gem,A part from an unknown monster. You sense a strange power within it.
+548,0,1,3,10,10,582,4112,39,10,0,25,90,Mysterious Feystone,A jewel that conceals faint traces of power within it. <STYL MOJI_YELLOW_DEFAULT>(Appraisal Item)</STYL>
+549,0,1,4,10,10,583,4112,39,3,0,25,90,Glowing Feystone,A jewel that conceals an unknown power within it. <STYL MOJI_YELLOW_DEFAULT>(Appraisal Item)</STYL>
+550,0,1,5,10,10,584,4112,39,7,0,25,90,Worn Feystone,A jewel that conceals considerable power within it. <STYL MOJI_YELLOW_DEFAULT>(Appraisal Item)</STYL>
+551,0,1,6,10,10,585,4112,39,1,0,25,90,Warped Feystone,A jewel that conceals a mystical power within it. <STYL MOJI_YELLOW_DEFAULT>(Appraisal Item)</STYL>
+552,0,1,5,10,10,586,4112,65,10,0,25,90,Sullied Streamstone,"Though dirty, this stone pulses with undeniable power. <STYL MOJI_YELLOW_DEFAULT>(Appraisal Item)</STYL>"
+553,0,1,7,10,10,587,4112,65,4,0,25,90,Shining Streamstone,A stone that shines with the brilliance of endless possibility. <STYL MOJI_YELLOW_DEFAULT>(Appraisal Item)</STYL>
+554,0,1,5,99,99,588,0,65,5,0,1000,10000,Streamstone Shard,"A rare stone taken from a tempered monster. The longer a beast's reign of terror, the larger the shard."
+555,0,1,6,99,99,589,0,65,5,0,2000,20000,Streamstone,"A rare stone taken from a tempered monster. A crystal of pure power, born of a beast's endless desires."
+556,0,1,7,99,99,590,0,65,5,0,3000,30000,Gleaming Streamstone,A rare stone taken from a tempered monster. Proof that it ruled for an age as a tyrant unchallenged.
+557,0,1,5,10,10,591,0,65,0,0,10000,100000,Warrior's Streamstone: Sword,A material used by champions of old. Used to bring out the hidden power in long swords and great swords.
+558,0,1,5,10,10,592,0,65,0,0,10000,100000,Warrior's Streamstone: Blade,A material used by champions of old. Used to bring out the hidden power in swords and shields and dual blades.
+559,0,1,5,10,10,593,0,65,0,0,10000,100000,Warrior's Streamstone: Hammer,A material used by champions of old. Used to bring out the hidden power in hammers and hunting horns.
+560,0,1,5,10,10,594,0,65,0,0,10000,100000,Warrior's Streamstone: Lance,A material used by champions of old. Used to bring out the hidden power in lances and gunlances.
+561,0,1,5,10,10,595,0,65,0,0,10000,100000,Warrior's Streamstone: Axe,A material used by champions of old. Used to bring out the hidden power in switch axes and charge blades.
+562,0,1,5,10,10,596,0,65,0,0,10000,100000,Warrior's Streamstone: Shaft,A material used by champions of old. Used to bring out the hidden power in insect glaives and bows.
+563,0,1,5,10,10,597,0,65,0,0,10000,100000,Warrior's Streamstone: Ranged,A material used by champions of old. Used to bring out the hidden power in light bowguns and heavy bowguns.
+564,0,1,7,10,10,598,0,65,7,0,20000,200000,Hero's Streamstone: Sword,A material used by legendary heroes. Used to bring out the hidden power in long swords and great swords.
+565,0,1,7,10,10,599,0,65,7,0,20000,200000,Hero's Streamstone: Blade,A material used by legendary heroes. Used to bring out the hidden power in swords and shields and dual blades.
+566,0,1,7,10,10,600,0,65,7,0,20000,200000,Hero's Streamstone: Hammer,A material used by legendary heroes. Used to bring out the hidden power in hammers and hunting horns.
+567,0,1,7,10,10,601,0,65,7,0,20000,200000,Hero's Streamstone: Lance,A material used by legendary heroes. Used to bring out the hidden power in lances and gunlances.
+568,0,1,7,10,10,602,0,65,7,0,20000,200000,Hero's Streamstone: Axe,A material used by legendary heroes. Used to bring out the hidden power in switch axes and charge blades.
+569,0,1,7,10,10,603,0,65,7,0,20000,200000,Hero's Streamstone: Shaft,A material used by legendary heroes. Used to bring out the hidden power in insect glaives and bows.
+570,0,1,7,10,10,604,0,65,7,0,20000,200000,Hero's Streamstone: Ranged,A material used by legendary heroes. Used to bring out the hidden power in light bowguns and heavy bowguns.
+571,0,1,3,99,99,605,0,50,0,0,500,5000,Voucher,Redeem this for a special meal with stronger effects than usual.
+572,0,1,3,99,99,606,0,26,2,0,0,1,First Wyverian Print,"A ticket with a handprint, used by the First Wyverians. You can exchange it for items at the Melding Pot."
+573,0,1,3,99,99,607,64,26,2,0,0,1,Deluxe First Wyverian Print,"A ticket with a handprint, used by the First Wyverians. You can exchange it for items at the Melding Pot."
+574,0,1,3,99,99,608,0,26,11,0,0,1,Steel Wyverian Print,"A ticket with a handprint, used by the First Wyverians. Exchange it for materials at the Melding Pot."
+575,0,1,3,99,99,609,0,26,0,0,0,1,Silver Wyverian Print,"A ticket with a handprint, used by the First Wyverians. Exchange it for rare materials at the Melding Pot."
+576,0,1,3,99,99,610,1024,26,4,0,0,1,Gold Wyverian Print,"A ticket with a handprint, used by the First Wyverians. Exchange it for very rare materials at the Melding Pot."
+577,0,1,4,99,99,613,0,26,7,0,0,1,Commendation,A ticket awarded for demonstrating courage. Collect them and something wonderful may happen!
+578,0,1,6,99,99,614,64,26,7,0,0,1,High Commendation,A ticket awarded for demonstrating tremendous courage. Collect them and something wonderful may happen!
+579,0,1,6,99,99,615,0,26,6,0,0,1,Research Commission Ticket,A ticket issued by the commander to those who have aided the Research Commission. Show it to the Smithy!
+580,0,1,3,99,99,616,0,25,26,0,500,5000,Pukei Coin,A coin given to those who have bested a Pukei-Pukei in the Arena.
+581,0,1,3,99,99,617,0,25,24,0,500,5000,Kulu Coin,A coin given to those who have bested a Kulu-Ya-Ku in the Arena.
+582,0,1,3,99,99,618,0,25,2,0,500,5000,Rathian Coin,A coin given to those who have bested a Rathian in the Arena.
+583,0,1,3,99,99,619,0,25,3,0,800,8000,Tzitzi Coin,A coin given to those who have bested a Tzitzi-Ya-Ku in the Arena.
+584,0,1,3,99,99,620,0,25,7,0,800,8000,Barroth Coin,A coin given to those who have bested a Barroth in the Arena.
+585,0,1,3,99,99,621,0,25,3,0,800,8000,Gama Coin,A coin given to those who have bested a Dodogama in the Arena.
+586,0,1,3,99,99,622,0,25,1,0,800,8000,Rathalos Coin,A coin given to those who have bested a Rathalos in the Arena.
+587,0,1,3,99,99,623,0,25,0,0,1500,15000,Brute Coin,A coin given to those who have bested multiple brute wyverns at the same time in the Arena.
+588,0,1,3,99,99,624,0,25,11,0,1500,15000,Flying Coin,A coin given to those who have bested multiple flying wyverns at the same time in the Arena.
+589,0,1,3,99,99,625,0,25,1,0,800,8000,Pinnacle Coin,A commemorative coin bestowed on hunters who have mastered the craft. The value of its sheen? Priceless.
+590,0,1,5,99,99,626,0,25,0,0,1200,12000,Hunter King Coin,A silver coin given to true hunters. It shines with all the glory of the Hunter King.
+591,0,1,7,99,99,627,0,25,4,0,2000,20000,Ace Hunter Coin,A golden coin given to hunters at the pinnacle of their field. Only a small handful ever know such honor.
+592,0,1,3,99,99,704,0,2,10,0,1000,10000,Steel Egg,"An egg of glittering steel. Valuable and rare, but of no use to a hunter. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>"
+593,0,1,3,99,99,705,0,2,0,0,10000,100000,Silver Egg,"An egg of glittering silver. Valuable and rare, but of no use to a hunter. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>"
+594,0,1,3,99,99,706,0,2,4,0,20000,200000,Golden Egg,"An egg of glittering gold. Super valuable and rare, but of no use to a hunter. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>"
+595,0,1,3,99,99,707,0,43,10,0,500,5000,Chipped Scale,"Acquired by using the Bandit Mantle. Chipped, but still prized by collectors. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>"
+596,0,1,3,99,99,708,0,43,24,0,1000,10000,Large Scale,Acquired by using the Bandit Mantle. Consistently popular among collectors. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+597,0,1,4,99,99,709,0,43,0,0,2000,20000,Beautiful Scale,Acquired by using the Bandit Mantle. In perpetual demand among collectors. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+598,0,1,5,99,99,710,0,43,6,0,3000,30000,Lustrous Scale,Acquired by using the Bandit Mantle. A source of pride for any collector. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+599,0,1,6,99,99,711,0,43,4,0,5000,50000,Glimmering Scale,Acquired by using the Bandit Mantle. A must-have for any collector. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+600,0,1,3,99,99,712,0,22,6,0,400,4000,Bhernastone,"An Old World import. Beautiful, but not suitable for crafting. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>"
+601,0,1,3,99,99,713,0,22,3,0,800,8000,Dundormarin,"An Old World import. Beautiful, but not suitable for crafting. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>"
+602,0,1,4,99,99,714,0,22,24,0,1500,15000,Loc Lac Ore,"An Old World import. Beautiful, but not suitable for crafting. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>"
+603,0,1,5,99,99,715,0,22,0,0,2000,20000,Val Habar Quartz,"An Old World import. Beautiful, but not suitable for crafting. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>"
+604,0,1,6,99,99,716,0,22,4,0,5000,50000,Minegardenite,"An Old World import. Beautiful, but not suitable for crafting. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>"
+605,0,1,3,99,99,717,0,43,4,0,1000,10000,Golden Scale,The scales of a Goldenfish. They shimmer like only pure gold can. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+606,0,1,4,99,99,718,1024,43,4,0,10000,100000,Golden Scale+,The scales of a Great Goldenfish. Trades at the same price as actual gold. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+607,0,1,3,99,99,719,0,43,0,0,2000,20000,Platinum Scale,The scales of a Platinumfish. They give off a beautiful gleam. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+608,0,1,4,99,99,720,1024,43,0,0,20000,200000,Platinum Scale+,The scales of a Great Platinumfish. Their shine is nigh on blinding. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+609,0,1,3,99,99,721,0,43,4,0,500,5000,Gilded Scale,The scales of a Goldenfry. Used by artisans in their crafts. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+610,0,1,4,99,99,722,1024,43,4,0,5000,50000,Gilded Scale+,The scales of a Great Goldenfry. Used in the very finest of crafts. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+611,0,2,1,10,10,727,4096,7,0,0,40,400,White Liver,"A white-colored liver, popular for its juicy texture. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>"
+612,0,2,2,10,10,728,4096,41,3,0,200,2000,Wyvern Tear,Bitter tears wept by wyverns on certain occasions. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+613,0,2,4,10,10,729,4096,41,3,0,500,5000,Large Wyvern Tear,"Large, bitter tears wept by wyverns on certain occasions. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>"
+614,0,2,2,10,10,730,4096,22,5,0,800,8000,Dragon Treasure,A shiny rock that elder dragons like to collect. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+615,0,2,4,10,10,732,4096,0,5,0,4000,40000,Old Dragon Treasure,A shiny rock that grew more brilliant in the care of an elder dragon. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+616,0,2,1,20,20,733,4096,4,8,0,12,120,Sunbloom,A flower from the Ancient Forest. It's been bathed in the warmth of the sun. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+617,0,2,2,10,10,734,4096,4,8,0,27,270,Shinebloom,A rare flower from the Ancient Forest. Has a scent of sunlight on its petals. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+618,0,2,3,10,10,735,4096,4,8,0,140,1400,Goldbloom,A precious flower from the Ancient Forest. It glitters brighter than gold. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+619,0,2,1,20,20,736,4096,1,0,0,10,100,Gourmet Shroomcap,A mushroom from the Ancient Forest. Known for its unique tenderness. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+620,0,2,2,10,10,737,4096,1,0,0,25,250,Exquisite Shroomcap,A rare mushroom from the Ancient Forest. Highly sought after by elite chefs. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+621,0,2,3,10,10,738,4096,1,0,0,150,1500,Spirit Shroomcap,A precious mushroom from the Ancient Forest. Possesses a fantastical glow. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+622,0,2,1,20,20,739,4096,4,2,0,14,140,Bauble Cactus,A cactus from the Wildspire Waste. Small but fleshy. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+623,0,2,2,10,10,740,4096,4,2,0,28,280,Jewel Cactus,A rare cactus from the Wildspire Waste. Big and meaty. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+624,0,2,3,10,10,741,4096,4,2,0,160,1600,Kingly Cactus,A precious cactus from the Wildspire Waste. The undeniable prickle king. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+625,0,2,1,20,20,742,4096,21,7,0,12,120,Hardfruit,"Fruit from the Wildspire Waste. Hard on the outside, juicy on the inside. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>"
+626,0,2,2,10,10,743,4096,21,7,0,24,240,Rockfruit,"Rare fruit from the Wildspire Waste. Tasty, but brutal on the chompers. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>"
+627,0,2,3,10,10,744,4096,21,7,0,145,1450,Wildfruit,Precious fruit from the Wildspire Waste. Not for the faint of heart. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+628,0,2,1,20,20,745,4096,13,24,0,16,160,Super Abalone,Coral Highlands seafood. A rare delicacy. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+629,0,2,2,10,10,746,4096,13,24,0,36,360,Choice Abalone,"Rare Coral Highlands seafood. Big in size, big in flavor. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>"
+630,0,2,3,10,10,747,4096,13,24,0,210,2100,Precious Abalone,Precious Coral Highlands seafood. A delicacy among delicacies. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+631,0,2,1,20,20,748,4096,37,0,0,18,180,Light Pearl,A jewel from the Coral Highlands. Gleams brilliantly. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+632,0,2,2,10,10,749,4096,37,0,0,38,380,Deep Pearl,A rare jewel from the Coral Highlands. Glows with a profound luster. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+633,0,2,3,10,10,750,4096,37,0,0,180,1800,Innocent Pearl,A precious jewel from the Coral Highlands. Glistens with purity. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+634,0,2,1,20,20,751,4096,42,11,0,15,150,Forgotten Fossil,A fossil from the Rotten Vale. It bears tracks from antiquity. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+635,0,2,2,10,10,752,4096,42,11,0,35,350,Legendary Fossil,A rare fossil from the Rotten Vale. The life it holds is long extinct. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+636,0,2,3,10,10,753,4096,42,11,0,200,2000,Mystical Fossil,A precious fossil from the Rotten Vale. The key to an ancient mystery. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+637,0,2,1,20,20,754,4096,21,14,0,14,140,Underground Fruit,Fruit from the Rotten Vale. It grows to maturity without sun. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+638,0,2,2,10,10,755,4096,21,14,0,34,340,Tainted Fruit,Rare fruit from the Rotten Vale. It thrives under arduous conditions. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+639,0,2,3,10,10,756,4096,21,14,0,190,1900,Elysian Fruit,Precious fruit from the Rotten Vale. Its aroma is not of this world. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+640,0,2,1,20,20,757,4096,22,7,0,30,300,Gaia Amber,Amber from the Elder's Recess. A golden tear plucked from the earth. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+641,0,2,2,10,10,758,4096,22,7,0,50,500,Dragonvein Amber,Rare amber from the Elder's Recess. It pulses with nature's raw energy. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+642,0,2,3,10,10,759,4096,22,7,0,250,2500,Ancient Amber,Precious amber from the Elder's Recess. A piece of antiquity. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+643,0,2,1,20,20,760,4096,22,3,0,32,320,Blue Beryl,A gem from the Elder's Recess. It shines with the color of the waves. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+644,0,2,2,10,10,761,4096,22,3,0,54,540,True Beryl,A rare gem from the Elder's Recess. It glints with the clarity of truth. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+645,0,2,3,10,10,762,4096,22,3,0,260,2600,Abyssal Beryl,"A precious gem from the Elder's Recess. Has a deep, hypnotic hue. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>"
+646,0,2,3,10,10,763,4096,4,7,0,100,1000,Sunkissed Grass,A special plant from the Ancient Forest. Known to cure all types of diseases. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+647,0,2,3,20,20,764,4096,1,5,0,88,880,Moonlit Mushroom,A special plant from the Ancient Forest. Radiates like the full moon. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+648,0,2,3,10,10,765,4096,4,1,0,84,840,Dragonbloom,A special flower from the Wildspire Waste. Hard as dragon scale. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+649,0,2,3,10,10,766,4096,21,4,0,80,800,Divineapple,Special fruit from the Wildspire Waste. Quite difficult to cultivate. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+650,0,2,3,20,20,767,4096,13,5,0,78,780,Violet Abalone,Special seafood from the Coral Highlands. Unique in both taste and aroma. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+651,0,2,3,10,10,768,4096,37,0,0,90,900,Platinum Pearl,A special jewel from the Coral Highlands. Bears a metallic sheen. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+652,0,2,3,10,10,769,4096,42,5,0,110,1100,Wicked Fossil,A special fossil from the Rotten Vale. Unspeakably ominous. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+653,0,2,3,10,10,770,4096,21,7,0,90,900,Heavenberry,Special fruit from the Rotten Vale. One bite'll send you to the pearly gates. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+654,0,2,3,10,10,771,4096,22,25,0,190,1900,Twilight Stone,A special gem from the Elder's Recess. The color of a sinking sun. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+655,0,2,3,10,10,772,4096,22,15,0,210,2100,Noahstone,A special gem from the Elder's Recess. Its brilliance engulfs all. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+656,0,2,4,1,1,773,6144,2,0,1,250,2500,Wyvern Egg,A flying wyvern's egg. Deliver it back to camp...if you can. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+657,0,2,3,1,1,774,6144,2,2,1,200,2000,Herbivore Egg,An herbivore egg. Deliver it back to camp...if you can. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+658,0,2,3,1,1,775,6144,2,8,1,300,3000,Lump of Meat,A lump of meat left by an Odogaron. Its distinct odor lures carnivores. <STYL MOJI_YELLOW_DEFAULT>(Account Item)</STYL>
+659,0,2,1,10,10,776,4096,92,11,0,7,70,Shepherd Hare,An animal often seen scurrying down narrow side paths. Follow one and you might discover a new shortcut.
+660,0,2,3,10,10,777,4096,92,8,0,77,770,Pilot Hare,A rare animal that appears on sunny days. They've been said to guide travelers who have lost their way.
+661,0,2,1,10,10,778,4096,93,13,0,8,80,Woodland Pteryx,A bird common to forested areas. Its bones and feathers resemble those of a prehistoric creature.
+662,0,2,3,10,10,779,4096,93,1,0,200,2000,Forest Pteryx,"A rare bird. Though it resembles fossilized species, it also has unprecedented physical features."
+663,0,2,1,10,10,780,4096,94,3,0,6,60,Cobalt Flutterfly,"A beautiful, vibrant butterfly with cobalt-blue wings."
+664,0,2,3,10,10,781,4096,94,5,0,120,1200,Phantom Flutterfly,"A brightly-colored, incredibly rare butterfly. The few sightings reported of it have all been on sunny days."
+665,0,2,1,10,10,782,4096,92,12,0,5,50,Climbing Joyperch,An amphibian that has retained many of its ancient characteristics. Their songs can be heard during rainfall.
+666,0,2,1,10,10,783,4096,92,2,0,7,70,Forest Gekko,"An arboreal lizard often found near brightmoss, predating on the insects that are drawn to the light."
+667,0,2,1,10,10,784,4096,92,4,0,6,60,Wildspire Gekko,A lizard found near ant hills. Exceptionally large ant hills can draw surprisingly large numbers.
+668,0,2,2,10,10,785,4096,92,1,0,8,80,Gloom Gekko,A lizard found in caves and other dark places. Their coloration serves as a warning to ward off predators.
+669,0,2,3,10,10,786,4096,92,5,0,220,2200,Moonlight Gekko,"A rare lizard whose brightmoss diet causes its tail to glow, a trait it uses to lure in prey."
+670,0,2,1,10,10,787,4096,94,4,0,5,50,Vaporonid,An Ancient Forest spider that spins webs larger in size than humans.
+671,0,2,2,10,10,788,4096,94,19,0,8,80,Scavantula,A ground-dwelling spider whose chief diet is rotting flesh. Often found living in groups near bonepiles.
+672,0,2,1,10,10,789,4096,93,10,0,12,120,Revolture,A carrion-eating bird that scavenges meat from carcasses. It is often spotted flying above large monsters.
+673,0,2,1,10,10,790,4096,93,8,0,15,150,Blissbill,An herbivorous bird that feeds on fruits and seeds. Comfortable around humans and common near Astera.
+674,0,2,1,10,10,791,4096,94,4,0,6,60,Omenfly,"Insects that emit light from their tails. They usually glow white, but will glow red when in danger."
+675,0,2,3,10,10,792,4096,94,6,0,180,1800,Augurfly,"A strange, rare insect that appears during foul weather. They only enter their adult stage during rainfall."
+676,0,2,1,10,10,793,4096,93,10,0,7,70,Scalebat,"A flying wyvern that evolved to adapt to life in caves, taking on a much smaller, bat-like appearance."
+677,0,2,1,10,10,794,4096,94,11,0,6,60,Dung Beetle,A beetle known to roll balls of monster dung. This process hardens the dung into fine Slinger ammo.
+678,0,2,2,10,10,795,4096,94,10,0,10,100,Bomb Beetle,A beetle known to roll large stones. Gathering from those stones often yields Slinger bomb pods.
+679,0,2,1,10,10,796,4096,95,8,0,15,150,Pink Parexus,A fish whose physiology remains almost unchanged from its ancient ancestors. Its spiny fins help ward off predators.
+680,0,2,3,10,10,797,4096,95,8,0,200,2000,Great Pink Parexus,A jumbo-sized Pink Parexus. It must have lived for countless years to reach this size.
+681,0,2,1,10,10,798,4096,95,2,0,18,180,Burst Arowana,Fish that smell of gunpowder. Use their scales and fire herbs to craft large amounts of gunpowder.
+682,0,2,1,10,10,799,4096,95,13,0,20,200,Bomb Arowana,Fish that smell of gunpowder. Use their scales and fire herbs to craft large amounts of quality gunpowder.
+683,0,2,3,10,10,800,4096,95,2,0,180,1800,Great Burst Arowana,A jumbo-sized Burst Arowana. Greater in size and volatility. Handle with extreme care.
+684,0,2,3,10,10,801,4096,95,13,0,200,2000,Great Bomb Arowana,A jumbo-sized Bomb Arowana. Greater in size and volatility. Handle with extreme care.
+685,0,2,2,10,10,802,4096,93,8,0,8,80,Elegant Coralbird,The common name for a female Coralbird. Their vibrant pink color is a result of their coral diet.
+686,0,2,3,10,10,803,4096,93,3,0,180,1800,Dapper Coralbird,"The common name for a Coralbird male. Extremely rare, as they only appear for mating."
+687,0,2,2,10,10,804,4096,95,5,0,20,200,Andangler,"A fish bearing a luminous protrusion on its head, which it uses to lure Flying Meduso, its primary prey."
+688,0,2,3,10,10,805,4096,93,0,0,200,2000,Downy Crake,"A legendarily rare bird, covered in decadently soft down. It travels atop the back of its symbiotic host."
+689,0,2,3,10,10,806,4096,93,10,0,800,8000,Bristly Crake,"A legendarily rare bird, covered in bizarrely stiff, bristly down. It travels atop the back of its symbiotic host."
+690,0,2,1,10,10,807,4096,95,6,0,3,30,Hopguppy,"A fish that bounces across the surface of the water, spreading its pectoral fins to glide farther."
+691,0,2,3,10,10,808,4096,95,15,0,500,500,Petricanths,"Previously known via fossils, this species was thought extinct. Finding otherwise was a real surprise."
+692,0,2,1,10,10,809,4096,92,9,0,20,200,Paratoad,A toad that releases paralyzing gas on impact. Its effect is potent enough to paralyze even large monsters.
+693,0,2,2,10,10,810,4096,92,6,0,24,240,Sleeptoad,A toad that releases sleeping gas on impact. Its effect is potent enough to put down even large monsters.
+694,0,2,2,10,10,811,4096,92,25,0,30,300,Nitrotoad,A toad that secretes an explosive gel on impact. The blast is strong enough to stagger even large monsters.
+695,0,2,2,10,10,812,4096,95,0,0,12,120,Wiggler,"A creature from the Coral Highlands. Match its eye level to put it at ease, allowing you to approach it."
+696,0,2,3,10,10,813,4096,95,4,0,180,1800,Wiggler Queen,A rare creature that appears only on moonlit nights. Watching it dance on the breeze is a truly magical sight.
+697,0,2,1,10,10,814,4096,94,2,0,10,100,Vigorwasp,"An insect that collects restorative nectar in its body, releasing it in a cloud when struck."
+698,0,2,1,10,10,815,4096,94,2,0,40,400,Giant Vigorwasp,An insect that stores a highly concentrated nectar which leaves a restorative cloud when released.
+699,0,2,2,10,10,816,4096,95,6,0,7,70,Flying Meduso,A native to the Coral Highlands that moves by riding the wind. Found in areas with the strongest breezes.
+700,0,2,1,10,10,817,4096,94,10,0,6,60,Carrier Ant,"Ants that are known to carry about all sorts of items, including, rarely, large monster materials."
+701,0,2,1,10,10,818,4096,94,11,0,25,250,Hercudrome,A large beetle with impressive horns. Hercudromes only inhabit seven specific spots in the Ancient Forest.
+702,0,2,1,10,10,819,4096,94,4,0,200,2000,Gold Hercudrome,"A glistening golden beetle, thought to bring good fortune. It only appears at night."
+703,0,2,3,10,10,820,4096,94,5,0,500,5000,Prism Hercudrome,"A shiny, rainbow-colored beetle. Due to its crepuscular nature, it is only usually seen at dawn and dusk."
+704,0,2,1,10,10,821,4096,94,2,0,8,80,Emperor Hopper,"A grasshopper as big as its moniker would suggest. Its swift, frenetic jumps make it hard to capture."
+705,0,2,3,10,10,822,4096,94,1,0,10,100,Tyrant Hopper,"This previously docile, herbivorous insect underwent phase variation to become a vicious carrion-eater."
+706,0,2,1,10,10,823,4096,94,4,0,12,120,Flashfly,"An insect that emits a bright flash when struck, which is brighter when in a swarm. The flash blinds monsters."
+707,0,2,2,10,10,824,4096,94,11,0,25,250,Grandfather Mantagrell,"A creature that rides air currents to float in midair. Weak to impacts, one good blow will bring it down."
+708,0,2,1,10,10,825,4096,94,10,0,8,80,Iron Helmcrab,"A crustacean found in muddy terrain. It frequently carries hard objects, and occasionally drops piercing pods."
+709,0,2,2,10,10,826,4096,94,0,0,11,110,Soldier Helmcrab,"A crustacean native to the Rotten Vale. They travel in large packs, stripping meat from carcasses."
+710,0,2,3,10,10,827,4096,94,12,0,240,2400,Emerald Helmcrab,A beautiful crustacean usually seen during inclement weather. It's said to be rarer than its gem namesake.
+711,0,2,1,10,10,828,4096,95,4,0,12,120,Whetfish,A fish with a dorsal fin hard enough to be used to sharpen weapons.
+712,0,2,3,10,10,829,4096,95,4,0,120,1200,Great Whetfish,A jumbo-sized Whetfish. Its dorsal fin surpasses even whetstones in its sharpness.
+713,0,2,1,10,10,830,4096,95,7,0,150,1500,Gastronome Tuna,A fish that eats anything— allowing you to sometimes get items from its stomach.
+714,0,2,3,10,10,831,4096,95,7,0,400,4000,Great Gastronome Tuna,A jumbo-sized Gastronome Tuna. Its ravenous diet has ballooned it into the king of gluttons.
+715,0,2,3,10,10,832,4096,95,3,0,180,1800,King Marlin,"A fish with a jaw shaped like a sword. Inhabits warm waters, and cannot be seen during cold nights."
+716,0,2,3,10,10,833,4096,95,3,0,560,5600,Great King Marlin,A jumbo-sized King Marlin. Its overwhelming size makes it seem like a different species entirely.
+717,0,2,2,10,10,834,4096,95,4,0,30,300,Goldenfish,"A rare fish that glitters as if it was actual gold. Its scales can fetch the same price as gold, too!"
+718,0,2,2,10,10,835,4096,95,0,0,60,600,Platinumfish,"A rare fish that shines like platinum, with glimmering scales just as valuable."
+719,0,2,3,10,10,836,4096,95,4,0,150,1500,Great Goldenfish,"A jumbo-sized Goldenfish. Not only is it bigger, its color and luster rival the finest craftsman's art."
+720,0,2,3,10,10,837,4096,95,0,0,300,3000,Great Platinumfish,"A jumbo-sized Platinumfish. Not only is it bigger, its color and luster rival the finest craftsman's art."
+721,0,2,1,99,99,838,4096,95,4,0,20,200,Goldenfry,"A small, rare fish that glitters like gold, and whose beautiful scales sell for just as much."
+722,0,2,3,99,99,839,4096,95,4,0,200,2000,Great Goldenfry,"A jumbo-sized Goldenfry. Not only is it bigger, its color and luster rival the finest craftsman's art."
+723,0,2,1,10,10,840,4096,95,7,0,15,150,Sushifish,A fatty fish popular among hunters. Its scales are rich in nutrients and can restore health.
+724,0,2,3,10,10,841,4096,95,7,0,150,1500,Great Sushifish,A jumbo-sized Sushifish. Generously plump from its bountiful supply of food.
+725,0,2,2,10,10,842,4096,95,14,0,22,220,Gunpowderfish,A fish that smells of gunpowder. Its unique scales can be used as explosive powder.
+726,0,2,3,10,10,843,4096,95,14,0,170,1700,Great Gunpowderfish,A jumbo-sized Gunpowderfish. Greater in size and volatility. Handle with extreme care.
+727,0,4,4,99,99,865,0,66,5,0,100,1000,Antidote Jewel 1,A decoration that enhances the Poison Resistance skill.
+728,0,4,4,99,99,866,0,66,9,0,100,1000,Antipara Jewel 1,A decoration that enhances the Paralysis Resistance skill.
+729,0,4,4,99,99,867,0,66,6,0,100,1000,Pep Jewel 1,A decoration that enhances the Sleep Resistance skill.
+730,0,4,5,99,99,868,0,66,4,0,400,4000,Steadfast Jewel 1,A decoration that enhances the Stun Resistance skill.
+731,0,4,4,99,99,869,0,66,25,0,100,1000,Antiblast Jewel 1,A decoration that enhances the Blast Resistance skill.
+732,0,4,4,99,99,870,0,66,7,0,100,1000,Suture Jewel 1,A decoration that enhances the Bleeding Resistance skill.
+733,0,4,4,99,99,871,0,66,7,0,100,1000,Def Lock Jewel 1,A decoration that enhances the Iron Skin skill.
+734,0,4,5,99,99,872,0,68,0,0,400,4000,Earplug Jewel 3,A decoration that enhances the Earplugs skill.
+735,0,4,5,99,99,873,0,67,0,0,400,4000,Wind Resist Jewel 2,A decoration that enhances the Windproof skill.
+736,0,4,5,99,99,874,0,67,10,0,400,4000,Footing Jewel 2,A decoration that enhances the Tremor Resistance skill.
+737,0,4,4,99,99,875,4096,0,11,0,100,1000,Fertilizer Jewel 1,A decoration that boosts Dungmaster skills.
+738,0,4,4,99,99,876,4096,0,0,0,100,1000,Heat Resist Jewel 2,A decoration that boosts Heat Guard skills.
+739,0,4,6,99,99,740,0,66,1,0,400,4000,Attack Jewel 1,A decoration that enhances the Attack Boost skill.
+740,0,4,5,99,99,877,0,66,7,0,400,4000,Defense Jewel 1,A decoration that enhances the Defense Boost skill.
+741,0,4,5,99,99,878,0,66,2,0,400,4000,Vitality Jewel 1,A decoration that enhances the Health Boost skill.
+742,0,4,5,99,99,879,0,66,2,0,400,4000,Recovery Jewel 1,A decoration that enhances the Recovery Speed skill.
+743,0,4,4,99,99,880,0,66,1,0,100,1000,Fire Res Jewel 1,A decoration that enhances the Fire Resistance skill.
+744,0,4,4,99,99,881,0,66,3,0,100,1000,Water Res Jewel 1,A decoration that enhances the Water Resistance skill.
+745,0,4,4,99,99,882,0,66,0,0,100,1000,Ice Res Jewel 1,A decoration that enhances the Ice Resistance skill.
+746,0,4,4,99,99,883,0,66,4,0,100,1000,Thunder Res Jewel 1,A decoration that enhances the Thunder Resistance skill.
+747,0,4,4,99,99,884,0,66,14,0,100,1000,Dragon Res Jewel 1,A decoration that enhances the Dragon Resistance skill.
+748,0,4,5,99,99,885,0,66,19,0,400,4000,Resistor Jewel 1,A decoration that enhances the Blight Resistance skill.
+749,0,4,5,99,99,853,0,66,1,0,400,4000,Blaze Jewel 1,A decoration that enhances the Fire Attack skill.
+750,0,4,5,99,99,854,0,66,3,0,400,4000,Stream Jewel 1,A decoration that enhances the Water Attack skill.
+751,0,4,5,99,99,855,0,66,0,0,400,4000,Frost Jewel 1,A decoration that enhances the Ice Attack skill.
+752,0,4,5,99,99,856,0,66,4,0,400,4000,Bolt Jewel 1,A decoration that enhances the Thunder Attack skill.
+753,0,4,5,99,99,857,0,66,14,0,400,4000,Dragon Jewel 1,A decoration that enhances the Dragon Attack skill.
+754,0,4,5,99,99,886,0,66,5,0,400,4000,Venom Jewel 1,A decoration that enhances the Poison Attack skill.
+755,0,4,6,99,99,887,0,66,9,0,2000,20000,Paralyzer Jewel 1,A decoration that enhances the Paralysis Attack skill.
+756,0,4,6,99,99,888,0,66,6,0,2000,20000,Sleep Jewel 1,A decoration that enhances the Sleep Attack skill.
+757,0,4,6,99,99,889,0,66,25,0,2000,20000,Blast Jewel 1,A decoration that enhances the Blast Attack skill.
+758,0,4,5,99,99,890,0,68,5,0,400,4000,Poisoncoat Jewel 3,A decoration that enhances the Poison Functionality skill.
+759,0,4,6,99,99,891,0,68,9,0,2000,20000,Paracoat Jewel 3,A decoration that enhances the Para Functionality skill.
+760,0,4,6,99,99,892,0,68,6,0,2000,20000,Sleepcoat Jewel 3,A decoration that enhances the Sleep Functionality skill.
+761,0,4,6,99,99,893,0,68,25,0,2000,20000,Blastcoat Jewel 3,A decoration that enhances the Blast Functionality skill.
+762,0,4,7,99,99,894,4096,0,1,0,4000,40000,Powercoat Jewel 3,A decoration that enhances the Power Functionality skill.
+763,0,4,7,99,99,895,0,68,12,0,4000,40000,Release Jewel 3,A decoration that enhances the Free Element/Ammo Up skill.
+764,0,4,5,99,99,858,0,66,15,0,2000,20000,Expert Jewel 1,A decoration that enhances the Critical Eye skill.
+765,0,4,7,99,99,859,0,67,15,0,4000,40000,Critical Jewel 2,A decoration that enhances the Critical Boost skill.
+766,0,4,5,99,99,896,0,67,15,0,400,4000,Tenderizer Jewel 2,A decoration that enhances the Weakness Exploit skill.
+767,0,4,7,99,99,897,0,67,24,0,4000,40000,Charger Jewel 2,A decoration that enhances the Focus skill.
+768,0,4,7,99,99,898,0,68,0,0,4000,40000,Handicraft Jewel 3,A decoration that enhances the Handicraft skill.
+769,0,4,7,99,99,899,0,67,15,0,4000,40000,Draw Jewel 2,A decoration that enhances the Critical Draw skill.
+770,0,4,5,99,99,900,0,67,10,0,400,4000,Destroyer Jewel 2,A decoration that enhances the Partbreaker skill.
+771,0,4,5,99,99,901,0,67,4,0,400,4000,KO Jewel 2,A decoration that enhances the Slugger skill.
+772,0,4,5,99,99,902,0,66,6,0,400,4000,Drain Jewel 1,A decoration that enhances the Stamina Thief skill.
+773,0,4,5,99,99,903,4096,0,1,0,400,4000,Rodeo Jewel 2,A decoration that boosts Mounting skills.
+774,0,4,4,99,99,904,0,67,3,0,100,1000,Flight Jewel 2,A decoration that enhances the Airborne skill.
+775,0,4,6,99,99,905,0,67,1,0,2000,20000,Throttle Jewel 2,A decoration that enhances the Latent Power skill.
+776,0,4,6,99,99,906,0,67,1,0,2000,20000,Challenger Jewel 2,A decoration that enhances the Agitator skill.
+777,0,4,6,99,99,907,0,67,1,0,2000,20000,Flawless Jewel 2,A decoration that enhances the Peak Performance skill.
+778,0,4,6,99,99,908,0,67,1,0,2000,20000,Potential Jewel 2,A decoration that enhances the Heroics skill.
+779,0,4,4,99,99,909,0,66,14,0,100,1000,Fortitude Jewel 1,A decoration that enhances the Fortify skill.
+780,0,4,6,99,99,910,0,67,14,0,2000,20000,Furor Jewel 2,A decoration that enhances the Resentment skill.
+781,0,4,5,99,99,911,0,66,0,0,400,4000,Sonorous Jewel 1,A decoration that enhances the Horn Maestro skill.
+782,0,4,6,99,99,912,0,67,10,0,2000,20000,Magazine Jewel 2,A decoration that enhances the Capacity Boost skill.
+783,0,4,6,99,99,913,0,66,10,0,2000,20000,Trueshot Jewel 1,A decoration that enhances the Special Ammo Boost skill.
+784,0,4,7,99,99,914,0,66,10,0,4000,40000,Artillery Jewel 1,A decoration that enhances the Artillery skill.
+785,0,4,4,99,99,915,0,66,10,0,100,1000,Heavy Artillery Jewel 1,A decoration that enhances the Heavy Artillery skill.
+786,0,4,7,99,99,916,0,67,7,0,4000,40000,Sprinter Jewel 2,A decoration that enhances the Marathon Runner skill.
+787,0,4,5,99,99,860,0,67,7,0,400,4000,Physique Jewel 2,A decoration that enhances the Constitution skill.
+788,0,4,4,99,99,917,4096,0,6,0,100,1000,Flying Leap Jewel 1,A decoration that boosts Leap of Faith skills.
+789,0,4,6,99,99,918,0,67,7,0,2000,20000,Refresh Jewel 2,A decoration that enhances the Stamina Surge skill.
+790,0,4,4,99,99,919,0,66,7,0,100,1000,Hungerless Jewel 1,A decoration that enhances the Hunger Resistance skill.
+791,0,4,5,99,99,920,0,67,6,0,400,4000,Evasion Jewel 2,A decoration that enhances the Evade Window skill.
+792,0,4,5,99,99,921,0,67,6,0,400,4000,Jumping Jewel 2,A decoration that enhances the Evade Extender skill.
+793,0,4,6,99,99,922,0,66,10,0,2000,20000,Ironwall Jewel 1,A decoration that enhances the Guard skill.
+794,0,4,5,99,99,923,0,66,24,0,400,4000,Sheath Jewel 1,A decoration that enhances the Quick Sheath skill.
+795,0,4,5,99,99,924,0,66,0,0,400,4000,Friendship Jewel 1,A decoration that enhances the Wide-Range skill.
+796,0,4,5,99,99,925,0,66,24,0,400,4000,Enduring Jewel 1,A decoration that enhances the Item Prolonger skill.
+797,0,4,4,99,99,926,0,66,24,0,100,1000,Satiated Jewel 1,A decoration that enhances the Free Meal skill.
+798,0,4,5,99,99,927,0,66,7,0,400,4000,Gobbler Jewel 1,A decoration that enhances the Speed Eating skill.
+799,0,4,5,99,99,928,0,66,4,0,400,4000,Grinder Jewel 1,A decoration that enhances the Speed Sharpening skill.
+800,0,4,5,99,99,929,0,66,25,0,400,4000,Bomber Jewel 1,A decoration that enhances the Bombardier skill.
+801,0,4,7,99,99,930,0,66,5,0,4000,40000,Fungiform Jewel 1,A decoration that enhances the Mushroomancer skill.
+802,0,4,4,99,99,931,4096,0,3,0,100,1000,Angler Jewel 1,A decoration that boosts Master Fisher skills.
+803,0,4,4,99,99,932,4096,0,1,0,100,1000,Chef Jewel 1,A decoration that boosts Spitmaster skills.
+804,0,4,4,99,99,933,4096,0,24,0,100,1000,Transporter Jewel 1,A decoration that boosts Transporter skills.
+805,0,4,4,99,99,934,4096,0,26,0,100,1000,Gathering Jewel 1,A decoration that boosts Gathering skills.
+806,0,4,4,99,99,935,4096,0,7,0,100,1000,Honeybee Jewel 1,A decoration that enhances the Honey Hunter skill.
+807,0,4,4,99,99,936,4096,0,10,0,100,1000,Carver Jewel 1,A decoration that enhances the Carving Pro skill.
+808,0,4,4,99,99,937,0,66,3,0,50,500,Protection Jewel 1,A decoration that enhances the Divine Blessing skill.
+809,0,4,4,99,99,938,0,66,24,0,100,1000,Meowster Jewel 1,A decoration that enhances the Palico Rally skill.
+810,0,4,4,99,99,939,0,66,26,0,100,1000,Botany Jewel 1,A decoration that enhances the Botanist skill.
+811,0,4,4,99,99,940,0,66,24,0,100,1000,Geology Jewel 1,A decoration that enhances the Geologist skill.
+812,0,4,6,99,99,941,0,67,1,0,2000,20000,Mighty Jewel 2,A decoration that enhances the Maximum Might skill.
+813,0,4,5,99,99,942,0,66,26,0,400,4000,Stonethrower Jewel 1,A decoration that enhances the Slinger Capacity skill.
+814,0,4,4,99,99,943,0,66,10,0,100,1000,Tip Toe Jewel 1,A decoration that enhances the Stealth skill.
+815,0,4,5,99,99,944,0,68,10,0,400,4000,Brace Jewel 3,A decoration that enhances the Flinch Free skill.
+816,0,4,4,99,99,945,4096,0,26,0,100,1000,Scoutfly Jewel 1,A decoration that enhances the Scoutfly Range skill.
+817,0,4,4,99,99,946,4096,0,0,0,100,1000,Crouching Jewel 1,A decoration that enhances the Speed Crawler skill.
+818,0,4,4,99,99,947,4096,0,3,0,100,1000,Longjump Jewel 1,A decoration that enhances the Jump Master skill.
+819,0,4,4,99,99,948,0,66,0,0,100,1000,Smoke Jewel 1,A decoration that enhances the Sporepuff Expert skill.
+820,0,4,4,99,99,949,0,66,3,0,100,1000,Mirewalker Jewel 1,A decoration that enhances the Aquatic Expert skill.
+821,0,4,4,99,99,950,4096,0,7,0,100,1000,Climber Jewel 1,A decoration that boosts Cliffhanger skills.
+822,0,4,4,99,99,951,4096,0,4,0,100,1000,Radiosity Jewel 1,A decoration that boosts Blindsider skills.
+823,0,4,4,99,99,952,4096,0,26,0,100,1000,Research Jewel 1,A decoration that boosts Scholar skills.
+824,0,4,4,99,99,953,0,66,2,0,100,1000,Specimen Jewel 1,A decoration that enhances the Entomologist skill.
+825,0,4,4,99,99,954,0,66,11,0,100,1000,Miasma Jewel 1,A decoration that enhances the Effluvia Resistance skill.
+826,0,4,4,99,99,955,0,66,7,0,100,1000,Scent Jewel 1,A decoration that enhances the Scenthound skill.
+827,0,4,5,99,99,956,4096,0,0,0,400,4000,Slider Jewel 1,A decoration that enhances the Dive Distance skill.
+828,0,4,4,99,99,957,0,66,0,0,100,1000,Intimidator Jewel 1,A decoration that enhances the Intimidator skill.
+829,0,4,4,99,99,958,4096,0,1,0,100,1000,Hazmat Jewel 1,A decoration that boosts Effluvial Expert skills.
+830,0,4,4,99,99,959,4096,0,1,0,100,1000,Mudshield Jewel 1,A decoration that enhances the Mudproof skill.
+831,0,4,4,99,99,960,4096,0,1,0,100,1000,Element Resist Jewel 1,A decoration that boosts Res Down Protection skills.
+832,0,4,5,99,99,961,0,67,1,0,400,4000,Slider Jewel 2,A decoration that enhances the Affinity Sliding skill.
+833,0,4,5,99,99,962,0,66,2,0,400,4000,Medicine Jewel 1,A decoration that enhances the Recovery Up skill.
+834,0,4,6,99,99,861,0,68,0,0,2000,20000,Forceshot Jewel 3,A decoration that enhances the Normal Shots skill.
+835,0,4,7,99,99,963,0,68,3,0,4000,40000,Pierce Jewel 3,A decoration that enhances the Piercing Shots skill.
+836,0,4,7,99,99,862,0,68,13,0,4000,40000,Spread Jewel 3,A decoration that enhances the Spread/Power Shots skill.
+837,0,4,6,99,99,964,0,67,24,0,2000,20000,Enhancer Jewel 2,A decoration that enhances the Power Prolonger skill.
+838,0,4,4,99,99,965,0,66,6,0,100,1000,Crisis Jewel 1,A decoration that enhances the Resuscitate skill.
+839,0,4,6,99,99,966,0,68,14,0,2000,20000,Dragonseal Jewel 3,A decoration that enhances the Elderseal Boost skill.
+840,0,4,4,99,99,967,4096,0,1,0,100,1000,Discovery Jewel 2,A decoration that enhances the Rare Gatherer skill.
+841,0,4,4,99,99,968,4096,0,1,0,100,1000,Detector Jewel 1,A decoration that enhances the Rare Hunter skill.
+842,0,4,4,99,99,969,0,66,24,0,100,1000,Maintenance Jewel 1,A decoration that enhances the Tool Specialist skill.
+843,0,0,3,1,1,974,4136,109,2,0,0,0,Vigorwasp Delivery,Signal to your Palico to use their Palico Gadget.
+844,0,0,3,1,1,975,4200,109,2,0,0,0,Vigorwasp Station,Signal to your Palico to use their Palico Gadget.
+845,0,0,3,1,1,976,4136,109,4,0,0,0,Flashfly Cage,Signal to your Palico to use their Palico Gadget.
+846,0,0,3,1,1,977,4200,109,4,0,0,0,Thunderbug Cage,Signal to your Palico to use their Palico Gadget.
+847,0,0,3,1,1,978,4136,109,7,0,0,0,Shieldspire Taunt,Signal to your Palico to use their Palico Gadget.
+848,0,0,3,1,1,979,4200,109,7,0,0,0,Shieldspire Bash,Signal to your Palico to use their Palico Gadget.
+849,0,0,3,1,1,980,4136,109,1,0,0,0,Coral Cheerhorn,Signal to your Palico to use their Palico Gadget.
+850,0,0,3,1,1,981,4200,109,1,0,0,0,Coral Cheerbongo,Signal to your Palico to use their Palico Gadget.
+851,0,0,3,1,1,982,4136,109,10,0,0,0,Plunderblade,Signal to your Palico to use their Palico Gadget.
+852,0,0,3,1,1,983,4200,109,10,0,0,0,Palarang,Signal to your Palico to use their Palico Gadget.
+853,0,0,3,1,1,984,4136,109,25,0,0,0,Meowlotov Assault,Signal to your Palico to use their Palico Gadget.
+854,0,0,3,1,1,985,4200,109,25,0,0,0,Rath-of-Meow,Signal to your Palico to use their Palico Gadget.
+855,0,0,0,1,1,986,4136,112,0,0,0,0,Invalid Message,Invalid Message
+856,0,0,0,1,1,987,4136,112,0,0,0,0,Invalid Message,Invalid Message
+857,0,0,0,1,1,988,4136,109,0,0,0,0,Invalid Message,Invalid Message
+858,0,0,0,1,1,989,4136,110,0,0,0,0,Invalid Message,Invalid Message
+859,0,0,0,10,10,990,4096,21,0,0,0,0,Stone,Slinger ammo that can be used to hit faraway plant life and bombs.
+860,0,0,0,10,10,991,4096,21,0,0,0,0,Redpit,Slinger ammo that can be used to hit faraway plant life and bombs.
+861,0,0,0,10,10,992,4096,21,0,0,0,0,Brightmoss,Slinger ammo that illuminates an area upon impact. Can also blind flying wyverns.
+862,0,0,0,10,10,993,4096,21,0,0,0,0,Scatternut,Slinger ammo that explodes on impact. Use it to stagger a monster when you're in a pinch.
+863,0,0,0,10,10,994,4096,21,0,0,0,0,Torch Pod,Slinger ammo that can be used to scare away small monsters or to illuminate dark areas.
+864,0,0,0,10,10,995,4096,21,0,0,0,0,Bomb Pod,Slinger ammo that explodes on impact.
+865,0,0,0,10,10,996,4096,21,0,0,0,0,Thorn Pod,Slinger ammo with a thorny husk that sticks to monster hide. Attack it to produce a shock.
+866,0,0,0,10,10,997,4096,21,0,0,0,0,Piercing Pod,Slinger ammo that deals piercing damage on impact.
+867,0,0,0,10,10,998,4096,21,0,0,0,0,Dragon Pod,Slinger ammo that deals dragon element damage.
+868,0,0,0,10,10,999,4096,22,0,0,0,0,Crystalburst,Slinger ammo that explodes on impact. Use it to stagger a monster when you're in a pinch.
+869,0,0,0,10,10,1000,4096,21,0,0,0,0,Puddle Pod,Slinger ammo imbued with the water element. It can also wash monsters clean of stuck-on mud.
+870,0,0,2,10,10,50,0,1,0,0,18,180,Chillshroom,This mushroom is a primary ingredient in cool drinks.
+871,0,1,3,99,99,611,0,26,24,0,200,2000,Tailraider Voucher,Proof of friendship with the Lynians of the new continent. Show it to the Smithy and see what happens!
+872,0,1,3,99,99,703,0,46,12,0,1500,15000,Emerald Shell,"An emerald Helmcrab carapace, every bit as lovely as its gem namesake. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>"
+873,0,1,3,99,99,612,0,26,24,0,200,2000,Gajalaka Sketch,Proof of friendship with the Gajalaka tribes of the new continent. Show it to the Smithy and see what happens!
+874,0,4,7,99,99,863,0,67,3,0,4000,40000,Mighty Bow Jewel 2,A decoration that enhances the Bow Charge Plus skill.
+875,0,4,7,99,99,970,0,67,1,0,4000,40000,Mind's Eye Jewel 2,A decoration that enhances the Mind's Eye/Ballistics skill.
+876,0,4,6,99,99,971,0,67,4,0,2000,20000,Shield Jewel 2,A decoration that enhances the Guard Up skill.
+877,0,4,6,99,99,972,0,67,14,0,2000,20000,Sharp Jewel 2,A decoration that enhances the Protective Polish skill.
+878,0,4,5,99,99,864,0,67,11,0,400,4000,Elementless Jewel 2,A decoration that enhances the Non-elemental Boost skill.
+879,0,1,5,99,99,504,0,43,13,0,1600,1600,Deviljho Scale,Rare Deviljho material. Mostly obtained by carving. Broadly used for many purposes.
+880,0,1,5,99,99,505,0,44,13,0,2400,2400,Deviljho Hide,"Rare Deviljho material. Mostly obtained as a reward. Supple, used to craft gear."
+881,0,1,5,99,99,506,0,45,13,0,3200,3200,Deviljho Tallfang,"Rare Deviljho material. Obtained by breaking its head. Stout, used in many weapons."
+882,0,1,5,99,99,507,0,45,13,0,3400,3400,Deviljho Talon,Rare Deviljho material. Mostly obtained by carving. Compatible with dragon element.
+883,0,1,5,99,99,508,0,60,13,0,4000,4000,Deviljho Scalp,"Rare Deviljho material. Obtained by breaking its head. Unusual, used in select gear."
+884,0,1,5,99,99,509,0,52,13,0,3600,3600,Deviljho Tail,"Rare Deviljho material. Obtained by carving its severed tail. Stiff, used to craft gear."
+885,0,1,5,99,99,510,0,5,13,0,2200,2200,Deviljho Saliva,Rare Deviljho material. Obtained by collecting rare drops. Unusual and difficult to handle.
+886,0,1,6,99,99,511,1024,9,13,0,9600,9600,Deviljho Gem,A rare gem said to have formed within Deviljho tissue. Used to dramatically improve gear.
+887,0,1,6,99,99,570,0,43,4,0,3000,3000,Kulve Taroth Golden Scale,Rare Kulve Taroth material. Mostly obtained as a reward. Many have fallen trying to obtain just one of these.
+888,0,1,6,99,99,571,0,46,4,0,4000,4000,Kulve Taroth Golden Shell,Rare Kulve Taroth material. Mostly obtained as a reward. Its value is tied to its brilliant gold shine.
+889,0,1,6,99,99,572,0,22,4,0,1000,1000,Kulve Taroth Golden Nugget,Rare Kulve Taroth material. Obtained by collecting rare drops. Emits an exotic light towards those that look at it.
+890,0,1,6,99,99,573,0,45,4,0,6000,6000,Kulve Taroth Golden Spiralhorn,Rare Kulve Taroth material. Obtained by breaking its head. It defiantly glows despite its age and weight.
+891,0,1,6,99,99,574,0,41,4,0,5000,5000,Kulve Taroth Golden Tailshell,Rare Kulve Taroth material. Obtained by breaking its tail. It shimmers a lustrous gold.
+892,0,1,7,99,99,575,1024,9,4,0,15000,15000,Kulve Taroth Golden Glimstone,A rare gem said to have formed within Kulve Taroth tissue. Within it lies unimaginable power.
+893,0,1,3,99,99,723,0,22,4,0,750,750,Golden Fragment,A fragment of pure gold. It fetches a high price despite its size. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+894,0,1,3,99,99,724,0,22,4,0,1500,1500,Golden Chunk,A precious lump of gold. Its brilliance can bewitch the purest of hearts. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+895,0,1,6,99,99,538,0,43,3,0,2300,2300,Lunastra Scale+,Rare Lunastra material. Mostly obtained by carving. Broadly used for many purposes.
+896,0,1,6,99,99,541,0,59,3,0,4500,4500,Lunastra Wing,"Rare Lunastra material. Obtained by breaking its wings. Supple, used to craft gear."
+897,0,1,7,99,99,544,1024,9,3,0,12000,12000,Lunastra Gem,A rare gem said to have formed within Lunastra tissue. Within it lies unimaginable power.
+898,0,1,6,99,99,539,0,46,3,0,3400,3400,Lunastra Carapace,"Rare Lunastra material. Mostly obtained as a reward. Solid, used to craft gear."
+899,0,1,6,99,99,540,0,41,3,0,3400,3400,Lunastra Mane,"Rare Lunastra material. Obtained by collecting rare drops. Valuable, fire resistant material."
+900,0,1,6,99,99,542,0,52,3,0,4900,4900,Lunastra Tail,"Rare Lunastra material. Obtained by carving its severed tail. Stiff, used to craft gear."
+901,0,1,6,99,99,543,0,45,3,0,5500,5500,Lunastra Horn,"Rare Lunastra material. Obtained by breaking its head. Stout, used in many weapons."
+902,0,1,6,99,99,576,0,41,5,0,8000,8000,,
+903,0,1,6,99,99,577,0,42,5,0,7000,7000,,
+904,0,1,7,99,99,578,0,45,5,0,15000,15000,,
+905,0,1,7,99,99,579,0,45,5,0,10000,10000,,
+906,0,1,7,99,99,580,0,52,5,0,12000,12000,,
+907,0,1,6,99,99,581,0,22,0,0,5000,5000,,
+908,0,1,3,99,99,628,0,26,8,0,200,2000,Spring Blossom Ticket,A ticket you receive for attending the Spring Blossom Fest. Can be exchanged for special equipment or fireworks.
+909,0,1,3,99,99,629,0,26,3,0,200,2000,Summer Twilight Ticket,A ticket you receive for attending the Summer Twilight Fest. Can be exchanged for special equipment or fireworks.
+910,0,1,3,99,99,630,0,26,7,0,200,2000,Autumn Harvest Ticket,A ticket you receive for attending the Autumn Harvest Fest. Can be exchanged for special equipment or fireworks.
+911,0,1,3,99,99,631,0,26,0,0,200,2000,Winter Star Ticket,A ticket you receive for attending the Winter Star Fest. Can be exchanged for special equipment or fireworks.
+912,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+913,0,1,3,99,99,633,0,36,8,0,200,2000,Spring Insect Field Guide,A field guide containing must-know info about Great Hornflies. Show it to the Smithy for a...novel armor set.
+914,0,1,3,99,99,634,0,36,7,0,200,2000,Summer Insect Field Guide,A field guide containing new info about Great Hornflies. Show it to the smithy for a...novel armor set.
+915,0,1,7,99,99,635,1024,26,10,0,800,8000,Vaal Hazak Ticket,"A ticket bearing Vaal Hazak, engulfed in eternal darkness. Redeem at the Smithy to make novel equipment."
+916,0,1,7,99,99,636,1024,26,0,0,800,8000,Kirin Ticket,"A ticket bearing Kirin, caressed by lightning. Redeem at the Smithy to make novel equipment."
+917,0,1,7,99,99,637,1024,26,1,0,800,8000,Teostra Ticket,"A ticket bearing Teostra, ruling over purgatory. Redeem at the Smithy to make novel equipment."
+918,0,1,7,99,99,639,1024,26,10,0,800,8000,Kushala Daora Ticket,"A ticket bearing Kushala Daora, commanding the winds. Redeem at the Smithy to make novel equipment."
+919,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+920,0,1,7,99,99,641,1024,26,10,0,800,8000,Zorah Magdaros Ticket,"A ticket bearing Zorah, trampling over the New World. Redeem at the Smithy to make novel equipment."
+921,0,1,7,99,99,642,1024,26,0,0,800,8000,Xeno'jiiva Ticket,"A ticket bearing Xeno'jiiva, elder dragon transcended. Redeem at the Smithy to make novel equipment."
+922,0,1,5,99,99,643,0,58,10,0,400,4000,Black Bandage,Cloth made from the glossy black hide of a monster. Not obtainable by normal means.
+923,0,1,5,99,99,644,0,26,10,0,400,4000,Black Crystal Ticket,A ticket you can trade for a crystal that emits a darkness-sucking light. Not obtainable by normal means.
+924,0,1,5,99,99,645,0,26,24,0,400,4000,Kulu-Ya-Ku Ticket,A ticket given to those who help with Kulu-Ya-Ku research. Includes a very accurate sketch.
+925,0,1,5,99,99,646,0,26,3,0,400,4000,Wiggler Ticket,A ticket given to those who help with Wiggler research. Comes with a rough sketch from a researcher.
+926,0,1,3,99,99,647,1024,58,0,0,200,2000,,
+927,0,1,5,99,99,648,1024,26,24,0,400,4000,,
+928,0,1,5,99,99,649,1024,26,3,0,400,4000,Mega Man Ticket,A ticket for a special Mega Man tie-in. Gives you access to special 8-bit retro Palico equipment.
+929,0,1,3,99,99,650,1024,26,0,0,200,2000,,
+930,0,1,5,99,99,651,1024,26,3,0,400,4000,,
+931,0,1,5,99,99,652,1024,26,8,0,400,4000,,
+932,0,1,3,99,99,653,1024,22,3,0,200,2000,Azure Star Shard,"Special material given to those who complete USJ's challenge. Glows a beautiful, transparent blue."
+933,0,1,5,99,99,654,1024,9,3,0,400,4000,Azure Stargem,Special material for those who overcome the USJ challenge. Shines a miraculous blue.
+934,0,1,7,99,99,655,1024,9,1,0,800,8000,Red Orb,Blood of demonic beings condensed into stone. Can be used to craft stylish devil hunter equipment.
+935,0,1,5,99,99,656,1024,26,10,0,800,8000,Master Craftsman's Blueprint,"A blueprint for a revolutionary Great Sword, designed by a famed craftsman."
+936,0,1,3,99,99,700,0,70,10,0,400,4000,Dissolved Weapon,A weapon carved from Kulve Taroth. Must be repaired before it can be used. <STYL MOJI_YELLOW_DEFAULT>(Appraised after investigation)</STYL>
+937,0,1,4,99,99,701,0,70,0,0,500,5000,Melded Weapon,A weapon carved from Kulve Taroth. Some parts have been infused with gold. <STYL MOJI_YELLOW_DEFAULT>(Appraised after investigation)</STYL>
+938,0,1,5,99,99,702,1024,70,4,0,600,6000,Sublimated Weapon,A weapon carved from Kulve Taroth Strengthened by being infused with gold. <STYL MOJI_YELLOW_DEFAULT>(Appraised after investigation)</STYL>
+939,0,1,3,99,99,657,0,26,1,0,400,4000,Bushi Ticket,A voucher given to those who assisted in the special investigation. Be sure to show it to the Resource Center!
+940,0,0,2,10,99,184,8,10,8,0,7,70,Blossom Fireworks,Fireworks you receive for attending the Spring Blossom Fest. Light up the sky and enjoy the festivities!
+941,0,0,2,10,99,185,8,10,3,0,7,70,Twilight Fireworks,Fireworks you receive for attending the Summer Twilight Fest. Enjoy the summer heat with a bang!
+942,0,0,2,10,99,186,8,10,7,0,7,70,Harvest Fireworks,Fireworks you receive for attending the Autumn Harvest Fest. Dance till the ground lights up in a blaze!
+943,0,0,2,10,99,187,8,10,0,0,7,70,Star Fireworks,Fireworks you receive for attending the Winter Star Fest. Enjoy the festivities with a bang!
+944,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+945,0,2,1,99,99,844,4096,93,4,0,11,110,Gold Scalebat,"A relative of the Scalebat, this nocturnal hunter developed a shiny coat as a result of inhabiting the golden underground."
+946,0,2,2,99,99,845,4096,94,11,0,14,140,Gold Helmcrab,A creature that hoards Dragon Pods. It has gained the attention of those studying the flow of the Everstream.
+947,0,2,3,99,99,846,4096,94,4,0,120,1200,Shiny Gold Helmcrab,A creature that has hoarded a vast amount of Dragon Pods. The key to the Kulve Taroth mystery?
+948,0,2,2,99,99,847,4096,94,11,0,8,80,Copper Calappa,A creature that feeds on gold frag- ments dropped by Taroth. Its shell becomes more golden by the year.
+949,0,2,3,99,99,848,4096,94,4,0,100,1000,Gold Calappa,A Calappa whose shine matches its old age. These creatures are often called living gold nuggets.
+950,0,2,3,99,99,849,4096,92,0,0,500,5000,Tsuchinoko,A creature that exists only in eye- witness reports. To catch one is to become rich beyond imagination.
+951,0,2,3,99,99,850,4096,92,0,0,85,850,,
+952,0,1,3,99,99,725,0,22,4,0,300,3000,Gold Chip Fragment,A fragment that a Copper Calappa harvested from a Kulve Taroth track. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+953,0,1,3,99,99,726,0,22,4,0,900,9000,Gold Nugget Fragment,A fragment that can only be harvested from a very heavy Taroth track. <STYL MOJI_YELLOW_DEFAULT>(Trade-in Item)</STYL>
+954,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+955,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+956,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+957,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+958,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+959,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+960,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+961,0,1,3,99,99,665,0,26,0,0,400,4000,Downy Crake Ticket,A ticket with a pair of Downy Crakes drawn on it. Redeem at the Smithy for something nice!?
+962,0,1,3,99,99,666,0,26,13,0,400,4000,Bristly Crake Ticket,A ticket with a large Bristly Crake drawn on it. Redeem at the Smithy for something nice!?
+963,0,1,3,99,99,667,0,26,25,0,400,4000,First Fleet Ticket,A ticket with the First Fleet's flag and emblem. Redeem at the Smithy for something nice!?
+964,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+965,0,1,7,99,99,638,1024,26,3,0,800,8000,Lunastra Ticket,"A ticket with Lunastra and Teostra, roaring in unison. Redeem at the Smithy for special equipment."
+966,0,2,4,10,10,731,4096,22,0,0,500,5000,,
+967,0,2,3,99,99,851,4096,92,0,0,1000,10000,,
+968,0,2,3,99,99,852,4096,92,0,0,300,3000,,
+969,0,1,3,99,99,658,0,26,4,0,400,4000,Faux Ticket,A ticket with a Mosswine and Felyne drawn on it. Redeem at the Resource Center for something nice!?
+970,0,1,3,99,99,659,0,26,6,0,400,4000,Faux Ticket II,A ticket with a Wiggler and eyepatch drawn on it. Redeem at the Resource Center for something nice!?
+971,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+972,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+973,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+974,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+975,0,1,7,99,99,675,1024,65,5,0,800,8000,,
+976,0,1,7,99,99,676,1024,26,7,0,800,8000,,A ticket with an image of a terrifying machine beast and a brave hunter. Allows you to craft special equipment.
+977,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+978,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+979,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+980,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+981,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+982,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+983,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+984,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+985,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+986,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+987,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+988,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+989,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+990,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+991,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+992,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+993,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+994,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+995,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+996,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+997,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+998,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable
+999,0,0,0,99,99,1,0,0,0,0,0,0,Unavailable,Unavailable

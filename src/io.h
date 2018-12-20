@@ -26,9 +26,11 @@ namespace io {
 	// declarations
 	typedef std::vector<uint8_t>	buffer;
 
-	buffer	read_savegame(const std::string& fname);
-	void	write_savegame(const std::string& fname, const buffer& buf);
-	void	write_dump(const std::string& fname, const buffer& buf);
+	buffer		read_savegame(const std::string& fname);
+	void		write_savegame(const std::string& fname, const buffer& buf);
+	void		write_dump(const std::string& fname, const buffer& buf);
+	bool		load_items_csv(const std::string& fname);
+	const char*	lookup_item(const size_t id);
 }
 
 #endif //_IO_H_
