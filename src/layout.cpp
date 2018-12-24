@@ -19,11 +19,30 @@
 #include <cstring>
 #include <stdexcept>
 #include <iconv.h>
+#include <algorithm>
 
 namespace {
 	const static size_t	STEAMID_OFFSET = 0x28,
 				SAVESLOT_OFFSET = 0x003004DC,
 		      		SAVESLOT_SIZE = 0xF6110;
+
+	struct items_containers {
+		size_t	offset,
+			count;
+	};
+
+	const static items_containers	LIST_CONTAINERS[] = {
+		{0xa2c79, 24},	//pouch_item
+		{0xa2d39, 16},	//pouch_ammo
+		{0xa2ed9, 200},	//box_item
+		{0xa3519, 200}, //box_ammo
+		{0xa3b59, 800},	//box_material
+		{0xa5459, 200}	//box_deco
+	};
+
+	const static size_t		IN_OFFSET = 0xDA8D5;
+					INV_TOTAL = 250;
+					INV_SIZE = 42;
 }
 
 namespace layout {
@@ -86,15 +105,6 @@ namespace layout {
 			count;
 	};
 
-	const static items_containers	LIST_CONTAINERS[] = {
-		{0xa2c79, 24},	//pouch_item
-		{0xa2d39, 16},	//pouch_ammo
-		{0xa2ed9, 200},	//box_item
-		{0xa3519, 200}, //box_ammo
-		{0xa3b59, 800},	//box_material
-		{0xa5459, 200}	//box_deco
-	};
-
 	items_data get_items_data(const io::buffer& buf, const size_t slot_id) {
 		const size_t	base_slot = SAVESLOT_OFFSET + SAVESLOT_SIZE*slot_id;
 		if((base_slot+SAVESLOT_SIZE) > buf.size())
@@ -114,6 +124,39 @@ namespace layout {
 				fn_read_two_uint32_t(j, cur_items[j]);
 		}
 		return out;
+	}
+
+	inv_data get_inv_data(const io::buffer& buf, const size_t slot_id) {
+		const size_t	base_slot = SAVESLOT_OFFSET + SAVESLOT_SIZE*slot_id;
+		if((base_slot+SAVESLOT_SIZE) > buf.size())
+			throw std::runtime_error("Invalid slot, outside of boundaries of savegame");
+		// scan each investigation
+		std::vector<inv_info>	ret;
+		for(size_t i = 0; i < INV_TOTAL; ++i) {
+			const uint8_t	*cur_inv = &buf[base_slot + IN_OFFSET + i*INV_SIZE];
+			static const uint8_t	FILLED[] = {0x30, 0x75, 0x00, 0x00};
+			if(memcmp(FILLED, cur_inv, sizeof(FILLED)/sizeof(uint8_t)))
+				continue;
+
+			auto	fn_get_uint32_t = [cur_inv](const size_t offset) -> uint32_t {
+				uint32_t	rv = 0;
+				std::memcpy(&rv, cur_inv + offset, sizeof(uint32_t));
+				return rv;
+			};
+
+			inv_info	tmp;
+			// bitmap info from https://github.com/AsteriskAmpersand/MHW-Save-Editor/blob/master/MHW%20Save%20Editor/src/InvestigationEditing/Investigation.cs
+			tmp.selected = cur_inv[4] != 0x00;
+			tmp.attempts = fn_get_uint32_t(5);
+			tmp.seen = cur_inv[9] == 0x03;
+			tmp.locale = cur_inv[13];
+			tmp.rank = cur_inv[14];
+			tmp.mon1 = fn_get_uint32_t(15);
+			tmp.mon2 = fn_get_uint32_t(19);
+			tmp.mon3 = fn_get_uint32_t(23);
+			ret.push_back(tmp);
+		}
+		return ret;
 	}
 }
 

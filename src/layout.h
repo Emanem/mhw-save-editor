@@ -49,10 +49,25 @@ namespace layout {
 		static const char	*names[ITEMS_CONTAINER::last];
 	};
 
+	struct inv_info {
+		bool		selected,
+				seen;
+		uint8_t		locale,
+				rank;
+		uint32_t	attempts,
+				mon1,
+				mon2,
+				mon3;
+
+	};
+
+	typedef std::vector<inv_info>	inv_data;
+
 	bool		basic_checksum(const io::buffer& buf);
 	int64_t 	get_steamid(const io::buffer& buf);
 	hunter_data	get_slot_data(const io::buffer& buf, const size_t slot_id);
 	items_data	get_items_data(const io::buffer& buf, const size_t slot_id);
+	inv_data	get_inv_data(const io::buffer& buf, const size_t slot_id);
 }
 
 #endif //_LAYOUT_H_

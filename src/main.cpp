@@ -172,6 +172,17 @@ namespace {
 		}
 	}
 
+	void print_inv_slot(const SLOT_ID slot, const io::buffer& data) {
+		const auto	items = layout::get_inv_data(data, slot);
+		std::cout << "\t" << "investigations" << '\n';
+		for(const auto& i : items) {
+			std::cout << "\t\t"	<< i.selected << "," << i.seen << "," << (int)i.locale << "," << i.attempts << ","
+						<< (int)i.rank << "," << i.mon1 << "," << i.mon2 << "," << i.mon3
+						<< '\n';
+		}
+		std::cout << std::endl;
+	}
+
 	template<typename func>
 	void print_data(const SLOT_ID slot, const io::buffer& data, func&& f) {
 		switch(slot) {
@@ -209,7 +220,7 @@ int main(int argc, char *argv[]) {
 			} break;
 
 			case LIST_TYPE::all:
-			print_data(slot_id, rv, [](const SLOT_ID slot, const io::buffer& data) -> void { print_basic_slot(slot, data); print_items_slot(slot, data); } );
+			print_data(slot_id, rv, [](const SLOT_ID slot, const io::buffer& data) -> void { print_basic_slot(slot, data); print_items_slot(slot, data); print_inv_slot(slot, data); } );
 			break;
 
 			case LIST_TYPE::basic:
