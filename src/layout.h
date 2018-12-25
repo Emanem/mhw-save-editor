@@ -68,6 +68,7 @@ namespace layout {
 	hunter_data	get_slot_data(const io::buffer& buf, const size_t slot_id);
 	items_data	get_items_data(const io::buffer& buf, const size_t slot_id);
 	inv_data	get_inv_data(const io::buffer& buf, const size_t slot_id);
+	void		mask_known_buffer(io::buffer& buf);
 }
 
 #endif //_LAYOUT_H_

@@ -22,12 +22,15 @@
 #include "layout.h"
 
 namespace {
-	static const char	VERSION[] = "0.0.1";
+	static const char	VERSION[] = "0.0.2";
 
 	enum LIST_TYPE {
 		basic = 0,
 		all,
-		dump
+		dump,
+		mask_dump,
+		items,
+		inv
 	} list_type = LIST_TYPE::basic;
 
 	enum SLOT_ID {
@@ -45,13 +48,19 @@ namespace {
 		std::cerr <<	"Usage: " << prog << " [options] ... [savefile]\nExecutes mhw-save-editor " << version << "\n\n"
 				"-l, --list             lists the basic save information for all the slots or\n"
 				"                       the specified slot\n"
-				"    --list-all         lists all known information for a given slot (if\n"
+				"-a, --list-all         lists all known information for a given slot (if\n"
 				"                       no slot specified, lists for all slots)\n"
 				"    --items-list (csv) specify a custom csv file with fir row header, containing\n"
 				"                       at least columns \"id\" (numerical identifier) and\n"
 				"                       \"name\" (name) of items. by default tries to load the\n"
 				"                       file named 'items.csv'\n"
+				"    --list-items       lists only the items (using custom csv - see '--items-list'\n"
+				"                       option)\n"
+				"    --list-inv         lists only investigations\n"
 				"-d, --dump (file)      dumps the decrypted information in the specified file\n"
+				"    --mask-dump (file) dumps the decrypted information in the specified file, by masking the\n"
+				"                       know layout with its own description. Usefuly for understanding\n"
+				"                       the file format\n"
 				"-s, --slot (n)         specify which slot to select (0, 1 or 2)\n"
 				"    --help             prints this help and exit\n\n"
 		<< std::flush;
@@ -62,10 +71,13 @@ namespace {
 		int			c;
 		static struct option	long_options[] = {
 			{"dump",		required_argument, 0,	'd'},
+			{"mask-dump",		required_argument, 0,	0},
 			{"help",		no_argument,	   0,	0},
 			{"items-list",		required_argument, 0,	0},
 			{"slot",		required_argument, 0,	's'},
-			{"list-all",		no_argument, 	   0,	0},
+			{"list-all",		no_argument, 	   0,	'a'},
+			{"list-items",		no_argument, 	   0,	0},
+			{"list-inv",		no_argument, 	   0,	0},
 			{0, 0, 0, 0}
 		};
 
@@ -73,7 +85,7 @@ namespace {
 			// getopt_long stores the option index here
 			int		option_index = 0;
 
-			if(-1 == (c = getopt_long(argc, argv, "d:s:", long_options, &option_index)))
+			if(-1 == (c = getopt_long(argc, argv, "ad:s:", long_options, &option_index)))
 				break;
 
 			switch (c) {
@@ -81,14 +93,23 @@ namespace {
 					// If this option set a flag, do nothing else now
 					if (long_options[option_index].flag != 0)
 					break;
-					if(!std::strcmp("list-all", long_options[option_index].name)) {
-						list_type = LIST_TYPE::all;
-					} if(!std::strcmp("items-list", long_options[option_index].name)) {
+					if(!std::strcmp("mask-dump", long_options[option_index].name)) {
+						outfile = optarg;
+						list_type = LIST_TYPE::mask_dump;
+					} else if(!std::strcmp("list-items", long_options[option_index].name)) {
+						list_type = LIST_TYPE::items;
+					} else if(!std::strcmp("list-inv", long_options[option_index].name)) {
+						list_type = LIST_TYPE::inv;
+					} else if(!std::strcmp("items-list", long_options[option_index].name)) {
 						items_file = optarg;
 					} else if(!std::strcmp("help", long_options[option_index].name)) {
 						print_help(prog, version);
 						std::exit(0);
 					}
+				} break;
+
+				case 'a': {
+					list_type = LIST_TYPE::all;
 				} break;
 
 				case 'd': {
@@ -219,8 +240,21 @@ int main(int argc, char *argv[]) {
 				io::write_dump(outfile, rv);
 			} break;
 
+			case LIST_TYPE::mask_dump: {
+				layout::mask_known_buffer(rv);
+				io::write_dump(outfile, rv);
+			} break;
+
 			case LIST_TYPE::all:
 			print_data(slot_id, rv, [](const SLOT_ID slot, const io::buffer& data) -> void { print_basic_slot(slot, data); print_items_slot(slot, data); print_inv_slot(slot, data); } );
+			break;
+
+			case LIST_TYPE::items:
+			print_data(slot_id, rv, [](const SLOT_ID slot, const io::buffer& data) -> void { print_items_slot(slot, data); } );
+			break;
+
+			case LIST_TYPE::inv:
+			print_data(slot_id, rv, [](const SLOT_ID slot, const io::buffer& data) -> void { print_inv_slot(slot, data); } );
 			break;
 
 			case LIST_TYPE::basic:

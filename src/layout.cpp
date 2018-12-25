@@ -40,8 +40,8 @@ namespace {
 		{0xa5459, 200}	//box_deco
 	};
 
-	const static size_t		IN_OFFSET = 0xDA8D5;
-					INV_TOTAL = 250;
+	const static size_t		INV_OFFSET = 0xDA8D5,
+					INV_TOTAL = 250,
 					INV_SIZE = 42;
 }
 
@@ -133,7 +133,7 @@ namespace layout {
 		// scan each investigation
 		std::vector<inv_info>	ret;
 		for(size_t i = 0; i < INV_TOTAL; ++i) {
-			const uint8_t	*cur_inv = &buf[base_slot + IN_OFFSET + i*INV_SIZE];
+			const uint8_t	*cur_inv = &buf[base_slot + INV_OFFSET + i*INV_SIZE];
 			static const uint8_t	FILLED[] = {0x30, 0x75, 0x00, 0x00};
 			if(memcmp(FILLED, cur_inv, sizeof(FILLED)/sizeof(uint8_t)))
 				continue;
@@ -157,6 +157,47 @@ namespace layout {
 			ret.push_back(tmp);
 		}
 		return ret;
+	}
+
+	void mask_known_buffer(io::buffer& buf) {
+		auto fn_mask = [&buf](const size_t offset, const size_t sz, const char* mask) -> void {
+			const size_t	mask_sz = std::strlen(mask);
+			for(size_t i = 0; i < sz; ++i) {
+				buf[offset + i] = mask[i%mask_sz];
+			}
+		};
+
+		auto fn_mask_inc = [&fn_mask](size_t& offset, const size_t sz, const char* mask) -> void {
+			fn_mask(offset, sz, mask);
+			offset += sz;
+		};
+
+		// steam id
+		fn_mask(STEAMID_OFFSET, sizeof(int64_t), "steamid");
+		// slot info
+		for(size_t i = 0; i < 3; ++i) {
+			const size_t	base_slot = SAVESLOT_OFFSET + SAVESLOT_SIZE*i;
+			// save slot basic info
+			{
+				size_t base_slot_inc = base_slot;
+				fn_mask_inc(base_slot_inc, 64, "name");
+				fn_mask_inc(base_slot_inc, sizeof(uint32_t), "rank");
+				fn_mask_inc(base_slot_inc, sizeof(uint32_t), "zenny");
+				fn_mask_inc(base_slot_inc, sizeof(uint32_t), "res");
+				fn_mask_inc(base_slot_inc, sizeof(uint32_t), "xp");
+				fn_mask_inc(base_slot_inc, sizeof(uint32_t), "time");
+				fn_mask(base_slot + 0xB0, sizeof(uint32_t), "gender");
+			}
+
+			// inventories
+			for(size_t j = 0; j < sizeof(LIST_CONTAINERS)/sizeof(items_containers); ++j) {
+				const size_t	cur_offset = base_slot + LIST_CONTAINERS[j].offset;
+				fn_mask(cur_offset, LIST_CONTAINERS[j].count*sizeof(uint32_t)*2, items_data::names[j]);
+			}
+
+			// investigations
+			fn_mask(base_slot + INV_OFFSET, INV_TOTAL*INV_SIZE, "investigations");
+		}
 	}
 }
 
