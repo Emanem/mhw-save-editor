@@ -16,6 +16,7 @@
  * */
 
 #include "layout.h"
+#include "layout_bin.h"
 #include <cstring>
 #include <stdexcept>
 #include <iconv.h>

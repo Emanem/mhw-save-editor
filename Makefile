@@ -21,7 +21,7 @@ $(OBJDIR)/io.o: src/io.cpp src/io.h $(OBJDIR)/__setup_obj_dir
 $(OBJDIR)/main.o: src/main.cpp src/io.h src/layout.h $(OBJDIR)/__setup_obj_dir
 	$(CPPC) $(FLAGS) src/main.cpp -c -o $@
 
-$(OBJDIR)/layout.o: src/layout.cpp src/layout.h src/io.h $(OBJDIR)/__setup_obj_dir
+$(OBJDIR)/layout.o: src/layout.cpp src/layout.h src/layout_bin.h src/io.h $(OBJDIR)/__setup_obj_dir
 	$(CPPC) $(FLAGS) src/layout.cpp -c -o $@
 
 $(OBJDIR)/__setup_obj_dir :
