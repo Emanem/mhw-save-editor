@@ -4,6 +4,12 @@ This is a simple _Monster Hunter: World_ save file editor.
 ## Summary
 Mostly inspired by [AsteriskAmpersand](https://github.com/AsteriskAmpersand/MHW-Save-Editor) and all the folks he's been inspired from and working with him/her, this editor is mostly a research prototype project.
 
+## How to build it
+This needs `openssl` installed to be able building it.
+On most distribution one just requires to
+```sudo apt install libssl-dev```
+And it would do the trick.
+
 ## How to use it
 t.b.d.
 
