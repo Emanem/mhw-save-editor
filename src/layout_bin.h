@@ -22,6 +22,17 @@
 
 namespace layout_bin {
 
+	struct itemnum {
+		uint32_t	id;
+		uint32_t	number;
+	} PACKED;
+
+	struct itemcontainers {
+		itemnum		pouch_item[24];
+		itemnum		pouch_ammo[16];
+		uint8_t		unknown0[0];
+	} PACKED;
+
 	struct saveslot {
 		uint8_t		name_utf8[64];
 		uint32_t	rank;
@@ -29,6 +40,15 @@ namespace layout_bin {
 		uint32_t	res_points;
 		uint32_t	xp;
 		uint32_t	playtime;
+		uint8_t		unknown0[0xb0 - (
+				sizeof(name_utf8) +
+				sizeof(rank) +
+				sizeof(zenny) +
+				sizeof(res_points) +
+				sizeof(xp) +
+				sizeof(playtime) +
+				0)];
+		uint32_t	gender;
 		uint8_t		unknown_[0xf6110 - (
 				sizeof(name_utf8) +
 				sizeof(rank) +
@@ -36,6 +56,8 @@ namespace layout_bin {
 				sizeof(res_points) +
 				sizeof(xp) +
 				sizeof(playtime) +
+				sizeof(unknown0) +
+				sizeof(gender) +
 				0)];
 	} PACKED;
 
