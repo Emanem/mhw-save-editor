@@ -6,9 +6,9 @@ Mostly inspired by [AsteriskAmpersand](https://github.com/AsteriskAmpersand/MHW-
 
 ## How to build it
 This needs `openssl` installed to be able building it.
-On most distribution one just requires to
+On most distributions one just requires to
 ```sudo apt install libssl-dev```
-And it would do the trick.
+and it would do the trick. Once done, then just invoke `make` or `make release` and the executable should be compiled.
 
 ## How to use it
 t.b.d.
