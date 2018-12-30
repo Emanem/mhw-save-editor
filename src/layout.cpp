@@ -25,10 +25,6 @@
 namespace {
 	const static size_t	SAVESLOT_OFFSET = 0x003004DC,
 		      		SAVESLOT_SIZE = 0xF6110;
-
-	const static size_t		INV_OFFSET = 0xDA8D5,
-					INV_TOTAL = 250,
-					INV_SIZE = 42;
 }
 
 namespace layout {
@@ -76,7 +72,7 @@ namespace layout {
 			iconv_close(conv);
 		}
 		out.rank = cs->info.rank;
-		out.zeny = cs->info.zeny;
+		out.zenny = cs->info.zenny;
 		out.res_points = cs->info.res_points;
 		out.xp = cs->info.xp;
 		out.playtime = cs->info.playtime;
@@ -124,30 +120,26 @@ namespace layout {
 		const size_t	base_slot = SAVESLOT_OFFSET + SAVESLOT_SIZE*slot_id;
 		if((base_slot+SAVESLOT_SIZE) > buf.size())
 			throw std::runtime_error("Invalid slot, outside of boundaries of savegame");
+		// local references
+		SAVEFILE_PTR(sf, buf);
+		const layout_bin::saveslot*	cs = &sf->slots[slot_id];
 		// scan each investigation
 		std::vector<inv_info>	ret;
-		for(size_t i = 0; i < INV_TOTAL; ++i) {
-			const uint8_t	*cur_inv = &buf[base_slot + INV_OFFSET + i*INV_SIZE];
+		for(const auto& i : cs->invs) {
 			static const uint8_t	FILLED[] = {0x30, 0x75, 0x00, 0x00};
-			if(memcmp(FILLED, cur_inv, sizeof(FILLED)/sizeof(uint8_t)))
+			if(memcmp(FILLED, &i.filled, sizeof(FILLED)/sizeof(uint8_t)))
 				continue;
-
-			auto	fn_get_uint32_t = [cur_inv](const size_t offset) -> uint32_t {
-				uint32_t	rv = 0;
-				std::memcpy(&rv, cur_inv + offset, sizeof(uint32_t));
-				return rv;
-			};
 
 			inv_info	tmp;
 			// bitmap info from https://github.com/AsteriskAmpersand/MHW-Save-Editor/blob/master/MHW%20Save%20Editor/src/InvestigationEditing/Investigation.cs
-			tmp.selected = cur_inv[4] != 0x00;
-			tmp.attempts = fn_get_uint32_t(5);
-			tmp.seen = cur_inv[9] == 0x03;
-			tmp.locale = cur_inv[13];
-			tmp.rank = cur_inv[14];
-			tmp.mon1 = fn_get_uint32_t(15);
-			tmp.mon2 = fn_get_uint32_t(19);
-			tmp.mon3 = fn_get_uint32_t(23);
+			tmp.selected = i.selected == 0x00;
+			tmp.attempts = i.attempts;
+			tmp.seen = i.seen == 0x03;
+			tmp.locale = i.locale;
+			tmp.rank = i.rank;
+			tmp.mon1 = i.mon1;
+			tmp.mon2 = i.mon2;
+			tmp.mon3 = i.mon3;
 			ret.push_back(tmp);
 		}
 		return ret;

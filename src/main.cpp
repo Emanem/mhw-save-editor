@@ -159,7 +159,7 @@ namespace {
 
 		std::wcout << "\t" << "Name:\t" << hd.name << '\n';
 		std::cout  << "\t" << "Rank:\t" << hd.rank << '\n'
-			   << "\t" << "Zeny:\t" << hd.zeny << '\n'
+			   << "\t" << "Zenny:\t" << hd.zenny << '\n'
 			   << "\t" << "Research:\t" << hd.res_points << '\n'
 			   << "\t" << "Experience:\t" << hd.xp << '\n'
 			   << "\t" << "Playtime:\t" << hd.playtime << '\n'

@@ -25,7 +25,7 @@ namespace layout {
 	struct hunter_data {
 		wchar_t		name[64];
 		uint32_t	rank,
-				zeny,
+				zenny,
 				res_points,
 				xp,
 				playtime,
