@@ -66,7 +66,7 @@ namespace layout {
 		// TODO - should check conversion from UTF-8 to wchar_t
 		{
 			auto		conv = iconv_open("WCHAR_T", "UTF-8");
-			char		*pIn = (char*)&cs->name_utf8,
+			char		*pIn = (char*)&cs->info.name_utf8,
 					*pOut = (char*)&out.name[0];
 			size_t		sIn = 64,
 					sOut = 64;
@@ -75,12 +75,12 @@ namespace layout {
 			iconv(conv, &pIn, &sIn, &pOut, &sOut);
 			iconv_close(conv);
 		}
-		out.rank = cs->rank;
-		out.zeny = cs->zeny;
-		out.res_points = cs->res_points;
-		out.xp = cs->xp;
-		out.playtime = cs->playtime;
-		out.gender = cs->gender;
+		out.rank = cs->info.rank;
+		out.zeny = cs->info.zeny;
+		out.res_points = cs->info.res_points;
+		out.xp = cs->info.xp;
+		out.playtime = cs->info.playtime;
+		out.gender = cs->info.gender;
 		return out;
 	}
 

@@ -22,6 +22,24 @@
 
 namespace layout_bin {
 
+	struct charinfo {
+		uint8_t		name_utf8[64];
+		uint32_t	rank;
+		uint32_t	zeny;
+		uint32_t	res_points;
+		uint32_t	xp;
+		uint32_t	playtime;
+		uint8_t		unknown0[0xb0 - (
+				sizeof(name_utf8) +
+				sizeof(rank) +
+				sizeof(zeny) +
+				sizeof(res_points) +
+				sizeof(xp) +
+				sizeof(playtime) +
+				0)];
+		uint32_t	gender;
+	} PACKED;
+
 	struct itemlist {
 		uint32_t	id;
 		uint32_t	number;
@@ -41,41 +59,13 @@ namespace layout_bin {
 	} PACKED;
 
 	struct saveslot {
-		uint8_t		name_utf8[64];
-		uint32_t	rank;
-		uint32_t	zeny;
-		uint32_t	res_points;
-		uint32_t	xp;
-		uint32_t	playtime;
-		uint8_t		unknown0[0xb0 - (
-				sizeof(name_utf8) +
-				sizeof(rank) +
-				sizeof(zeny) +
-				sizeof(res_points) +
-				sizeof(xp) +
-				sizeof(playtime) +
-				0)];
-		uint32_t	gender;
+		charinfo	info;
 		uint8_t		unknown1[0xa2c79 - (
-				sizeof(name_utf8) +
-				sizeof(rank) +
-				sizeof(zeny) +
-				sizeof(res_points) +
-				sizeof(xp) +
-				sizeof(playtime) +
-				sizeof(unknown0) +
-				sizeof(gender) +
+				sizeof(info) +
 				0)];
 		itemcontainers	items;
 		uint8_t		unknown_[0xf6110 - (
-				sizeof(name_utf8) +
-				sizeof(rank) +
-				sizeof(zeny) +
-				sizeof(res_points) +
-				sizeof(xp) +
-				sizeof(playtime) +
-				sizeof(unknown0) +
-				sizeof(gender) +
+				sizeof(info) + 
 				sizeof(unknown1) +
 				sizeof(items) +
 				0)];
