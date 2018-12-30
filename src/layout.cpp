@@ -23,23 +23,8 @@
 #include <algorithm>
 
 namespace {
-	const static size_t	STEAMID_OFFSET = 0x28,
-				SAVESLOT_OFFSET = 0x003004DC,
+	const static size_t	SAVESLOT_OFFSET = 0x003004DC,
 		      		SAVESLOT_SIZE = 0xF6110;
-
-	struct items_containers {
-		size_t	offset,
-			count;
-	};
-
-	const static items_containers	LIST_CONTAINERS[] = {
-		{0xa2c79, 24},	//pouch_item
-		{0xa2d39, 16},	//pouch_ammo
-		{0xa2ed9, 200},	//box_item
-		{0xa3519, 200}, //box_ammo
-		{0xa3b59, 800},	//box_material
-		{0xa5459, 200}	//box_deco
-	};
 
 	const static size_t		INV_OFFSET = 0xDA8D5,
 					INV_TOTAL = 250,
@@ -99,29 +84,39 @@ namespace layout {
 		return out;
 	}
 
-	struct items_containers {
-		size_t	offset,
-			count;
-	};
-
 	items_data get_items_data(const io::buffer& buf, const size_t slot_id) {
 		const size_t	base_slot = SAVESLOT_OFFSET + SAVESLOT_SIZE*slot_id;
 		if((base_slot+SAVESLOT_SIZE) > buf.size())
 			throw std::runtime_error("Invalid slot, outside of boundaries of savegame");
+		// local references
+		SAVEFILE_PTR(sf, buf);
+		const layout_bin::saveslot*	cs = &sf->slots[slot_id];
 		// start filling in info
 		items_data out;
-		for(size_t i = 0; i < sizeof(LIST_CONTAINERS)/sizeof(items_containers); ++i) {
-			auto&		cur_items = out.containers[i];
-			cur_items.resize(LIST_CONTAINERS[i].count);
-			const size_t	cur_offset = base_slot + LIST_CONTAINERS[i].offset;
-			auto fn_read_two_uint32_t = [&buf, &cur_offset](const size_t idx, std::pair<uint32_t, uint32_t>& v) -> void {
-				std::memcpy(&v.first, &buf[cur_offset + idx*sizeof(uint32_t)*2], sizeof(uint32_t));
-				std::memcpy(&v.second, &buf[cur_offset + idx*sizeof(uint32_t)*2 + sizeof(uint32_t)], sizeof(uint32_t));
-			};
-
-			for(size_t j = 0; j < LIST_CONTAINERS[i].count; ++j)
-				fn_read_two_uint32_t(j, cur_items[j]);
-		}
+		//
+		out.containers[ITEMS_CONTAINER::pouch_item].resize(sizeof(layout_bin::itemcontainers::pouch_item)/sizeof(layout_bin::itemlist));
+		for(const auto& i : cs->items.pouch_item)
+			out.containers[ITEMS_CONTAINER::pouch_item].push_back(std::make_pair(i.id, i.number));
+		//
+		out.containers[ITEMS_CONTAINER::pouch_ammo].resize(sizeof(layout_bin::itemcontainers::pouch_ammo)/sizeof(layout_bin::itemlist));
+		for(const auto& i : cs->items.pouch_ammo)
+			out.containers[ITEMS_CONTAINER::pouch_ammo].push_back(std::make_pair(i.id, i.number));
+		//
+		out.containers[ITEMS_CONTAINER::box_item].resize(sizeof(layout_bin::itemcontainers::box_item)/sizeof(layout_bin::itemlist));
+		for(const auto& i : cs->items.box_item)
+			out.containers[ITEMS_CONTAINER::box_item].push_back(std::make_pair(i.id, i.number));
+		//
+		out.containers[ITEMS_CONTAINER::box_ammo].resize(sizeof(layout_bin::itemcontainers::box_ammo)/sizeof(layout_bin::itemlist));
+		for(const auto& i : cs->items.box_ammo)
+			out.containers[ITEMS_CONTAINER::box_ammo].push_back(std::make_pair(i.id, i.number));
+		//
+		out.containers[ITEMS_CONTAINER::box_materials].resize(sizeof(layout_bin::itemcontainers::box_materials)/sizeof(layout_bin::itemlist));
+		for(const auto& i : cs->items.box_materials)
+			out.containers[ITEMS_CONTAINER::box_materials].push_back(std::make_pair(i.id, i.number));
+		//
+		out.containers[ITEMS_CONTAINER::box_decos].resize(sizeof(layout_bin::itemcontainers::box_decos)/sizeof(layout_bin::itemlist));
+		for(const auto& i : cs->items.box_decos)
+			out.containers[ITEMS_CONTAINER::box_decos].push_back(std::make_pair(i.id, i.number));
 		return out;
 	}
 
@@ -159,44 +154,8 @@ namespace layout {
 	}
 
 	void mask_known_buffer(io::buffer& buf) {
-		auto fn_mask = [&buf](const size_t offset, const size_t sz, const char* mask) -> void {
-			const size_t	mask_sz = std::strlen(mask);
-			for(size_t i = 0; i < sz; ++i) {
-				buf[offset + i] = mask[i%mask_sz];
-			}
-		};
-
-		auto fn_mask_inc = [&fn_mask](size_t& offset, const size_t sz, const char* mask) -> void {
-			fn_mask(offset, sz, mask);
-			offset += sz;
-		};
-
-		// steam id
-		fn_mask(STEAMID_OFFSET, sizeof(int64_t), "steamid");
-		// slot info
-		for(size_t i = 0; i < 3; ++i) {
-			const size_t	base_slot = SAVESLOT_OFFSET + SAVESLOT_SIZE*i;
-			// save slot basic info
-			{
-				size_t base_slot_inc = base_slot;
-				fn_mask_inc(base_slot_inc, 64, "name");
-				fn_mask_inc(base_slot_inc, sizeof(uint32_t), "rank");
-				fn_mask_inc(base_slot_inc, sizeof(uint32_t), "zenny");
-				fn_mask_inc(base_slot_inc, sizeof(uint32_t), "res");
-				fn_mask_inc(base_slot_inc, sizeof(uint32_t), "xp");
-				fn_mask_inc(base_slot_inc, sizeof(uint32_t), "time");
-				fn_mask(base_slot + 0xB0, sizeof(uint32_t), "gender");
-			}
-
-			// inventories
-			for(size_t j = 0; j < sizeof(LIST_CONTAINERS)/sizeof(items_containers); ++j) {
-				const size_t	cur_offset = base_slot + LIST_CONTAINERS[j].offset;
-				fn_mask(cur_offset, LIST_CONTAINERS[j].count*sizeof(uint32_t)*2, items_data::names[j]);
-			}
-
-			// investigations
-			fn_mask(base_slot + INV_OFFSET, INV_TOTAL*INV_SIZE, "investigations");
-		}
+		// TODO
+		// Needs to be completely rewritten
 	}
 }
 

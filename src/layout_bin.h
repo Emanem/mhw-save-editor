@@ -36,8 +36,8 @@ namespace layout_bin {
 				0)];
 		itemlist	box_item[200];
 		itemlist	box_ammo[200];
-		itemlist	box_material[800];
-		itemlist	box_deco[200];
+		itemlist	box_materials[800];
+		itemlist	box_decos[200];
 	} PACKED;
 
 	struct saveslot {
