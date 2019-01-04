@@ -29,14 +29,7 @@ namespace layout_bin {
 		uint32_t	res_points;
 		uint32_t	xp;
 		uint32_t	playtime;
-		uint8_t		unknown0[0xb0 - (
-				sizeof(name_utf8) +
-				sizeof(rank) +
-				sizeof(zenny) +
-				sizeof(res_points) +
-				sizeof(xp) +
-				sizeof(playtime) +
-				0)];
+		uint8_t		unknown0[92];
 		uint32_t	gender;
 	} PACKED;
 
@@ -45,13 +38,32 @@ namespace layout_bin {
 		uint32_t	number;
 	} PACKED;
 
+	struct itemloadouts {
+		struct loadout {
+			struct       shortcuts {
+				struct items {
+					uint32_t	category_id;
+					uint32_t	entry_id;
+					uint32_t        unknown;
+				} PACKED;
+				uint8_t	name_utf8[0x20];
+				items	circle[8];
+			} PACKED;
+			uint8_t		name_utf8[0x20];
+			itemlist	default_pouch_items[24];
+			itemlist	default_pouch_ammo[16];
+			uint8_t		unknown0[264];
+			shortcuts	tlrb[4];
+		} PACKED;
+
+		loadout		list[0x38];
+		uint8_t		sort_idx[0x38];
+	};
+
 	struct itemcontainers {
 		itemlist	pouch_item[24];
 		itemlist	pouch_ammo[16];
-		uint8_t		unknown0[0x260 - (
-				sizeof(pouch_item) +
-				sizeof(pouch_ammo) +
-				0)];
+		uint8_t		unknown0[288];
 		itemlist	box_item[200];
 		itemlist	box_ammo[200];
 		itemlist	box_materials[800];
@@ -137,48 +149,24 @@ namespace layout_bin {
 
 	struct saveslot {
 		charinfo	info;
-		uint8_t		unknown0[0xa2c79 - (
-				sizeof(info) +
-				0)];
+		uint8_t		unknown0[603333];
+		itemloadouts	item_loadouts;
+		uint8_t		unknown1[8];
 		itemcontainers	items;
-		uint8_t		unknown1[0xda8d5 - (
-				sizeof(info) + 
-				sizeof(unknown0) +
-				sizeof(items) +
-				0)];
+		uint8_t		unknown2[216636];
 		investigation	invs[250];
-		uint8_t		unknown2[0xfb9];
-		equiploadout	loadouts[0x70];
-		uint8_t		unknown_[0xf6110 - (
-				sizeof(info) + 
-				sizeof(unknown0) +
-				sizeof(items) +
-				sizeof(unknown1) +
-				sizeof(invs) + 
-				sizeof(unknown2) +
-				sizeof(loadouts) +
-				0)];
+		uint8_t		unknown3[4025];
+		equiploadout	eq_loadouts[0x70];
+		uint8_t		unknown_[37246];
 	} PACKED;
 
 	struct savefile {
 		uint32_t	magicnum;
-		uint8_t		unknown0[12 - (
-				sizeof(magicnum) +
-				0)];
+		uint8_t		unknown0[8];
 		uint8_t		sha1[20];
-		uint8_t		unknown1[0x28 - (
-				sizeof(magicnum) +
-				sizeof(unknown0) +
-				sizeof(sha1) +
-				0)];
+		uint8_t		unknown1[8];
 		int64_t		steamid;
-		uint8_t		unknown_[0x3004dc - (
-				sizeof(magicnum) +
-				sizeof(unknown0) +
-				sizeof(sha1) +
-				sizeof(unknown1) +
-				sizeof(steamid) +
-				0)];
+		uint8_t		unknown_[3146924];
 		saveslot	slots[3];
 	} PACKED;
 
