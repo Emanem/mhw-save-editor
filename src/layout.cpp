@@ -146,8 +146,39 @@ namespace layout {
 	}
 
 	void mask_known_buffer(io::buffer& buf) {
-		// TODO
-		// Needs to be completely rewritten
+		auto fn_fill_buf = [&buf](void* ptr, const size_t sz, const char* pattern) -> void {
+			uint8_t*	ptr_buf = (uint8_t*)ptr;
+
+			if(ptr_buf + sz >= (&buf[0] + buf.size()))
+				throw std::runtime_error("Can't fill buffer, offset specified is too large!");
+			const size_t	pattern_sz = std::strlen(pattern);
+			for(size_t i = 0; i < sz; ++i) {
+				ptr_buf[i] = pattern[i%pattern_sz];
+			}
+		};
+
+		// local references
+		layout_bin::savefile	*sf = reinterpret_cast<layout_bin::savefile*>(&buf[0]);
+// simple macro to call fill in function
+#define FILL_FN(d, p)	fn_fill_buf(&(d), sizeof((d)), p)
+
+		// start with savefile
+		FILL_FN(sf->magicnum, "magic");
+		FILL_FN(sf->sha1, "sha1");
+		FILL_FN(sf->steamid, "steamid");
+
+		for(size_t i = 0; i < sizeof(layout_bin::savefile::slots)/sizeof(layout_bin::saveslot); ++i) {
+			// do each saveslot
+			layout_bin::saveslot*	cs = &sf->slots[i];
+
+			FILL_FN(cs->info, "charinfo");
+			FILL_FN(cs->item_loadouts, "item_loadouts");
+			FILL_FN(cs->items, "items");
+			FILL_FN(cs->invs, "investigations");
+			FILL_FN(cs->equip_loadouts, "equip_loadouts");
+		}
+
+#undef FILL_FN
 	}
 }
 

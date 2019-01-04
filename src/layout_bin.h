@@ -156,7 +156,7 @@ namespace layout_bin {
 		uint8_t		unknown2[216636];
 		investigation	invs[250];
 		uint8_t		unknown3[4025];
-		equiploadout	eq_loadouts[0x70];
+		equiploadout	equip_loadouts[0x70];
 		uint8_t		unknown_[37246];
 	} PACKED;
 
