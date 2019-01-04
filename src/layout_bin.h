@@ -85,24 +85,78 @@ namespace layout_bin {
 		uint8_t		zenny_multiplier;
 	} PACKED;
 
+	struct equiploadout {
+		uint32_t	slotid;
+		uint8_t		name[256];
+		uint32_t	weapon_idx;
+		uint32_t	helmet_idx;
+		uint32_t	torso_idx;
+		uint32_t	arms_idx;
+		uint32_t	coil_idx;
+		uint32_t	feet_idx;
+		uint32_t	charm_idx;
+		uint32_t	mantle1_idx;
+		uint32_t	mantel2_idx;
+		uint32_t	weapondecos_id1;
+		uint32_t	weapondecos_id2;
+		uint32_t	weapondecos_id3;
+		uint32_t	helmetdecos_id1;
+		uint32_t	helmetdecos_id2;
+		uint32_t	helmetdecos_id3;
+		uint32_t	torsodecos_id1;
+		uint32_t	torsodecos_id2;
+		uint32_t	torsodecos_id3;
+		uint32_t	armsdecos_id1;
+		uint32_t	armsdecos_id2;
+		uint32_t	armsdecos_id3;
+		uint32_t	coildecos_id1;
+		uint32_t	coildecos_id2;
+		uint32_t	coildecos_id3;
+		uint32_t	feetdecos_id1;
+		uint32_t	feetdecos_id2;
+		uint32_t	feetdecos_id3;
+		uint32_t	unknown0[27];
+		uint32_t	charmdecos_idx1;
+		uint32_t	charmdecos_idx2;
+		uint32_t	charmdecos_idx3;
+		uint32_t	mantle1decos_idx1;
+		uint32_t	mantle1decos_idx2;
+		uint32_t	mantle1decos_idx3;
+		uint32_t	mantle2decos_idx1;
+		uint32_t	mantle2decos_idx2;
+		uint32_t	mantle2decos_idx3;
+		uint32_t	bitmask_customcolours;
+		uint32_t	bitmask_rainbow;
+		uint32_t	rgb_head;
+		uint32_t	rgb_torso;
+		uint32_t	rgb_arms;
+		uint32_t	rgb_coil;
+		uint32_t	rgb_wholeset;
+		uint32_t	unknown_[1];
+	} PACKED;
+
 	struct saveslot {
 		charinfo	info;
-		uint8_t		unknown1[0xa2c79 - (
+		uint8_t		unknown0[0xa2c79 - (
 				sizeof(info) +
 				0)];
 		itemcontainers	items;
-		uint8_t		unknown0[0xda8d5 - (
+		uint8_t		unknown1[0xda8d5 - (
 				sizeof(info) + 
-				sizeof(unknown1) +
+				sizeof(unknown0) +
 				sizeof(items) +
 				0)];
 		investigation	invs[250];
+		uint8_t		unknown2[0xfb9];
+		equiploadout	loadouts[0x70];
 		uint8_t		unknown_[0xf6110 - (
 				sizeof(info) + 
-				sizeof(unknown1) +
-				sizeof(items) +
 				sizeof(unknown0) +
+				sizeof(items) +
+				sizeof(unknown1) +
 				sizeof(invs) + 
+				sizeof(unknown2) +
+				sizeof(loadouts) +
 				0)];
 	} PACKED;
 
