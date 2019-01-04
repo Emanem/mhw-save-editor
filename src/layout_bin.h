@@ -147,15 +147,27 @@ namespace layout_bin {
 		uint32_t	unknown_[1];
 	} PACKED;
 
+	struct inventoryitem {
+		uint32_t	type;	// 0 armor, 1 weapon, 2 charm
+		uint32_t	slot;	// 0 head, 1 chest, 2 arms, 3 waist, 4 legs, ... if armor
+					// otherwise weapon type
+		uint32_t	id;	// item id
+		uint8_t		unknown[56];
+	} PACKED;
+
 	struct saveslot {
 		charinfo	info;
 		uint8_t		unknown0[603333];
 		itemloadouts	item_loadouts;
 		uint8_t		unknown1[8];
 		itemcontainers	items;
-		uint8_t		unknown2[216636];
+		uint8_t		unknown2[4];
+		inventoryitem	inventory[1000];
+		uint8_t		unknown3[102676];
+		uint32_t	inventory_idx[1000];
+		uint8_t		unknown4[41956];
 		investigation	invs[250];
-		uint8_t		unknown3[4025];
+		uint8_t		unknown5[4025];
 		equiploadout	equip_loadouts[0x70];
 		uint8_t		unknown_[37246];
 	} PACKED;
