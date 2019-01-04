@@ -58,7 +58,7 @@ namespace layout_bin {
 
 		loadout		list[0x38];
 		uint8_t		sort_idx[0x38];
-	};
+	} PACKED;
 
 	struct itemcontainers {
 		itemlist	pouch_item[24];
