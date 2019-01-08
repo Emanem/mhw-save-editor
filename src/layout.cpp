@@ -172,8 +172,11 @@ namespace layout {
 			layout_bin::saveslot*	cs = &sf->slots[i];
 
 			FILL_FN(cs->info, "charinfo");
+			FILL_FN(cs->qstats, "qstats");
 			FILL_FN(cs->item_loadouts, "item_loadouts");
 			FILL_FN(cs->items, "items");
+			FILL_FN(cs->inventory, "inventory");
+			FILL_FN(cs->inventory_idx, "inventory_idx");
 			FILL_FN(cs->invs, "investigations");
 			FILL_FN(cs->equip_loadouts, "equip_loadouts");
 		}
