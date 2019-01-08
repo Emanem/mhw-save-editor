@@ -40,7 +40,7 @@ namespace layout_bin {
 
 	struct monsterfstats {
 		uint32_t	total_captured[128]; //not sure about the indexes... for example idx 18 is Teostra, 25 is Nergi, ...
-		uint32_t	hr_killed[128];
+		uint32_t	total_killed[128];
 		uint32_t	tempered_killed[128];
 	} PACKED;
 
