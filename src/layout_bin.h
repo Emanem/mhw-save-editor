@@ -166,6 +166,12 @@ namespace layout_bin {
 		uint8_t		unknown[56];
 	} PACKED;
 
+	struct harvestdata {
+		itemlist	harvestable_items[3]; 	// the quantity are the turns harvested for (increasing)
+		itemlist	active_fertilizers[5];	// id and how many turns is going to be on (decreasing)
+		itemlist	harvestbox[30];
+	} PACKED;
+
 	struct saveslot {
 		charinfo	info;
 		uint8_t		unknown0[4419];
@@ -184,9 +190,11 @@ namespace layout_bin {
 		investigation	invs[250];
 		uint8_t		unknown7[4025];
 		equiploadout	equip_loadouts[0x70];
-		uint8_t		unknown8[7072];
-		itemlist	harvestbox[30];
-		uint8_t		unknown_[29934];
+		uint8_t		unknown8[7008];
+		harvestdata	harvestbox;
+		uint8_t		unknown9[32];
+		uint8_t		harvest_flag; // set to 1 when fertilizer has been used
+		uint8_t		unknown_[29901];
 	} PACKED;
 
 	struct savefile {

@@ -181,6 +181,7 @@ namespace layout {
 			FILL_FN(cs->invs, "investigations");
 			FILL_FN(cs->equip_loadouts, "equip_loadouts");
 			FILL_FN(cs->harvestbox, "harvestbox");
+			FILL_FN(cs->harvest_flag, "harvest_flag");
 		}
 
 #undef FILL_FN
