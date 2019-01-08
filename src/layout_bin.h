@@ -57,18 +57,18 @@ namespace layout_bin {
 					uint32_t	entry_id;
 					uint32_t        unknown;
 				} PACKED;
-				uint8_t	name_utf8[0x20];
+				uint8_t	name_utf8[32];
 				items	circle[8];
 			} PACKED;
-			uint8_t		name_utf8[0x20];
+			uint8_t		name_utf8[32];
 			itemlist	default_pouch_items[24];
 			itemlist	default_pouch_ammo[16];
 			uint8_t		unknown0[264];
-			shortcuts	tlrb[4];
+			shortcuts	top_left_right_bottom[4];
 		} PACKED;
 
-		loadout		list[0x38];
-		uint8_t		sort_idx[0x38];
+		loadout		list[56];
+		uint8_t		sort_idx[56];
 	} PACKED;
 
 	struct itemcontainers {
@@ -110,7 +110,7 @@ namespace layout_bin {
 
 	struct equiploadout {
 		uint32_t	slotid;
-		uint8_t		name[256];
+		uint8_t		name_utf8[256];
 		uint32_t	weapon_idx;
 		uint32_t	helmet_idx;
 		uint32_t	torso_idx;
@@ -189,7 +189,7 @@ namespace layout_bin {
 		uint8_t		unknown6[41956];
 		investigation	invs[250];
 		uint8_t		unknown7[4025];
-		equiploadout	equip_loadouts[0x70];
+		equiploadout	equip_loadouts[112];
 		uint8_t		unknown8[7008];
 		harvestdata	harvestbox;
 		uint8_t		unknown9[32];
