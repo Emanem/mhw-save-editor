@@ -38,6 +38,12 @@ namespace layout_bin {
 		uint16_t	killed[64];
 	} PACKED;
 
+	struct monsterfstats {
+		uint32_t	total_captured[128]; //not sure about the indexes... for example idx 18 is Teostra, 25 is Nergi, ...
+		uint32_t	hr_killed[128];
+		uint32_t	tempered_killed[128];
+	} PACKED;
+
 	struct itemlist {
 		uint32_t	id;
 		uint32_t	number;
@@ -163,18 +169,20 @@ namespace layout_bin {
 	struct saveslot {
 		charinfo	info;
 		uint8_t		unknown0[4419];
-		monsterqstats	qstats;	//quick summary monster stats
-		uint8_t		unknown1[598658];
+		monsterqstats	qstats; //quick summary monster stats
+		uint8_t		unknown1[592084];
+		monsterfstats	fstats; //full monster stats
+		uint8_t		unknown2[5038];
 		itemloadouts	item_loadouts;
-		uint8_t		unknown2[8];
+		uint8_t		unknown3[8];
 		itemcontainers	items;
-		uint8_t		unknown3[4];
+		uint8_t		unknown4[4];
 		inventoryitem	inventory[1000];
-		uint8_t		unknown4[102676];
+		uint8_t		unknown5[102676];
 		uint32_t	inventory_idx[1000];
-		uint8_t		unknown5[41956];
+		uint8_t		unknown6[41956];
 		investigation	invs[250];
-		uint8_t		unknown6[4025];
+		uint8_t		unknown7[4025];
 		equiploadout	equip_loadouts[0x70];
 		uint8_t		unknown_[37246];
 	} PACKED;
