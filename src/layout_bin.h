@@ -184,7 +184,9 @@ namespace layout_bin {
 		investigation	invs[250];
 		uint8_t		unknown7[4025];
 		equiploadout	equip_loadouts[0x70];
-		uint8_t		unknown_[37246];
+		uint8_t		unknown8[7072];
+		itemlist	harvestbox[30];
+		uint8_t		unknown_[29934];
 	} PACKED;
 
 	struct savefile {

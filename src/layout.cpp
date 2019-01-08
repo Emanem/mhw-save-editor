@@ -180,6 +180,7 @@ namespace layout {
 			FILL_FN(cs->inventory_idx, "inventory_idx");
 			FILL_FN(cs->invs, "investigations");
 			FILL_FN(cs->equip_loadouts, "equip_loadouts");
+			FILL_FN(cs->harvestbox, "harvestbox");
 		}
 
 #undef FILL_FN
