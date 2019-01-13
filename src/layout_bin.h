@@ -99,15 +99,8 @@ namespace layout_bin {
 		palicoapp	palico;
 	} PACKED;
 
-	struct monsterqstats {
-		uint16_t	captured[64]; // as of now we have 34 monsters - these are listed as appear in the chief ecologist dialogue
-		uint16_t	killed[64];
-	} PACKED;
-
-	struct monsterfstats {
-		uint32_t	total_captured[128]; //not sure about the indexes... for example idx 18 is Teostra, 25 is Nergi, ...
-		uint32_t	total_killed[128];
-		uint32_t	tempered_killed[128];
+	struct guildcard {
+		uint8_t		unknown[4923];
 	} PACKED;
 
 	struct itemlist {
@@ -240,25 +233,23 @@ namespace layout_bin {
 
 	struct saveslot {
 		charinfo	info;
-		uint8_t		unknown0[4347];
-		monsterqstats	qstats; //quick summary monster stats
-		uint8_t		unknown1[592084];
-		monsterfstats	fstats; //full monster stats
-		uint8_t		unknown2[5038];
+		guildcard	huntergc;
+		guildcard	othersgc[100];
+		uint8_t		unknown0[106038];
 		itemloadouts	item_loadouts;
-		uint8_t		unknown3[8];
+		uint8_t		unknown1[8];
 		itemcontainers	items;
-		uint8_t		unknown4[4];
+		uint8_t		unknown2[4];
 		inventoryitem	inventory[1000];
-		uint8_t		unknown5[102676];
+		uint8_t		unknown3[102676];
 		uint32_t	inventory_idx[1000];
-		uint8_t		unknown6[41956];
+		uint8_t		unknown4[41956];
 		investigation	invs[250];
-		uint8_t		unknown7[4025];
+		uint8_t		unknown5[4025];
 		equiploadout	equip_loadouts[112];
-		uint8_t		unknown8[7008];
+		uint8_t		unknown6[7008];
 		harvestdata	harvestbox;
-		uint8_t		unknown9[32];
+		uint8_t		unknown7[32];
 		uint8_t		harvest_flag; // set to 1 when fertilizer has been used
 		uint8_t		unknown_[29901];
 	} PACKED;
