@@ -22,6 +22,71 @@
 
 namespace layout_bin {
 
+	struct hunterapp {
+		uint32_t	makeup2color;
+		float		makeup2posx;
+		float     	makeup2posy;
+		float     	makeup2sizex;
+		float     	makeup2sizey;
+		float     	makeup2glossy;
+		float     	makeup2metallic;
+		uint32_t     	makeup2type;
+		uint32_t     	makeup1color;
+		float     	makeup1posx;
+		float     	makeup1posy;
+		float     	makeup1sizex;
+		float     	makeup1sizey;
+		float     	makeup1gloss;
+		float     	makeup1metallic;
+		uint32_t     	makeup1type;
+		uint32_t     	lefteyecolor;
+		uint32_t     	righteyecolor;
+		uint32_t     	eyebrowcolor;
+		uint32_t     	facialhaircolor;
+		uint8_t      	eyewidth;
+		uint8_t      	eyeheight;
+		uint8_t     	skincolorx;
+		uint8_t     	skincolory;
+		uint8_t     	age;
+		uint8_t     	wrinkles;
+		uint8_t      	noseheight;
+		uint8_t      	mouthheight;
+		uint32_t     	gender;
+		uint8_t     	browtype;
+		uint8_t     	facetype;
+		uint8_t     	eyetype;
+		uint8_t     	nosetype;
+		uint8_t     	mouthtype;
+		uint8_t     	eyebrowtype;
+		uint8_t     	eyelashlength;
+		uint8_t     	facialhairtype;
+		uint8_t     	unused[4];
+		uint32_t     	haircolor;
+		uint32_t     	clothingcolor;
+		uint16_t    	hairtype;
+		uint8_t     	clothingtype;
+		uint8_t     	voice;
+		uint32_t     	expression;
+	} PACKED;
+
+	struct palicoapp {
+		uint32_t	patterncolor1;
+		uint32_t	patterncolor2;
+		uint32_t	patterncolor3;
+		uint32_t	furcolor;
+		uint32_t	lefteyecolor;
+		uint32_t	righteyecolor;
+		uint32_t	clothingcolor;
+		float		furlength;
+		float		furthickness;
+		uint8_t		patterntype;
+		uint8_t		eyetype;
+		uint8_t		eartype;
+		uint8_t		tailtype;
+		uint16_t	voicetype;
+		uint16_t	voicepitch;
+	} PACKED;
+
 	struct charinfo {
 		uint8_t		name_utf8[64];
 		uint32_t	rank;
@@ -29,8 +94,9 @@ namespace layout_bin {
 		uint32_t	res_points;
 		uint32_t	xp;
 		uint32_t	playtime;
-		uint8_t		unknown0[92];
-		uint32_t	gender;
+		uint8_t		unknown0[4];
+		hunterapp	hunter;
+		palicoapp	palico;
 	} PACKED;
 
 	struct monsterqstats {
@@ -174,7 +240,7 @@ namespace layout_bin {
 
 	struct saveslot {
 		charinfo	info;
-		uint8_t		unknown0[4419];
+		uint8_t		unknown0[4347];
 		monsterqstats	qstats; //quick summary monster stats
 		uint8_t		unknown1[592084];
 		monsterfstats	fstats; //full monster stats

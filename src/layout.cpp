@@ -76,7 +76,7 @@ namespace layout {
 		out.res_points = cs->info.res_points;
 		out.xp = cs->info.xp;
 		out.playtime = cs->info.playtime;
-		out.gender = cs->info.gender;
+		out.gender = cs->info.hunter.gender;
 		return out;
 	}
 
