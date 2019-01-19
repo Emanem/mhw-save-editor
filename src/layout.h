@@ -49,6 +49,8 @@ namespace layout {
 		static const char	*names[ITEMS_CONTAINER::last];
 	};
 
+	typedef std::vector<std::pair<std::string, std::vector<std::pair<uint32_t, uint32_t>>>>	decos_data;
+
 	struct inv_info {
 		bool		selected,
 				seen;
@@ -67,6 +69,7 @@ namespace layout {
 	int64_t 	get_steamid(const io::buffer& buf);
 	hunter_data	get_slot_data(const io::buffer& buf, const size_t slot_id);
 	items_data	get_items_data(const io::buffer& buf, const size_t slot_id);
+	decos_data	get_all_decos_data(const io::buffer& buf, const size_t slot_id);
 	inv_data	get_inv_data(const io::buffer& buf, const size_t slot_id);
 	void		mask_known_buffer(io::buffer& buf);
 }

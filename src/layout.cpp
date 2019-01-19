@@ -18,6 +18,7 @@
 #include "layout.h"
 #include "layout_bin.h"
 #include <cstring>
+#include <map>
 #include <stdexcept>
 #include <iconv.h>
 #include <algorithm>
@@ -62,7 +63,7 @@ namespace layout {
 		// TODO - should check conversion from UTF-8 to wchar_t
 		{
 			auto		conv = iconv_open("WCHAR_T", "UTF-8");
-			char		*pIn = (char*)&cs->info.name_utf8,
+			char		*pIn = (char*)&cs->info.name_utf8[0],
 					*pOut = (char*)&out.name[0];
 			size_t		sIn = 64,
 					sOut = 64;
@@ -113,6 +114,82 @@ namespace layout {
 		out.containers[ITEMS_CONTAINER::box_decos].resize(sizeof(layout_bin::itemcontainers::box_decos)/sizeof(layout_bin::itemlist));
 		for(const auto& i : cs->items.box_decos)
 			out.containers[ITEMS_CONTAINER::box_decos].push_back(std::make_pair(i.id, i.number));
+		return out;
+	}
+
+	decos_data get_all_decos_data(const io::buffer& buf, const size_t slot_id) {
+		const size_t	base_slot = SAVESLOT_OFFSET + SAVESLOT_SIZE*slot_id;
+		if((base_slot+SAVESLOT_SIZE) > buf.size())
+			throw std::runtime_error("Invalid slot, outside of boundaries of savegame");
+		// local references
+		SAVEFILE_PTR(sf, buf);
+		const layout_bin::saveslot*	cs = &sf->slots[slot_id];
+		// start putting decos into the vector and remove the items in case of no decos
+		// I know this is suboptimal...
+		decos_data	out;
+
+		for(int i = 0; i < -1; ++i) {
+			const auto&	cur_loadout = cs->equip_loadouts[i];
+			if(cur_loadout.weapon_idx != 0xFFFFFFFF) {
+				auto fn_cnv = [&]() -> std::string {
+					auto		conv = iconv_open("ASCII", "UTF-8");
+					char		*pIn = (char*)&cur_loadout.name_utf8[0],
+							tmp[256],
+							*pOut = (char*)&tmp[0];
+					size_t		sIn = 256,
+							sOut = 256;
+					if(((void*)-1) == conv)
+						throw std::runtime_error("this system can't convert from UTF-8 to ASCII");
+					iconv(conv, &pIn, &sIn, &pOut, &sOut);
+					iconv_close(conv);
+
+					return tmp;
+				};
+
+				std::map<uint32_t, uint32_t>	deco_qty;
+
+#define	GET_DECO(d) { if(cur_loadout.d != 0xFFFFFFFF) ++deco_qty[cur_loadout.d]; }
+
+				GET_DECO(weapondecos_id1);
+				GET_DECO(weapondecos_id2);
+				GET_DECO(weapondecos_id3);
+				GET_DECO(helmetdecos_id1);
+				GET_DECO(helmetdecos_id2);
+				GET_DECO(helmetdecos_id3);
+				GET_DECO(torsodecos_id1);
+				GET_DECO(torsodecos_id2);
+				GET_DECO(torsodecos_id3);
+				GET_DECO(armsdecos_id1);
+				GET_DECO(armsdecos_id2);
+				GET_DECO(armsdecos_id3);
+				GET_DECO(coildecos_id1);
+				GET_DECO(coildecos_id2);
+				GET_DECO(coildecos_id3);
+				GET_DECO(feetdecos_id1);
+				GET_DECO(feetdecos_id2);
+				GET_DECO(feetdecos_id3);
+
+#undef GET_DECO
+				if(!deco_qty.empty()) {
+					std::pair<std::string, std::vector<std::pair<uint32_t, uint32_t>>>	cur_data;
+					cur_data.first = fn_cnv();
+					for(const auto& i : deco_qty)
+						cur_data.second.emplace_back(std::pair<uint32_t, uint32_t>(cs->items.box_decos[i.first].id, i.second));
+					out.emplace_back(cur_data);
+				}
+			}
+		}
+
+		// add the box
+		{
+			std::pair<std::string, std::vector<std::pair<uint32_t, uint32_t>>>	cur_data;
+			cur_data.first = items_data::names[ITEMS_CONTAINER::box_decos];
+			out.emplace_back(cur_data);
+			auto&	latest = *out.rbegin();
+			for(const auto& i : cs->items.box_decos)
+				latest.second.emplace_back(std::make_pair(i.id, i.number));
+		}
+
 		return out;
 	}
 

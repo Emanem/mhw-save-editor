@@ -30,7 +30,8 @@ namespace {
 		dump,
 		mask_dump,
 		items,
-		inv
+		inv,
+		decos
 	} list_type = LIST_TYPE::basic;
 
 	enum SLOT_ID {
@@ -57,6 +58,7 @@ namespace {
 				"    --list-items       lists only the items (using custom csv - see '--items-list'\n"
 				"                       option)\n"
 				"    --list-inv         lists only investigations\n"
+				"    --list-decos       lists all the decorations (both in builds and in inventory)\n"
 				"-d, --dump (file)      dumps the decrypted information in the specified file\n"
 				"    --mask-dump (file) dumps the decrypted information in the specified file, by masking the\n"
 				"                       know layout with its own description. Usefuly for understanding\n"
@@ -78,6 +80,7 @@ namespace {
 			{"list-all",		no_argument, 	   0,	'a'},
 			{"list-items",		no_argument, 	   0,	0},
 			{"list-inv",		no_argument, 	   0,	0},
+			{"list-decos",		no_argument,	   0,	0},
 			{0, 0, 0, 0}
 		};
 
@@ -85,7 +88,7 @@ namespace {
 			// getopt_long stores the option index here
 			int		option_index = 0;
 
-			if(-1 == (c = getopt_long(argc, argv, "ad:s:", long_options, &option_index)))
+			if(-1 == (c = getopt_long(argc, argv, "ad:ls:", long_options, &option_index)))
 				break;
 
 			switch (c) {
@@ -100,6 +103,8 @@ namespace {
 						list_type = LIST_TYPE::items;
 					} else if(!std::strcmp("list-inv", long_options[option_index].name)) {
 						list_type = LIST_TYPE::inv;
+					} else if(!std::strcmp("list-decos", long_options[option_index].name)) {
+						list_type = LIST_TYPE::decos;
 					} else if(!std::strcmp("items-list", long_options[option_index].name)) {
 						items_file = optarg;
 					} else if(!std::strcmp("help", long_options[option_index].name)) {
@@ -115,6 +120,10 @@ namespace {
 				case 'd': {
 					outfile = optarg;
 					list_type = LIST_TYPE::dump;
+				} break;
+
+				case 'l': {
+					list_type = LIST_TYPE::basic;
 				} break;
 
 				case 's': {
@@ -167,7 +176,7 @@ namespace {
 			   << std::endl;
 	}
 
-	void print_items_slot(const SLOT_ID slot, const io::buffer& data) {
+	void load_items_csv(void) {
 		// try to load the csv file with item listings
 		static bool loaded_csv = false;
 		if(!loaded_csv) {
@@ -175,6 +184,10 @@ namespace {
 				std::cerr << "warning: couldn't find items csv file (\"" << items_file << "\")" << std::endl;
 			loaded_csv = true;
 		}
+	}
+
+	void print_items_slot(const SLOT_ID slot, const io::buffer& data) {
+		load_items_csv();
 
 		const auto	items = layout::get_items_data(data, slot);
 		for(size_t i = 0; i < layout::ITEMS_CONTAINER::last; ++i) {
@@ -201,7 +214,25 @@ namespace {
 						<< (int)i.rank << "," << i.mon1 << "," << i.mon2 << "," << i.mon3
 						<< '\n';
 		}
-		std::cout << std::endl;
+	}
+
+	void print_deco_slot(const SLOT_ID slot, const io::buffer& data) {
+		load_items_csv();
+
+		const auto	decos = layout::get_all_decos_data(data, slot);
+		for(const auto& i : decos) {
+			std::cout << "\t" << i.first << '\n';
+			for(const auto& item_desc : i.second) {
+				if(0 == item_desc.first)
+					continue;
+				const char*	item_name = io::lookup_item(item_desc.first);
+				if(item_name)
+					std::cout << "\t\t" << item_name << ", " << item_desc.second << '\n';
+				else
+					std::cout << "\t\t" << item_desc.first << ", " << item_desc.second << '\n';
+			}
+			std::cout << std::endl;
+		}
 	}
 
 	template<typename func>
@@ -255,6 +286,10 @@ int main(int argc, char *argv[]) {
 
 			case LIST_TYPE::inv:
 			print_data(slot_id, rv, [](const SLOT_ID slot, const io::buffer& data) -> void { print_inv_slot(slot, data); } );
+			break;
+
+			case LIST_TYPE::decos:
+			print_data(slot_id, rv, [](const SLOT_ID slot, const io::buffer& data) -> void { print_deco_slot(slot, data); } );
 			break;
 
 			case LIST_TYPE::basic:
