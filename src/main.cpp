@@ -22,7 +22,7 @@
 #include "layout.h"
 
 namespace {
-	static const char	VERSION[] = "0.0.2";
+	static const char	VERSION[] = "0.1.0";
 
 	enum LIST_TYPE {
 		basic = 0,

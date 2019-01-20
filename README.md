@@ -11,7 +11,38 @@ On most distributions one just requires to
 and it would do the trick. Once done, then just invoke `make` or `make release` and the executable should be compiled.
 
 ## How to use it
-t.b.d.
+```
+Usage: ./mhw-save-editor [options] ... [savefile]
+Executes mhw-save-editor 0.1.0
+
+-b, --list-basic       lists the basic save information for all the slots or
+                       the specified slot
+-l, --list-all         lists all known information for a given slot (if
+                       no slot specified, lists for all slots)
+    --items-list (csv) specify a custom csv file with fir row header, containing
+                       at least columns "id" (numerical identifier) and
+                       "name" (name) of items. by default tries to load the
+                       file named 'items.csv'
+    --list-items       lists only the items (using custom csv - see '--items-list'
+                       option)
+    --list-inv         lists only investigations
+    --list-decos       lists all the decorations (both in builds and in inventory)
+-a, --add (type:item)  adds a single item of the type specified in appropriate container.
+                       Note that now onlt decorations (type 'd') and materials (type 'm')
+                       are currently supported, and the item specified will be added to
+                       specific inventory slot; item needs to be specified using the numeric
+                       identifier - example '-a d:741' will a Vitality decoration (see file
+                       items.csv for a numeric list of items). If slot is not specified, the
+                       given item will be added in slot 0
+    --overwrite        overwrites the input file
+-d, --dump (file)      dumps the decrypted information in the specified file
+    --mask-dump (file) dumps the decrypted information in the specified file, by masking the
+                       know layout with its own description. Usefuly for understanding
+                       the file format
+-s, --slot (n)         specify which slot to select (0, 1 or 2)
+    --help             prints this help and exit
+
+```
 
 ## _Monster Hunter: World_ save file description
 The savefile are usually located under:
@@ -36,39 +67,7 @@ swapbytes
 ```
 
 ## Data layout
-Section describing the file data layout. 
-
-### Basic checksum
-If all operation have been executed correctly, the first 4 bytes of the file should be `0x01, 0x00, 0x00, 0x00`.
-
-### Steam Id
-Starts at 0x28 and it's an int64_t.
-
-### Save Slots
-Each slot (max 3) has a size of 0xF6110 and the slot data starts at 0x003004DC, hence the first slot (0) should start at 0x003004DC, the second at 0x003004DC + 0xF6110 and third should start at 0x003004DC + 0xF6110*2. The content of the slots should be the following:
-
-1. UTF-8 character name (64 bytes)
-2. Rank (4 bytes uint32_t)
-3. Zenny (4 bytes uint32_t)
-4. Research points (4 bytes uint32_t)
-5. XP (4 bytes uint32_t)
-6. Play time (4 bytes uint32_t)
-7. Gender (starting at 0xb0)
-
-### Items/Ammo containers
-Each container starts from a given offset for current slot. Using slot starting area as basepoint, one sums up the relative offset and then goes through the items list.
-The items list is a `uint32_t`, `uint32_t` pairs, indicating the item code and the quantity.
-
-Each container has a limited max number of items; the min items is 1 and max item is 999 (?).
-
-|Container  |Offset  |Number |
-|-----------|--------|------:|
-|pouch item|0xa2c79|24|
-|pouch ammo|0xa2d39|16|
-|box item|0xa2ed9|200|
-|box ammo|0xa3519|200|
-|box materials|0xa3b59|800|
-|box decos|0xa5459|200|   
+Please see the file [layout_bin.h](https://github.com/Emanem/mhw-save-editor/blob/master/src/layout_bin.h) containing all the known binary layout.
 
 ## Why this editor?
 I play on Linux (through SteamPlay) and altough the game runs very well, I have two issues:
