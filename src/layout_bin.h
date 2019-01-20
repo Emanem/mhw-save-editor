@@ -353,7 +353,7 @@ namespace layout_bin {
 	} PACKED;
 
 	struct bounties_data {
-		int32_t		listed[6];
+		int32_t		listed[6]; // slot not used is -1
 		uint32_t	progress[6];
 	} PACKED;
 
@@ -415,6 +415,11 @@ namespace layout_bin {
 		uint8_t		unknown[56];
 	} PACKED;
 
+	struct npc_status { // this is only based on analysis, no confirmation...
+		uint32_t	id; // id of NPC, 1 is commander, 16 is the research base commander ...
+		uint32_t	status; // ? an internal pointer/reference to the status in the game's data ?
+	} PACKED;
+
 	struct harvestdata {
 		itemlist	harvestable_items[3]; 	// the quantity are the turns harvested for (increasing)
 		itemlist	active_fertilizers[5];	// id and how many turns is going to be on (decreasing)
@@ -433,15 +438,17 @@ namespace layout_bin {
 		inventoryitem	inventory[1000];
 		uint8_t		unknown3[102676];
 		uint32_t	inventory_idx[1000];
-		uint8_t		unknown4[41956];
+		uint8_t		unknown4[17396];
+		npc_status	npcs[2048]; // stack containing the latest status for each id - go in same memory order to have history for same npc id
+		uint8_t		unknown5[8176];
 		investigation	invs[250];
-		uint8_t		unknown5[1872];
+		uint8_t		unknown6[1872];
 		bounties_data	bounties;
-		uint8_t		unknown6[2105];
+		uint8_t		unknown7[2105];
 		equiploadout	equip_loadouts[112];
-		uint8_t		unknown7[7008];
+		uint8_t		unknown8[7008];
 		harvestdata	harvestbox;
-		uint8_t		unknown8[32];
+		uint8_t		unknown9[32];
 		uint8_t		harvest_flag; // set to 1 when fertilizer has been used
 		uint8_t		unknown_[29901];
 	} PACKED;
