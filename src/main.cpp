@@ -31,7 +31,8 @@ namespace {
 		mask_dump,
 		items,
 		inv,
-		decos
+		decos,
+		edit
 	} list_type = LIST_TYPE::basic;
 
 	enum SLOT_ID {
@@ -44,12 +45,34 @@ namespace {
 	std::string	outfile,
 			items_file = "items.csv";
 
+	struct ADD_DATA {
+		char	inv_type;
+		int	item_id;
+	} add_data = { 0, -1 };
+
+	void parse_add_data(const char* d) {
+		const char*	sep = strchr(d, ':');
+		if(!sep)
+			throw std::runtime_error("separator ':' missing in the add request");
+
+		const std::string	type(d, sep);
+
+		if (type == "d") add_data.inv_type ='d';
+		else if (type == "m") add_data.inv_type = 'm';
+		else throw std::runtime_error("invalid type in the add request (specify 'd' or 'm')");
+
+		const int		item_id = atoi(sep+1);
+
+		if(item_id <= 0)
+			throw std::runtime_error("invalid item id in the add request");
+	}
+
 	// settings/options management
 	void print_help(const char *prog, const char *version) {
 		std::cerr <<	"Usage: " << prog << " [options] ... [savefile]\nExecutes mhw-save-editor " << version << "\n\n"
-				"-l, --list             lists the basic save information for all the slots or\n"
+				"-b, --list-basic       lists the basic save information for all the slots or\n"
 				"                       the specified slot\n"
-				"-a, --list-all         lists all known information for a given slot (if\n"
+				"-l, --list-all         lists all known information for a given slot (if\n"
 				"                       no slot specified, lists for all slots)\n"
 				"    --items-list (csv) specify a custom csv file with fir row header, containing\n"
 				"                       at least columns \"id\" (numerical identifier) and\n"
@@ -59,6 +82,12 @@ namespace {
 				"                       option)\n"
 				"    --list-inv         lists only investigations\n"
 				"    --list-decos       lists all the decorations (both in builds and in inventory)\n"
+				"-a, --add (type:item)  adds a single item of the type specified in appropriate container.\n"
+				"                       Note that now onlt decorations (type 'd') and materials (type 'm')\n"
+				"                       are currently supported, and the item specified will be added to\n"
+				"                       specific inventory slot; item needs to be specified using the numeric\n"
+				"                       identifier - example '-a d:741' will a Vitality decoration (see file\n"
+				"                       items.csv for a numeric list of items)\n"
 				"-d, --dump (file)      dumps the decrypted information in the specified file\n"
 				"    --mask-dump (file) dumps the decrypted information in the specified file, by masking the\n"
 				"                       know layout with its own description. Usefuly for understanding\n"
@@ -71,24 +100,33 @@ namespace {
 	int parse_args(int argc, char *argv[], const char *prog, const char *version) {
 
 		int			c;
-		static struct option	long_options[] = {
+		const static struct option	long_options[] = {
+			{"add",			required_argument, 0,	'a'},
 			{"dump",		required_argument, 0,	'd'},
 			{"mask-dump",		required_argument, 0,	0},
 			{"help",		no_argument,	   0,	0},
 			{"items-list",		required_argument, 0,	0},
 			{"slot",		required_argument, 0,	's'},
-			{"list-all",		no_argument, 	   0,	'a'},
+			{"list-basic",		no_argument,	   0,	'b'},
+			{"list-all",		no_argument, 	   0,	'l'},
 			{"list-items",		no_argument, 	   0,	0},
 			{"list-inv",		no_argument, 	   0,	0},
 			{"list-decos",		no_argument,	   0,	0},
 			{0, 0, 0, 0}
 		};
 
+		bool	action_set = false;
+		auto	fn_verify_action = [&]() -> void {
+			if(action_set)
+				throw std::runtime_error("another action (such as 'a', 'l', 'd' ...) has been already specified");
+			action_set = true;
+		};
+
 		while (1) {
 			// getopt_long stores the option index here
 			int		option_index = 0;
 
-			if(-1 == (c = getopt_long(argc, argv, "ad:ls:", long_options, &option_index)))
+			if(-1 == (c = getopt_long(argc, argv, "a:bd:ls:", long_options, &option_index)))
 				break;
 
 			switch (c) {
@@ -99,12 +137,16 @@ namespace {
 					if(!std::strcmp("mask-dump", long_options[option_index].name)) {
 						outfile = optarg;
 						list_type = LIST_TYPE::mask_dump;
+						fn_verify_action();
 					} else if(!std::strcmp("list-items", long_options[option_index].name)) {
 						list_type = LIST_TYPE::items;
+						fn_verify_action();
 					} else if(!std::strcmp("list-inv", long_options[option_index].name)) {
 						list_type = LIST_TYPE::inv;
+						fn_verify_action();
 					} else if(!std::strcmp("list-decos", long_options[option_index].name)) {
 						list_type = LIST_TYPE::decos;
+						fn_verify_action();
 					} else if(!std::strcmp("items-list", long_options[option_index].name)) {
 						items_file = optarg;
 					} else if(!std::strcmp("help", long_options[option_index].name)) {
@@ -114,16 +156,25 @@ namespace {
 				} break;
 
 				case 'a': {
+					list_type = LIST_TYPE::edit;
+					parse_add_data(optarg);
+					fn_verify_action();
+				} break;
+
+				case 'l': {
 					list_type = LIST_TYPE::all;
+					fn_verify_action();
 				} break;
 
 				case 'd': {
 					outfile = optarg;
 					list_type = LIST_TYPE::dump;
+					fn_verify_action();
 				} break;
 
-				case 'l': {
+				case 'b': {
 					list_type = LIST_TYPE::basic;
+					fn_verify_action();
 				} break;
 
 				case 's': {
