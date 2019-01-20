@@ -352,6 +352,11 @@ namespace layout_bin {
 		uint8_t		zenny_multiplier;
 	} PACKED;
 
+	struct bounties_data {
+		int32_t		listed[6];
+		uint32_t	progress[6];
+	} PACKED;
+
 	struct equiploadout {
 		uint32_t	slotid;
 		uint8_t		name_utf8[256];
@@ -430,11 +435,13 @@ namespace layout_bin {
 		uint32_t	inventory_idx[1000];
 		uint8_t		unknown4[41956];
 		investigation	invs[250];
-		uint8_t		unknown5[4025];
+		uint8_t		unknown5[1872];
+		bounties_data	bounties;
+		uint8_t		unknown6[2105];
 		equiploadout	equip_loadouts[112];
-		uint8_t		unknown6[7008];
+		uint8_t		unknown7[7008];
 		harvestdata	harvestbox;
-		uint8_t		unknown7[32];
+		uint8_t		unknown8[32];
 		uint8_t		harvest_flag; // set to 1 when fertilizer has been used
 		uint8_t		unknown_[29901];
 	} PACKED;

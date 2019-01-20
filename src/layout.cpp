@@ -258,6 +258,7 @@ namespace layout {
 			FILL_FN(cs->inventory, "inventory");
 			FILL_FN(cs->inventory_idx, "inventory_idx");
 			FILL_FN(cs->invs, "investigations");
+			FILL_FN(cs->bounties, "bounties");
 			FILL_FN(cs->equip_loadouts, "equip_loadouts");
 			FILL_FN(cs->harvestbox, "harvestbox");
 			FILL_FN(cs->harvest_flag, "harvest_flag");
