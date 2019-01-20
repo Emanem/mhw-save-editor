@@ -41,6 +41,8 @@ namespace layout {
 
 // simple macro to avoid repeating the below cast
 #define	SAVEFILE_PTR(ptr, buf) const layout_bin::savefile	*ptr = reinterpret_cast<const layout_bin::savefile*>(&buf[0])
+
+#define	SAVEFILE_PTR_RW(ptr, buf) layout_bin::savefile	*ptr = reinterpret_cast<layout_bin::savefile*>(&buf[0])
 	
 	bool basic_checksum(const io::buffer& buf) {
 		SAVEFILE_PTR(sf, buf);
@@ -68,7 +70,7 @@ namespace layout {
 			size_t		sIn = 64,
 					sOut = 64;
 			if(((void*)-1) == conv)
-				throw std::runtime_error("this system can't convert from UTF-8 to WCHAR_T");
+				throw std::runtime_error("This system can't convert from UTF-8 to WCHAR_T");
 			iconv(conv, &pIn, &sIn, &pOut, &sOut);
 			iconv_close(conv);
 		}
@@ -139,7 +141,7 @@ namespace layout {
 					size_t		sIn = 256,
 							sOut = 256;
 					if(((void*)-1) == conv)
-						throw std::runtime_error("this system can't convert from UTF-8 to ASCII");
+						throw std::runtime_error("This system can't convert from UTF-8 to ASCII");
 					iconv(conv, &pIn, &sIn, &pOut, &sOut);
 					iconv_close(conv);
 
@@ -262,6 +264,31 @@ namespace layout {
 		}
 
 #undef FILL_FN
+	}
+
+	void add_deco(io::buffer& buf, const size_t slot_id, const int deco_id) {
+		const size_t	base_slot = SAVESLOT_OFFSET + SAVESLOT_SIZE*slot_id;
+		if((base_slot+SAVESLOT_SIZE) > buf.size())
+			throw std::runtime_error("Invalid slot, outside of boundaries of savegame");
+
+		SAVEFILE_PTR_RW(sf, buf);
+
+		// try to find if the deco exists, otherwise use the first unused slot
+		int	idx = -1;
+		for(int i = 0; i < (int)(sizeof(layout_bin::itemcontainers::box_decos)/sizeof(layout_bin::itemlist)); ++i) {
+			auto&	cur_deco = sf->slots[slot_id].items.box_decos[i];
+			if(cur_deco.id == 0) idx = i;
+			else if(cur_deco.id == (uint32_t)deco_id) {
+			       ++cur_deco.number;
+			       return;
+			}
+		}
+
+		if(-1 == idx)
+			throw std::runtime_error("Can't add decoration, not enough free space");
+		auto&	idx_deco = sf->slots[slot_id].items.box_decos[idx];
+		idx_deco.id = deco_id;
+		idx_deco.number = 1;
 	}
 }
 

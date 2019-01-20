@@ -65,6 +65,7 @@ namespace layout {
 
 	typedef std::vector<inv_info>	inv_data;
 
+	// R/O functions
 	bool		basic_checksum(const io::buffer& buf);
 	int64_t 	get_steamid(const io::buffer& buf);
 	hunter_data	get_slot_data(const io::buffer& buf, const size_t slot_id);
@@ -72,6 +73,8 @@ namespace layout {
 	decos_data	get_all_decos_data(const io::buffer& buf, const size_t slot_id);
 	inv_data	get_inv_data(const io::buffer& buf, const size_t slot_id);
 	void		mask_known_buffer(io::buffer& buf);
+	// R/W functions
+	void		add_deco(io::buffer& buf, const size_t slot_id, const int deco_id);
 }
 
 #endif //_LAYOUT_H_

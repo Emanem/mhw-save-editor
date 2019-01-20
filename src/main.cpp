@@ -32,7 +32,7 @@ namespace {
 		items,
 		inv,
 		decos,
-		edit
+		add_item
 	} list_type = LIST_TYPE::basic;
 
 	enum SLOT_ID {
@@ -50,21 +50,22 @@ namespace {
 		int	item_id;
 	} add_data = { 0, -1 };
 
+	bool		overwrite = false;
+
 	void parse_add_data(const char* d) {
 		const char*	sep = strchr(d, ':');
 		if(!sep)
-			throw std::runtime_error("separator ':' missing in the add request");
+			throw std::runtime_error("Separator ':' missing in the add request");
 
 		const std::string	type(d, sep);
-
 		if (type == "d") add_data.inv_type ='d';
 		else if (type == "m") add_data.inv_type = 'm';
-		else throw std::runtime_error("invalid type in the add request (specify 'd' or 'm')");
+		else throw std::runtime_error("Invalid type in the add request (specify 'd' or 'm')");
 
 		const int		item_id = atoi(sep+1);
-
 		if(item_id <= 0)
-			throw std::runtime_error("invalid item id in the add request");
+			throw std::runtime_error("Invalid item id in the add request");
+		add_data.item_id = item_id;
 	}
 
 	// settings/options management
@@ -87,7 +88,9 @@ namespace {
 				"                       are currently supported, and the item specified will be added to\n"
 				"                       specific inventory slot; item needs to be specified using the numeric\n"
 				"                       identifier - example '-a d:741' will a Vitality decoration (see file\n"
-				"                       items.csv for a numeric list of items)\n"
+				"                       items.csv for a numeric list of items). If slot is not specified, the\n"
+				"                       given item will be added in slot 0\n"
+				"    --overwrite        overwrites the input file\n"
 				"-d, --dump (file)      dumps the decrypted information in the specified file\n"
 				"    --mask-dump (file) dumps the decrypted information in the specified file, by masking the\n"
 				"                       know layout with its own description. Usefuly for understanding\n"
@@ -112,13 +115,14 @@ namespace {
 			{"list-items",		no_argument, 	   0,	0},
 			{"list-inv",		no_argument, 	   0,	0},
 			{"list-decos",		no_argument,	   0,	0},
+			{"overwrite",		no_argument,	   0,	0},
 			{0, 0, 0, 0}
 		};
 
 		bool	action_set = false;
 		auto	fn_verify_action = [&]() -> void {
 			if(action_set)
-				throw std::runtime_error("another action (such as 'a', 'l', 'd' ...) has been already specified");
+				throw std::runtime_error("Another action (such as 'a', 'l', 'd' ...) has been already specified");
 			action_set = true;
 		};
 
@@ -149,6 +153,8 @@ namespace {
 						fn_verify_action();
 					} else if(!std::strcmp("items-list", long_options[option_index].name)) {
 						items_file = optarg;
+					} else if(!std::strcmp("overwrite", long_options[option_index].name)) {
+						overwrite = true;
 					} else if(!std::strcmp("help", long_options[option_index].name)) {
 						print_help(prog, version);
 						std::exit(0);
@@ -156,7 +162,7 @@ namespace {
 				} break;
 
 				case 'a': {
-					list_type = LIST_TYPE::edit;
+					list_type = LIST_TYPE::add_item;
 					parse_add_data(optarg);
 					fn_verify_action();
 				} break;
@@ -193,7 +199,7 @@ namespace {
 						break;
 
 						default:
-						throw std::runtime_error("invalid slot id specified (use 0, 1, 2 or don't specify this option for 'all')");
+						throw std::runtime_error("Invalid slot id specified (use 0, 1, 2 or don't specify this option for 'all')");
 					}
 				} break;
 
@@ -304,6 +310,18 @@ namespace {
 			break;
 		}
 	}
+
+	void add_deco_slot(const SLOT_ID slot, const int deco_id, io::buffer& data) {
+		load_items_csv();
+
+		const char*	item_name = io::lookup_item(deco_id);
+		if(item_name)
+			std::cout << "Adding deco:\t'" << item_name << "' to slot id " << slot << std::endl;
+		else
+			std::cout << "Adding unknown deco:\t" << deco_id << " to slot id " << slot << std::endl;
+		layout::add_deco(data, slot, deco_id);
+		std::cout << std::endl;
+	}
 }
 
 
@@ -311,13 +329,30 @@ int main(int argc, char *argv[]) {
 	try {
 		const int	savefile = parse_args(argc, argv, argv[0], VERSION);
 		if(savefile >= argc)
-			throw std::runtime_error("input [savefile] not specified");
+			throw std::runtime_error("Input [savefile] not specified");
 		auto		rv = io::read_savegame(argv[savefile]);
 		std::cout << "Basic checksum: " << layout::basic_checksum(rv) << '\n'
 			  << "Steam id:       " << layout::get_steamid(rv) << '\n'
 			  << std::endl;
 		// print out dedicated info
 		switch(list_type) {
+			case LIST_TYPE::add_item: {
+				const std::string	out = (overwrite) ? std::string(argv[savefile]) : std::string(argv[savefile]) + ".amended";
+
+				switch(add_data.inv_type) {
+
+					case 'd':
+					add_deco_slot(slot_id, add_data.item_id, rv);
+					break;
+
+					default:
+					throw std::runtime_error("Unknown inventory type");
+				};
+
+				io::write_savegame(out, rv);
+				std::cout << "Updated savefile:\t" << out << std::endl;
+			} break;
+
 			case LIST_TYPE::dump: {
 				io::write_dump(outfile, rv);
 			} break;
