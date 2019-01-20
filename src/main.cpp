@@ -22,7 +22,7 @@
 #include "layout.h"
 
 namespace {
-	static const char	VERSION[] = "0.1.0";
+	static const char	VERSION[] = "0.1.1";
 
 	enum LIST_TYPE {
 		basic = 0,
@@ -322,6 +322,18 @@ namespace {
 		layout::add_deco(data, slot, deco_id);
 		std::cout << std::endl;
 	}
+
+	void add_material_slot(const SLOT_ID slot, const int item_id, io::buffer& data) {
+		load_items_csv();
+
+		const char*	item_name = io::lookup_item(item_id);
+		if(item_name)
+			std::cout << "Adding material:\t'" << item_name << "' to slot id " << slot << std::endl;
+		else
+			std::cout << "Adding unknown material:\t" << item_id << " to slot id " << slot << std::endl;
+		layout::add_material(data, slot, item_id);
+		std::cout << std::endl;
+	}
 }
 
 
@@ -343,6 +355,10 @@ int main(int argc, char *argv[]) {
 
 					case 'd':
 					add_deco_slot(slot_id, add_data.item_id, rv);
+					break;
+
+					case 'm':
+					add_material_slot(slot_id, add_data.item_id, rv);
 					break;
 
 					default:

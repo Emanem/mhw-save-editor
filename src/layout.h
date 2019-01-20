@@ -75,6 +75,7 @@ namespace layout {
 	void		mask_known_buffer(io::buffer& buf);
 	// R/W functions
 	void		add_deco(io::buffer& buf, const size_t slot_id, const int deco_id);
+	void		add_material(io::buffer& buf, const size_t slot_id, const int item_id);
 }
 
 #endif //_LAYOUT_H_

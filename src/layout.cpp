@@ -291,5 +291,30 @@ namespace layout {
 		idx_deco.id = deco_id;
 		idx_deco.number = 1;
 	}
+
+	void add_material(io::buffer& buf, const size_t slot_id, const int item_id) {
+		const size_t	base_slot = SAVESLOT_OFFSET + SAVESLOT_SIZE*slot_id;
+		if((base_slot+SAVESLOT_SIZE) > buf.size())
+			throw std::runtime_error("Invalid slot, outside of boundaries of savegame");
+
+		SAVEFILE_PTR_RW(sf, buf);
+
+		// try to find if the deco exists, otherwise use the first unused slot
+		int	idx = -1;
+		for(int i = 0; i < (int)(sizeof(layout_bin::itemcontainers::box_materials)/sizeof(layout_bin::itemlist)); ++i) {
+			auto&	cur_mat = sf->slots[slot_id].items.box_materials[i];
+			if(cur_mat.id == 0) idx = i;
+			else if(cur_mat.id == (uint32_t)item_id) {
+			       ++cur_mat.number;
+			       return;
+			}
+		}
+
+		if(-1 == idx)
+			throw std::runtime_error("Can't add material, not enough free space");
+		auto&	idx_mat = sf->slots[slot_id].items.box_materials[idx];
+		idx_mat.id = item_id;
+		idx_mat.number = 1;
+	}
 }
 
