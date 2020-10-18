@@ -1,6 +1,9 @@
 # mhw-save-editor (Linux version)
 This is a simple _Monster Hunter: World_ save file editor.
 
+## Status
+Please note this editor is discontinued since _Monster Hunter World: Iceborne_.
+
 ## Summary
 Mostly inspired by [AsteriskAmpersand](https://github.com/AsteriskAmpersand/MHW-Save-Editor) and all the folks he's been inspired from and working with him/her, this editor is mostly a research prototype project.
 
